@@ -3,7 +3,7 @@ PODS:
   - SwiftyJSON (2.3.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 2.0)
+  - Alamofire
   - SwiftyJSON
 
 SPEC CHECKSUMS:

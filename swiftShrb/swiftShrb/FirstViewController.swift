@@ -27,6 +27,8 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         self.title = "热点"
         self.setTableView()
+        self.preferredStatusBarStyle()
+        
         
     }
     
@@ -37,7 +39,35 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         self.view.addSubview(tableView)
         
     }
-
+    
+    //child ViewController的作为状态栏
+    override func childViewControllerForStatusBarStyle() -> UIViewController? {
+        super.setNeedsStatusBarAppearanceUpdate()
+        return nil;
+    }
+    //child ViewController的状态栏是否隐藏设置状态栏
+    override func childViewControllerForStatusBarHidden() -> UIViewController? {
+        return nil;
+    }
+    //设置当前ViewController的StatusBar的样式
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+        
+    }
+    //隐藏还是展示statusBar
+    override func prefersStatusBarHidden() -> Bool {
+        return false
+    }
+    //statusBar的改变动画
+    override func preferredStatusBarUpdateAnimation() -> UIStatusBarAnimation {
+        return .Fade  
+    }
+    
+    override func setNeedsStatusBarAppearanceUpdate()
+    {
+        super.setNeedsStatusBarAppearanceUpdate()
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
