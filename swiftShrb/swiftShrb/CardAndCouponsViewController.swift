@@ -15,9 +15,34 @@ class CardAndCouponsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setView()
         
         self.title = "卡包"
     }
+    
+    func setView() {
+        cardBtn = UIButton(frame: CGRectMake(16, 20 + 44 + 16, screenWidth-32, (screenWidth-32)/2))
+        cardBtn.setBackgroundImage(UIImage(named: "vipBack"), forState: UIControlState.Normal)
+        cardBtn.setBackgroundImage(UIImage(named: "vipBack"), forState: UIControlState.Highlighted)
+        cardBtn.addTarget(self, action: Selector("gotoCardView"), forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(cardBtn)
+        
+        couponsBtn = UIButton(frame: CGRectMake(self.cardBtn.frame.origin.x, self.cardBtn.frame.origin.y + self.cardBtn.frame.size.height + 20 , self.cardBtn.frame.size.width, self.cardBtn.frame.size.height))
+        couponsBtn.setBackgroundImage(UIImage(named: "couponsBack"), forState: UIControlState.Normal)
+        couponsBtn.setBackgroundImage(UIImage(named: "couponsBack"), forState: UIControlState.Highlighted)
+        couponsBtn.addTarget(self, action: Selector("gotoCouponsView"), forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(couponsBtn)
+        
+    }
+    
+    func gotoCardView() {
+        print("显示卡片页面")
+    }
+    
+    func gotoCouponsView() {
+        print("显示电子券页面")
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

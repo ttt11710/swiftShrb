@@ -18,6 +18,7 @@
 		DF0BAC291BB8CEB2008A8952 /* swiftShrbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC281BB8CEB2008A8952 /* swiftShrbUITests.swift */; };
 		DF0BAC391BB8DAC7008A8952 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC381BB8DAC7008A8952 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
 		DF850ADF1BBA61DC0055DCA7 /* MerchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF850ADE1BBA61DC0055DCA7 /* MerchModel.swift */; settings = {ASSET_TAGS = (); }; };
+		DF850AE11BBA8E1D0055DCA7 /* UserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DFD7774A1BBA3608008F4F34 /* HotFocusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD777481BBA3608008F4F34 /* HotFocusTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		DFD7774B1BBA3608008F4F34 /* HotFocusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD777491BBA3608008F4F34 /* HotFocusTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		DF0BAC2A1BB8CEB2008A8952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF0BAC381BB8DAC7008A8952 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		DF850ADE1BBA61DC0055DCA7 /* MerchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchModel.swift; sourceTree = "<group>"; };
+		DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterViewController.swift; sourceTree = "<group>"; };
 		DFD777481BBA3608008F4F34 /* HotFocusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotFocusTableViewCell.swift; sourceTree = "<group>"; };
 		DFD777491BBA3608008F4F34 /* HotFocusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotFocusTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -249,6 +251,7 @@
 		DFD777441BBA3422008F4F34 /* control */ = {
 			isa = PBXGroup;
 			children = (
+				DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */,
 			);
 			name = control;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				DF0BAC0B1BB8CEB2008A8952 /* CardAndCouponsViewController.swift in Sources */,
 				DF850ADF1BBA61DC0055DCA7 /* MerchModel.swift in Sources */,
 				DF0BAC391BB8DAC7008A8952 /* Config.swift in Sources */,
+				DF850AE11BBA8E1D0055DCA7 /* UserCenterViewController.swift in Sources */,
 				DFD7774A1BBA3608008F4F34 /* HotFocusTableViewCell.swift in Sources */,
 				DF0BAC071BB8CEB2008A8952 /* AppDelegate.swift in Sources */,
 				DF0BAC091BB8CEB2008A8952 /* HotFocusViewController.swift in Sources */,

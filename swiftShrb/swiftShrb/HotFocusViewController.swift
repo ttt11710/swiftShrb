@@ -83,6 +83,8 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
         tableView.registerNib(UINib(nibName: "HotFocusTableViewCell", bundle: nil), forCellReuseIdentifier: "HotFocusTableViewCellId")
         let cell = tableView.dequeueReusableCellWithIdentifier("HotFocusTableViewCellId", forIndexPath: indexPath) as! HotFocusTableViewCell
         
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        
         cell.descriptionLabel.text = self.merchModel[indexPath.row].merchDesc
         cell.hotImageView.sd_setImageWithURL(NSURL(string: self.merchModel[indexPath.row].merchImglist[0].imgUrl), placeholderImage: UIImage(named: "热点无图片"))
         
