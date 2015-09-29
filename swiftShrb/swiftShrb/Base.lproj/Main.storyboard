@@ -2,12 +2,15 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Hot Focus View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="swiftShrb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="HotFocusViewController" customModule="swiftShrb" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -23,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="1384.5" y="-320"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Card And Coupons View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="swiftShrb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="CardAndCouponsViewController" customModule="swiftShrb" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -35,27 +38,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="195" y="279" width="210" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="192" y="329" width="216" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="couponsBack" translatesAutoresizingMaskIntoConstraints="NO" id="qwO-EN-EWz">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vipBack" translatesAutoresizingMaskIntoConstraints="NO" id="4Ez-NS-5eL">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4Ez-NS-5eL" secondAttribute="height" multiplier="2:1" id="RgK-o8-AwC"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RgK-o8-AwC"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="RgK-o8-AwC"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="qwO-EN-EWz" firstAttribute="height" secondItem="4Ez-NS-5eL" secondAttribute="height" id="9ID-lz-SBW"/>
+                            <constraint firstItem="4Ez-NS-5eL" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="MLF-DG-TJi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Ez-NS-5eL" secondAttribute="trailing" constant="16" id="PU3-QZ-tF9"/>
+                            <constraint firstItem="qwO-EN-EWz" firstAttribute="leading" secondItem="4Ez-NS-5eL" secondAttribute="leading" id="ZRz-mD-QNu"/>
+                            <constraint firstItem="qwO-EN-EWz" firstAttribute="trailing" secondItem="4Ez-NS-5eL" secondAttribute="trailing" id="fpS-3q-Wbu"/>
+                            <constraint firstItem="4Ez-NS-5eL" firstAttribute="bottom" secondItem="QS5-Rx-YEW" secondAttribute="centerY" constant="-10" id="imW-VZ-jjd"/>
+                            <constraint firstItem="qwO-EN-EWz" firstAttribute="top" secondItem="4Ez-NS-5eL" secondAttribute="bottom" constant="20" id="msp-WN-fDz"/>
+                            <constraint firstItem="qwO-EN-EWz" firstAttribute="width" secondItem="4Ez-NS-5eL" secondAttribute="width" id="u1P-5W-d1Z"/>
+                            <constraint firstItem="4Ez-NS-5eL" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="16" id="vuS-C0-8bV"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qwO-EN-EWz"/>
+                                <exclude reference="4Ez-NS-5eL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="MLF-DG-TJi"/>
+                                <exclude reference="PU3-QZ-tF9"/>
+                                <exclude reference="imW-VZ-jjd"/>
+                                <exclude reference="vuS-C0-8bV"/>
+                                <exclude reference="9ID-lz-SBW"/>
+                                <exclude reference="ZRz-mD-QNu"/>
+                                <exclude reference="fpS-3q-Wbu"/>
+                                <exclude reference="msp-WN-fDz"/>
+                                <exclude reference="u1P-5W-d1Z"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qwO-EN-EWz"/>
+                                <include reference="4Ez-NS-5eL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="MLF-DG-TJi"/>
+                                <include reference="PU3-QZ-tF9"/>
+                                <include reference="imW-VZ-jjd"/>
+                                <include reference="vuS-C0-8bV"/>
+                                <include reference="9ID-lz-SBW"/>
+                                <include reference="ZRz-mD-QNu"/>
+                                <include reference="fpS-3q-Wbu"/>
+                                <include reference="msp-WN-fDz"/>
+                                <include reference="u1P-5W-d1Z"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="gc1-Fd-Cmd"/>
                 </viewController>
@@ -122,6 +170,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="couponsBack" width="350" height="174"/>
+        <image name="vipBack" width="351" height="174"/>
         <image name="寻觅" width="24" height="24"/>
         <image name="恋人" width="24" height="24"/>
     </resources>

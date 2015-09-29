@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  HotFocusViewController.swift
 //  swiftShrb
 //
 //  Created by PayBay on 15/9/28.
@@ -7,20 +7,16 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import SDWebImage
 
 
-class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var tableView : UITableView!
-
-    let data = [
-        ["orderImageView":"辛巴克.jpg","money":"金额：100元","date":"时间：18:30 2015/06/01","orderNum":"订单号：201506010001","address":"地区：上海市徐汇区龙吴路1333号华滨家园23#1202室12345343243243214321432672222222222334563456734567"],
-        ["orderImageView":"冰雪皇后.jpg","money":"金额：2300元","date":"时间：15:30 2015/06/13","orderNum":"订单号：201506010003","address":"地区：徐汇区"],
-        ["orderImageView":"雀巢.jpg","money":"金额：400元","date":"时间：12:30 2015/06/04","orderNum":"订单号：201506010004","address":"地区：徐汇区"],
-        ["orderImageView":"吉野家.jpg","money":"金额：350元","date":"时间：18:30 2015/06/23","orderNum":"订单号：201506010006","address":"地区：徐汇区"],
-        ["orderImageView":"雀巢.jpg","money":"金额：33440元","date":"时间：18:30 2015/06/12","orderNum":"订单号：201506010011","address":"地区：徐汇区"],
-    ]
-
+    
+    var merchModel = [MerchModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +25,22 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         self.setTableView()
         self.preferredStatusBarStyle()
         
+        Alamofire.request(.GET, baseUrl + "/merch/v1.0/getMerchList?", parameters: ["pageNum":"1","pageCount":"20","orderBy":"updateTime","sort":"desc","whereString":""])
         
+            .response { request, response, data, error in
+                
+                if error == nil {
+                    let json  = JSON(data: data!)
+                    if json["code"].stringValue == "200" {
+                     self.merchModel =  MerchModel.merchModel(json)
+                    }
+                }
+                self.tableView.reloadData()
+        }
     }
     
     func setTableView() {
-        tableView = UITableView(frame: CGRectMake(0, 44+20, screenWidth, screenHeight-44-20))
+        tableView = UITableView(frame: CGRectMake(0, 44+20, screenWidth, screenHeight-44-20 - 49))
         tableView.delegate = self
         tableView.dataSource = self
         self.view.addSubview(tableView)
@@ -69,20 +76,28 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return self.merchModel.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier:"cell")
+        tableView.registerNib(UINib(nibName: "HotFocusTableViewCell", bundle: nil), forCellReuseIdentifier: "HotFocusTableViewCellId")
+        let cell = tableView.dequeueReusableCellWithIdentifier("HotFocusTableViewCellId", forIndexPath: indexPath) as! HotFocusTableViewCell
         
-        cell.textLabel?.text = data[indexPath.row]["date"]
+        cell.descriptionLabel.text = self.merchModel[indexPath.row].merchDesc
+        cell.hotImageView.sd_setImageWithURL(NSURL(string: self.merchModel[indexPath.row].merchImglist[0].imgUrl), placeholderImage: UIImage(named: "热点无图片"))
         
         return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        return 110
+       let merchDescriptionLabel = UILabel(frame: CGRectMake(0, 0, screenWidth-32, 0))
+        merchDescriptionLabel.font = UIFont(name: "Arial", size: 18)
+        merchDescriptionLabel.text = self.merchModel[indexPath.row].merchDesc
+        merchDescriptionLabel.numberOfLines = 0
+        merchDescriptionLabel.sizeToFit()
+        
+        return screenWidth/8*5+16+CGFloat(merchDescriptionLabel.frame.size.height)+16+8
     }
     
     override func didReceiveMemoryWarning() {

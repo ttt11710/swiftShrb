@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  CardAndCouponsViewController.swift
 //  swiftShrb
 //
 //  Created by PayBay on 15/9/28.
@@ -8,7 +8,10 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class CardAndCouponsViewController: UIViewController {
+    
+    var cardBtn : UIButton!
+    var couponsBtn : UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
