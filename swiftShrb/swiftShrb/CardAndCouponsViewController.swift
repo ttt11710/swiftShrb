@@ -20,6 +20,12 @@ class CardAndCouponsViewController: UIViewController {
         self.title = "卡包"
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.hidden = false
+    }
+
+    
     func setView() {
         cardBtn = UIButton(frame: CGRectMake(16, 20 + 44 + 16, screenWidth-32, (screenWidth-32)/2))
         cardBtn.setBackgroundImage(UIImage(named: "vipBack"), forState: UIControlState.Normal)

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SupermarketCollectionViewCellId" id="gTV-IL-0wX" customClass="SupermarketCollectionViewCell" customModule="swiftShrb" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="206" height="302"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="206" height="302"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xWb-Zr-xJ8">
+                        <rect key="frame" x="0.0" y="0.0" width="206" height="206"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="xWb-Zr-xJ8" secondAttribute="height" multiplier="1:1" id="x4k-xR-eGA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1D-gX-PL2">
+                        <rect key="frame" x="8" y="215" width="190" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.30588235294117649" green="0.30588235294117649" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imS-f4-dCg">
+                        <rect key="frame" x="8" y="263" width="190" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会员价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ee9-KX-QZR">
+                        <rect key="frame" x="8" y="240" width="190" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xWb-Zr-xJ8" secondAttribute="trailing" id="4Ql-5j-rUs"/>
+                <constraint firstItem="imS-f4-dCg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="HFe-cS-qt3"/>
+                <constraint firstItem="xWb-Zr-xJ8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Hh9-vW-W1d"/>
+                <constraint firstItem="Ee9-KX-QZR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Iv4-5N-fGM"/>
+                <constraint firstItem="imS-f4-dCg" firstAttribute="top" secondItem="Ee9-KX-QZR" secondAttribute="bottom" constant="2" id="P2p-Cl-qJ7"/>
+                <constraint firstAttribute="trailing" secondItem="d1D-gX-PL2" secondAttribute="trailing" constant="8" id="SuN-lb-kXH"/>
+                <constraint firstItem="Ee9-KX-QZR" firstAttribute="top" secondItem="d1D-gX-PL2" secondAttribute="bottom" constant="4" id="Vvq-aQ-58g"/>
+                <constraint firstItem="d1D-gX-PL2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="XvJ-ic-ZEw"/>
+                <constraint firstItem="xWb-Zr-xJ8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hhQ-xP-cci"/>
+                <constraint firstAttribute="trailing" secondItem="imS-f4-dCg" secondAttribute="trailing" constant="8" id="i3R-ul-9nd"/>
+                <constraint firstAttribute="trailing" secondItem="Ee9-KX-QZR" secondAttribute="trailing" constant="8" id="pED-cB-lrw"/>
+                <constraint firstItem="d1D-gX-PL2" firstAttribute="top" secondItem="xWb-Zr-xJ8" secondAttribute="bottom" constant="9" id="xKY-my-N6a"/>
+            </constraints>
+            <size key="customSize" width="206" height="302"/>
+            <connections>
+                <outlet property="priceLabel" destination="imS-f4-dCg" id="dqe-UA-BBF"/>
+                <outlet property="prodNameLabel" destination="d1D-gX-PL2" id="RfS-la-g8Q"/>
+                <outlet property="tradeImageView" destination="xWb-Zr-xJ8" id="yEN-b6-9u5"/>
+                <outlet property="vipPriceLabel" destination="Ee9-KX-QZR" id="gjP-4I-V8u"/>
+            </connections>
+            <point key="canvasLocation" x="440" y="495"/>
+        </collectionViewCell>
+    </objects>
+</document>

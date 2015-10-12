@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCenterHeadPortraitTableViewCellId" rowHeight="130" id="KGk-i7-Jjw" customClass="UserCenterHeadPortraitTableViewCell" customModule="swiftShrb" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="129"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infoBack" translatesAutoresizingMaskIntoConstraints="NO" id="UfB-VX-FPh">
+                        <rect key="frame" x="0.0" y="0.0" width="356" height="129"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="默认女头像" translatesAutoresizingMaskIntoConstraints="NO" id="OLf-VW-yLc">
+                        <rect key="frame" x="22" y="12" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="rU3-WO-GY0"/>
+                            <constraint firstAttribute="width" constant="70" id="ukt-cr-PVS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通宝号:12365126616" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7X-kz-GjJ">
+                        <rect key="frame" x="22" y="93" width="161" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1q2-9T-GQP">
+                        <rect key="frame" x="107" y="31" width="175" height="33"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <state key="normal" title="您还没有登录,点击登录">
+                            <color key="titleColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="UfB-VX-FPh" secondAttribute="bottom" constant="-8" id="1OA-U2-o73"/>
+                    <constraint firstItem="UfB-VX-FPh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="2e4-fF-ih1"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UfB-VX-FPh" secondAttribute="trailing" constant="-8" id="3Mw-ev-2Qs"/>
+                    <constraint firstItem="1q2-9T-GQP" firstAttribute="leading" secondItem="OLf-VW-yLc" secondAttribute="trailing" constant="15" id="AE1-yF-VCs"/>
+                    <constraint firstItem="UfB-VX-FPh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="ELq-dP-6m9"/>
+                    <constraint firstAttribute="topMargin" secondItem="OLf-VW-yLc" secondAttribute="top" constant="-4" id="IHD-wc-8qG"/>
+                    <constraint firstItem="OLf-VW-yLc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="14" id="MvE-Pg-cyI"/>
+                    <constraint firstItem="i7X-kz-GjJ" firstAttribute="leading" secondItem="OLf-VW-yLc" secondAttribute="leading" id="SfG-qT-ca1"/>
+                    <constraint firstItem="i7X-kz-GjJ" firstAttribute="top" secondItem="OLf-VW-yLc" secondAttribute="bottom" constant="11" id="iBj-dO-36C"/>
+                    <constraint firstItem="1q2-9T-GQP" firstAttribute="centerY" secondItem="OLf-VW-yLc" secondAttribute="centerY" id="iKx-ia-MTh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="loginBtn" destination="1q2-9T-GQP" id="jh0-BY-WyO"/>
+                <outlet property="memberImageView" destination="OLf-VW-yLc" id="M8k-g2-BPf"/>
+                <outlet property="memberNumLabel" destination="i7X-kz-GjJ" id="IgA-0s-tIv"/>
+            </connections>
+            <point key="canvasLocation" x="306" y="387"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="infoBack" width="375" height="130"/>
+        <image name="默认女头像" width="80" height="80"/>
+    </resources>
+</document>

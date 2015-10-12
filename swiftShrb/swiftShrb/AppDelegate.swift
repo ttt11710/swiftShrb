@@ -12,23 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         UINavigationBar.appearance().barTintColor = shrbPink
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(),NSFontAttributeName:UIFont(name: "Arial", size: 20.0)!]
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(),NSFontAttributeName:font20!]
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UITabBar.appearance().tintColor = shrbPink
         UITableView.appearance().tintColor = shrbTableViewColor
         UITextField.appearance().tintColor = shrbTableViewColor
         UITextView.appearance().tintColor = shrbTableViewColor
         
-//        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: 0, vertical: -60), forBarMetrics:UIBarMetrics.Default)
+        
+        //        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
         
         return true
     }
-
+    
     func setupWithStatusBar(application: UIApplication) {
         
         // 设置状态栏高亮

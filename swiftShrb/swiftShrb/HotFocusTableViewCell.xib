@@ -2,33 +2,36 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HotFocusTableViewCellId" rowHeight="345" id="KGk-i7-Jjw" customClass="HotFocusTableViewCell" customModule="swiftShrb" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HotFocusTableViewCellId" rowHeight="517" id="KGk-i7-Jjw" customClass="HotFocusTableViewCell" customModule="swiftShrb" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="442" height="178"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="442" height="177"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dvn-4W-V6L">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktb-kO-Z9d">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="热点无图片" translatesAutoresizingMaskIntoConstraints="NO" id="Dvn-4W-V6L">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="Dvn-4W-V6L" secondAttribute="height" multiplier="8:5" id="6LI-xY-g7B"/>
+                            <constraint firstAttribute="width" secondItem="Dvn-4W-V6L" secondAttribute="height" multiplier="8:5" id="tqd-qw-KN5"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="6LI-xY-g7B"/>
+                                <exclude reference="tqd-qw-KN5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
-                                <include reference="6LI-xY-g7B"/>
+                                <include reference="tqd-qw-KN5"/>
                             </mask>
                         </variation>
                     </imageView>
@@ -39,43 +42,58 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="Dvn-4W-V6L" secondAttribute="trailing" constant="-8" id="B1A-aG-3LY"/>
-                    <constraint firstItem="6xj-Rm-JOW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="esq-Yn-um2"/>
-                    <constraint firstItem="Dvn-4W-V6L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="iha-65-cfj"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="6xj-Rm-JOW" secondAttribute="bottom" constant="16" id="j2Q-ha-kay"/>
-                    <constraint firstItem="Dvn-4W-V6L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="j4N-OX-HXA"/>
-                    <constraint firstItem="6xj-Rm-JOW" firstAttribute="top" secondItem="Dvn-4W-V6L" secondAttribute="bottom" constant="16" id="yWU-Ar-aPE"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="6xj-Rm-JOW" secondAttribute="trailing" constant="16" id="zQd-Kf-KgZ"/>
+                    <constraint firstItem="Dvn-4W-V6L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="6rm-5u-3KO"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ktb-kO-Z9d" secondAttribute="trailing" constant="-8" id="8jg-mf-nCX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="6xj-Rm-JOW" secondAttribute="bottom" constant="16" id="9tV-Pi-dFy"/>
+                    <constraint firstItem="ktb-kO-Z9d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="DZP-5d-bmu"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Dvn-4W-V6L" secondAttribute="trailing" constant="-8" id="Kmg-j3-Ndl"/>
+                    <constraint firstItem="ktb-kO-Z9d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="MxA-yg-UiD"/>
+                    <constraint firstItem="6xj-Rm-JOW" firstAttribute="top" secondItem="Dvn-4W-V6L" secondAttribute="bottom" constant="16" id="VmK-1S-Ixg"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6xj-Rm-JOW" secondAttribute="trailing" constant="8" id="ak7-MT-acI"/>
+                    <constraint firstItem="6xj-Rm-JOW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="mHG-TI-nyW"/>
+                    <constraint firstItem="Dvn-4W-V6L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="ojK-TE-Ca9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ktb-kO-Z9d" secondAttribute="bottom" id="rSG-RU-sCM"/>
                 </constraints>
                 <variation key="default">
                     <mask key="subviews">
+                        <exclude reference="ktb-kO-Z9d"/>
                         <exclude reference="Dvn-4W-V6L"/>
                         <exclude reference="6xj-Rm-JOW"/>
                     </mask>
                     <mask key="constraints">
-                        <exclude reference="esq-Yn-um2"/>
-                        <exclude reference="j2Q-ha-kay"/>
-                        <exclude reference="yWU-Ar-aPE"/>
-                        <exclude reference="zQd-Kf-KgZ"/>
-                        <exclude reference="B1A-aG-3LY"/>
-                        <exclude reference="iha-65-cfj"/>
-                        <exclude reference="j4N-OX-HXA"/>
+                        <exclude reference="6rm-5u-3KO"/>
+                        <exclude reference="Kmg-j3-Ndl"/>
+                        <exclude reference="ojK-TE-Ca9"/>
+                        <exclude reference="8jg-mf-nCX"/>
+                        <exclude reference="DZP-5d-bmu"/>
+                        <exclude reference="MxA-yg-UiD"/>
+                        <exclude reference="rSG-RU-sCM"/>
+                        <exclude reference="9tV-Pi-dFy"/>
+                        <exclude reference="VmK-1S-Ixg"/>
+                        <exclude reference="ak7-MT-acI"/>
+                        <exclude reference="mHG-TI-nyW"/>
                     </mask>
                 </variation>
                 <variation key="widthClass=compact">
                     <mask key="subviews">
+                        <include reference="ktb-kO-Z9d"/>
                         <include reference="Dvn-4W-V6L"/>
                         <include reference="6xj-Rm-JOW"/>
                     </mask>
                     <mask key="constraints">
-                        <include reference="esq-Yn-um2"/>
-                        <include reference="j2Q-ha-kay"/>
-                        <include reference="yWU-Ar-aPE"/>
-                        <include reference="zQd-Kf-KgZ"/>
-                        <include reference="B1A-aG-3LY"/>
-                        <include reference="iha-65-cfj"/>
-                        <include reference="j4N-OX-HXA"/>
+                        <include reference="6rm-5u-3KO"/>
+                        <include reference="Kmg-j3-Ndl"/>
+                        <include reference="ojK-TE-Ca9"/>
+                        <include reference="8jg-mf-nCX"/>
+                        <include reference="DZP-5d-bmu"/>
+                        <include reference="MxA-yg-UiD"/>
+                        <include reference="rSG-RU-sCM"/>
+                        <include reference="9tV-Pi-dFy"/>
+                        <include reference="VmK-1S-Ixg"/>
+                        <include reference="ak7-MT-acI"/>
+                        <include reference="mHG-TI-nyW"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
@@ -83,7 +101,10 @@
                 <outlet property="descriptionLabel" destination="6xj-Rm-JOW" id="Ngu-dE-zYG"/>
                 <outlet property="hotImageView" destination="Dvn-4W-V6L" id="Nvo-cm-9Qn"/>
             </connections>
-            <point key="canvasLocation" x="368" y="396.5"/>
+            <point key="canvasLocation" x="363" y="482"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="热点无图片" width="375" height="375"/>
+    </resources>
 </document>
