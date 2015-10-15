@@ -195,6 +195,13 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
         }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let loginViewController = LoginViewController()
+        loginViewController.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(loginViewController, animated: true)
+    }
+    
         
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

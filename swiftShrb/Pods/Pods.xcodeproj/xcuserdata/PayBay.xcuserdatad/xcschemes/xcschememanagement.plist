@@ -9,6 +9,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BFPaperButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>BFPaperTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DCAnimationKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,7 +39,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIColor+BFPaperColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,17 +62,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5F57FA475B2908BFDDB3ED839D5ECEB4</key>
+		<key>3773E6EA3A0786B0DCEE1C54D82FA0A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>711538795264D08E8EAEF638402A97B1</key>
+		<key>3DA374BB5346C86BB9E37D7D8A3F9705</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44F8B8E68E06A8EDBC9DE7B84BCABE18</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65EB674F5BA83DCC5DD33605CF3437EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>838400556E85888824B61130375885A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9666688CB41B38A9914616144C9C7A3E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9D428B2A7088537AAAA934F26DB4BFA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -53,6 +103,16 @@
 			<true/>
 		</dict>
 		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C85D880C21B4D4B3A18C46A33299313A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9B442ADC5A54025122E8076600082A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PriceGatherTableViewCellId" rowHeight="100" id="KGk-i7-Jjw" customClass="PriceGatherTableViewCell" customModule="swiftShrb" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总价：500RMB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dt2-H7-h6U">
+                        <rect key="frame" x="178" y="8" width="118" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="widthClass=compact" misplaced="YES">
+                            <rect key="frame" x="191" y="8" width="105" height="18"/>
+                        </variation>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkK-wd-nhg" customClass="TNCheckBoxGroup">
+                        <rect key="frame" x="176" y="58" width="120" height="24"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="KX2-fq-qiz"/>
+                            <constraint firstAttribute="width" constant="120" id="bJ6-8i-jf8"/>
+                            <constraint firstAttribute="width" constant="120" id="fot-ts-aPd"/>
+                            <constraint firstAttribute="height" constant="24" id="ife-xZ-814"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="k7V-dv-H3Y"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="m0Q-ZM-h5z"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fot-ts-aPd"/>
+                                <exclude reference="ife-xZ-814"/>
+                                <exclude reference="k7V-dv-H3Y"/>
+                                <exclude reference="m0Q-ZM-h5z"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact" misplaced="YES">
+                            <rect key="frame" x="176" y="55" width="120" height="24"/>
+                            <mask key="constraints">
+                                <include reference="fot-ts-aPd"/>
+                                <include reference="ife-xZ-814"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="会员价：350RMB" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LF0-lv-gYY">
+                        <rect key="frame" x="161" y="29" width="135" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="widthClass=compact" misplaced="YES">
+                            <rect key="frame" x="176" y="33" width="120" height="18"/>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LF0-lv-gYY" firstAttribute="top" secondItem="dt2-H7-h6U" secondAttribute="bottom" constant="4" id="0P9-pe-WdK"/>
+                    <constraint firstItem="dkK-wd-nhg" firstAttribute="top" secondItem="LF0-lv-gYY" secondAttribute="bottom" constant="4" id="74Q-gu-51x"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dkK-wd-nhg" secondAttribute="trailing" constant="16" id="Z2o-Cz-prH"/>
+                    <constraint firstItem="LF0-lv-gYY" firstAttribute="trailing" secondItem="dkK-wd-nhg" secondAttribute="trailing" id="ofP-BQ-R3R"/>
+                    <constraint firstItem="dt2-H7-h6U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="qMW-vc-8JQ"/>
+                    <constraint firstItem="dt2-H7-h6U" firstAttribute="trailing" secondItem="dkK-wd-nhg" secondAttribute="trailing" id="usU-gB-GgT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkCouponsView" destination="dkK-wd-nhg" id="rd9-d0-6hV"/>
+                <outlet property="memberTotalLabel" destination="LF0-lv-gYY" id="9vX-wU-KuG"/>
+                <outlet property="totalLabel" destination="dt2-H7-h6U" id="lVJ-Nu-8Mf"/>
+            </connections>
+            <point key="canvasLocation" x="403" y="524"/>
+        </tableViewCell>
+    </objects>
+</document>

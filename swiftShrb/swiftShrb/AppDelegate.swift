@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         UINavigationBar.appearance().barTintColor = shrbPink
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(),NSFontAttributeName:font20!]
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(),NSFontAttributeName:font20]
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UITabBar.appearance().tintColor = shrbPink
         UITableView.appearance().tintColor = shrbTableViewColor

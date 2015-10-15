@@ -12,9 +12,10 @@ import SwiftyJSON
 import SDWebImage
 
 
-class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,TQTableViewCellRemoveControllerDelegate {
     
     var tableView : UITableView!
+    var cellRemoveController : TQTableViewCellRemoveController!
     
     var merchModel = [MerchModel]()
     
@@ -22,22 +23,20 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
         super.viewDidLoad()
         
         self.title = "热点"
-        self.setTableView()
+        self.creatTableView()
         self.preferredStatusBarStyle()
         self.requestData()
         
     }
     
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.hidden = false
     }
-//
-//    override func viewWillDisappear(animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        self.tabBarController?.tabBar.hidden = true
-//    }
+
     
+    //http://121.40.222.162:8080/tongbao/merch/v1.0/getMerchList?&orderBy=updateTime&pageCount=20&pageNum=1&sort=desc&whereString=
     func requestData() {
         Alamofire.request(.GET, baseUrl + "/merch/v1.0/getMerchList?", parameters: ["pageNum":"1","pageCount":"20","orderBy":"updateTime","sort":"desc","whereString":""])
             
@@ -45,30 +44,37 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 
                 if error == nil {
                     let json  = JSON(data: data!)
-                    if json["code"].stringValue == "200" {
-                       // self.merchModel =  MerchModel.merchModel(json)
-                    }
                     
-                    switch json["code"].intValue
-                    {
-                    case 200:
-                        self.merchModel =  MerchModel.merchModel(json)
-                    default:
-                        break
-                    }
+                    self.merchModel = MerchModel.merchModel(RequestDataTool.processingData(json))
+                    
+//                    switch json["code"].intValue
+//                    {
+//                    case 200:
+//                        self.merchModel =  MerchModel.merchModel(json)
+//                    default:
+//                        break
+//                    }
+                }
+                else {
+                    SVProgressShow.showErrorWithStatus("请求失败!")
                 }
                 self.tableView.reloadData()
-        }
+                
+                }
 
     }
     
-    func setTableView() {
+    func creatTableView() {
         tableView = UITableView(frame: CGRectMake(0, 44+20, screenWidth, screenHeight-44-20 - 49))
         tableView.backgroundColor = shrbTableViewColor
         tableView.separatorStyle = .None
         tableView.delegate = self
         tableView.dataSource = self
         self.view.addSubview(tableView)
+        
+        
+        self.cellRemoveController = TQTableViewCellRemoveController.init(tableView: self.tableView)
+        self.cellRemoveController.delegate = self
         
     }
     
@@ -142,9 +148,27 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
             self.navigationController?.pushViewController(supermarketCollectController, animated: true)
             SVProgressShow.dismiss()
         })
-
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.alpha = 1
+    }
+    
+    func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.alpha = 0
+        cell.transform = CGAffineTransformMakeTranslation(0, 0)
+    }
+    
+    func didRemoveTableViewCellWithIndexPath(indexPath: NSIndexPath!) {
+        let deleteArr = self.merchModel[indexPath.row]
+        self.merchModel.removeAtIndex(indexPath.row)
         
+        self.tableView.beginUpdates()
+        self.tableView.deleteRowsAtIndexPaths([indexPath!],  withRowAnimation: UITableViewRowAnimation.Bottom)
+        self.tableView.endUpdates()
         
+        self.merchModel.insert(deleteArr, atIndex: self.merchModel.count)
+        self.tableView.reloadData()
         
     }
     
@@ -155,4 +179,23 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

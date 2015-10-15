@@ -17,10 +17,40 @@
 		DF0BAC1E1BB8CEB2008A8952 /* swiftShrbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC1D1BB8CEB2008A8952 /* swiftShrbTests.swift */; };
 		DF0BAC291BB8CEB2008A8952 /* swiftShrbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC281BB8CEB2008A8952 /* swiftShrbUITests.swift */; };
 		DF0BAC391BB8DAC7008A8952 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC381BB8DAC7008A8952 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
+		DF3832FE1BCF407300A84EC2 /* CardInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3832FD1BCF407300A84EC2 /* CardInfoModel.swift */; settings = {ASSET_TAGS = (); }; };
+		DF3833011BCF6D6400A84EC2 /* CardDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3832FF1BCF6D6400A84EC2 /* CardDetailTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		DF3833021BCF6D6400A84EC2 /* CardDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF3833001BCF6D6400A84EC2 /* CardDetailTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		DF3833041BCF6F9600A84EC2 /* CompleteVoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3833031BCF6F9600A84EC2 /* CompleteVoucherViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF3833071BCF8B5800A84EC2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3833061BCF8B5800A84EC2 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DF4FFD181BC8A36B00824999 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FFD171BC8A36B00824999 /* ProductViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DF4FFD1A1BC8A38500824999 /* ProductIsMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FFD191BC8A38500824999 /* ProductIsMemberViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DF850ADF1BBA61DC0055DCA7 /* MerchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF850ADE1BBA61DC0055DCA7 /* MerchModel.swift */; settings = {ASSET_TAGS = (); }; };
 		DF850AE11BBA8E1D0055DCA7 /* UserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DFC214C11BCDEC7E0039639C /* QRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214BC1BCDEC7E0039639C /* QRItem.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214C21BCDEC7E0039639C /* QRMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214BE1BCDEC7E0039639C /* QRMenu.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214C31BCDEC7E0039639C /* QRView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214C01BCDEC7E0039639C /* QRView.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214C91BCDEDCD0039639C /* SupermarketQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214C81BCDEDCD0039639C /* SupermarketQRViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DFC214CB1BCDEECC0039639C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC214CA1BCDEECC0039639C /* AssetsLibrary.framework */; };
+		DFC214CD1BCDEED70039639C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC214CC1BCDEED70039639C /* MobileCoreServices.framework */; };
+		DFC214CF1BCDEEDF0039639C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC214CE1BCDEEDF0039639C /* CoreLocation.framework */; };
+		DFC214D11BCE21CE0039639C /* UserDefaultsSaveInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214D01BCE21CE0039639C /* UserDefaultsSaveInfo.swift */; settings = {ASSET_TAGS = (); }; };
+		DFC214D61BCE26650039639C /* orderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214D41BCE26650039639C /* orderTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		DFC214D71BCE26650039639C /* orderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC214D51BCE26650039639C /* orderTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		DFC214D91BCE2DB90039639C /* SupermarketOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214D81BCE2DB90039639C /* SupermarketOrderViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DFC214DC1BCE37D00039639C /* PriceGatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214DA1BCE37D00039639C /* PriceGatherTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		DFC214DD1BCE37D00039639C /* PriceGatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC214DB1BCE37D00039639C /* PriceGatherTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		DFC214F31BCE38110039639C /* TNCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214E01BCE38110039639C /* TNCheckBox.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214F41BCE38110039639C /* TNCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214E21BCE38110039639C /* TNCheckBoxData.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214F51BCE38110039639C /* TNCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214E51BCE38110039639C /* TNCheckBoxGroup.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214F61BCE38110039639C /* TNCircularCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214E81BCE38110039639C /* TNCircularCheckBox.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214F71BCE38110039639C /* TNCircularCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214EA1BCE38110039639C /* TNCircularCheckBoxData.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214F81BCE38110039639C /* TNImageCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214EC1BCE38110039639C /* TNImageCheckbox.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214F91BCE38110039639C /* TNImageCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214EE1BCE38110039639C /* TNImageCheckBoxData.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214FA1BCE38110039639C /* TNRectangularCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214F01BCE38110039639C /* TNRectangularCheckBox.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214FB1BCE38110039639C /* TNRectangularCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214F21BCE38110039639C /* TNRectangularCheckBoxData.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214FE1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214FC1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		DFC214FF1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC214FD1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		DFC215011BCE4FFA0039639C /* SuperMarketChoosePayTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC215001BCE4FFA0039639C /* SuperMarketChoosePayTypeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DFC9608C1BCB44D900A28DC7 /* SVProgressShow.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC9608B1BCB44D900A28DC7 /* SVProgressShow.m */; settings = {ASSET_TAGS = (); }; };
 		DFD7774A1BBA3608008F4F34 /* HotFocusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD777481BBA3608008F4F34 /* HotFocusTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		DFD7774B1BBA3608008F4F34 /* HotFocusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD777491BBA3608008F4F34 /* HotFocusTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -33,6 +63,7 @@
 		DFF5EEF21BC65AF400B3E480 /* SupermarketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEF01BC65AF400B3E480 /* SupermarketCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		DFF5EEF31BC65AF400B3E480 /* SupermarketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF5EEF11BC65AF400B3E480 /* SupermarketCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		DFF5EEF61BC6624200B3E480 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEF51BC6624200B3E480 /* CollectionViewWaterfallLayout.swift */; settings = {ASSET_TAGS = (); }; };
+		DFFF6B4B1BCCA9C50087611D /* TQTableViewCellRemoveController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFF6B4A1BCCA9C50087611D /* TQTableViewCellRemoveController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,10 +102,54 @@
 		DF0BAC281BB8CEB2008A8952 /* swiftShrbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftShrbUITests.swift; sourceTree = "<group>"; };
 		DF0BAC2A1BB8CEB2008A8952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF0BAC381BB8DAC7008A8952 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		DF3832FD1BCF407300A84EC2 /* CardInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInfoModel.swift; sourceTree = "<group>"; };
+		DF3832FF1BCF6D6400A84EC2 /* CardDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailTableViewCell.swift; sourceTree = "<group>"; };
+		DF3833001BCF6D6400A84EC2 /* CardDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardDetailTableViewCell.xib; sourceTree = "<group>"; };
+		DF3833031BCF6F9600A84EC2 /* CompleteVoucherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteVoucherViewController.swift; sourceTree = "<group>"; };
+		DF3833061BCF8B5800A84EC2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DF4FFD171BC8A36B00824999 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		DF4FFD191BC8A38500824999 /* ProductIsMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductIsMemberViewController.swift; sourceTree = "<group>"; };
 		DF850ADE1BBA61DC0055DCA7 /* MerchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchModel.swift; sourceTree = "<group>"; };
 		DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterViewController.swift; sourceTree = "<group>"; };
+		DFC214BB1BCDEC7E0039639C /* QRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRItem.h; sourceTree = "<group>"; };
+		DFC214BC1BCDEC7E0039639C /* QRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRItem.m; sourceTree = "<group>"; };
+		DFC214BD1BCDEC7E0039639C /* QRMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRMenu.h; sourceTree = "<group>"; };
+		DFC214BE1BCDEC7E0039639C /* QRMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRMenu.m; sourceTree = "<group>"; };
+		DFC214BF1BCDEC7E0039639C /* QRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRView.h; sourceTree = "<group>"; };
+		DFC214C01BCDEC7E0039639C /* QRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRView.m; sourceTree = "<group>"; };
+		DFC214C81BCDEDCD0039639C /* SupermarketQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupermarketQRViewController.swift; sourceTree = "<group>"; };
+		DFC214CA1BCDEECC0039639C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		DFC214CC1BCDEED70039639C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		DFC214CE1BCDEEDF0039639C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DFC214D01BCE21CE0039639C /* UserDefaultsSaveInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsSaveInfo.swift; sourceTree = "<group>"; };
+		DFC214D41BCE26650039639C /* orderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orderTableViewCell.swift; sourceTree = "<group>"; };
+		DFC214D51BCE26650039639C /* orderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = orderTableViewCell.xib; sourceTree = "<group>"; };
+		DFC214D81BCE2DB90039639C /* SupermarketOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupermarketOrderViewController.swift; sourceTree = "<group>"; };
+		DFC214DA1BCE37D00039639C /* PriceGatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceGatherTableViewCell.swift; sourceTree = "<group>"; };
+		DFC214DB1BCE37D00039639C /* PriceGatherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceGatherTableViewCell.xib; sourceTree = "<group>"; };
+		DFC214DF1BCE38110039639C /* TNCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCheckBox.h; sourceTree = "<group>"; };
+		DFC214E01BCE38110039639C /* TNCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCheckBox.m; sourceTree = "<group>"; };
+		DFC214E11BCE38110039639C /* TNCheckBoxData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCheckBoxData.h; sourceTree = "<group>"; };
+		DFC214E21BCE38110039639C /* TNCheckBoxData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCheckBoxData.m; sourceTree = "<group>"; };
+		DFC214E31BCE38110039639C /* TNCheckBoxDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCheckBoxDelegate.h; sourceTree = "<group>"; };
+		DFC214E41BCE38110039639C /* TNCheckBoxGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCheckBoxGroup.h; sourceTree = "<group>"; };
+		DFC214E51BCE38110039639C /* TNCheckBoxGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCheckBoxGroup.m; sourceTree = "<group>"; };
+		DFC214E61BCE38110039639C /* TNCheckBoxProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCheckBoxProtocol.h; sourceTree = "<group>"; };
+		DFC214E71BCE38110039639C /* TNCircularCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCircularCheckBox.h; sourceTree = "<group>"; };
+		DFC214E81BCE38110039639C /* TNCircularCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCircularCheckBox.m; sourceTree = "<group>"; };
+		DFC214E91BCE38110039639C /* TNCircularCheckBoxData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCircularCheckBoxData.h; sourceTree = "<group>"; };
+		DFC214EA1BCE38110039639C /* TNCircularCheckBoxData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCircularCheckBoxData.m; sourceTree = "<group>"; };
+		DFC214EB1BCE38110039639C /* TNImageCheckbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNImageCheckbox.h; sourceTree = "<group>"; };
+		DFC214EC1BCE38110039639C /* TNImageCheckbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNImageCheckbox.m; sourceTree = "<group>"; };
+		DFC214ED1BCE38110039639C /* TNImageCheckBoxData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNImageCheckBoxData.h; sourceTree = "<group>"; };
+		DFC214EE1BCE38110039639C /* TNImageCheckBoxData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNImageCheckBoxData.m; sourceTree = "<group>"; };
+		DFC214EF1BCE38110039639C /* TNRectangularCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNRectangularCheckBox.h; sourceTree = "<group>"; };
+		DFC214F01BCE38110039639C /* TNRectangularCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNRectangularCheckBox.m; sourceTree = "<group>"; };
+		DFC214F11BCE38110039639C /* TNRectangularCheckBoxData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNRectangularCheckBoxData.h; sourceTree = "<group>"; };
+		DFC214F21BCE38110039639C /* TNRectangularCheckBoxData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNRectangularCheckBoxData.m; sourceTree = "<group>"; };
+		DFC214FC1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupermarketChoosePayTableViewCell.swift; sourceTree = "<group>"; };
+		DFC214FD1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SupermarketChoosePayTableViewCell.xib; sourceTree = "<group>"; };
+		DFC215001BCE4FFA0039639C /* SuperMarketChoosePayTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperMarketChoosePayTypeViewController.swift; sourceTree = "<group>"; };
 		DFC960891BCB44D800A28DC7 /* swiftShrb-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swiftShrb-Bridging-Header.h"; sourceTree = "<group>"; };
 		DFC9608A1BCB44D900A28DC7 /* SVProgressShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressShow.h; sourceTree = "<group>"; };
 		DFC9608B1BCB44D900A28DC7 /* SVProgressShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressShow.m; sourceTree = "<group>"; };
@@ -89,6 +164,8 @@
 		DFF5EEF01BC65AF400B3E480 /* SupermarketCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupermarketCollectionViewCell.swift; sourceTree = "<group>"; };
 		DFF5EEF11BC65AF400B3E480 /* SupermarketCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SupermarketCollectionViewCell.xib; sourceTree = "<group>"; };
 		DFF5EEF51BC6624200B3E480 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
+		DFFF6B491BCCA9C50087611D /* TQTableViewCellRemoveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTableViewCellRemoveController.h; sourceTree = "<group>"; };
+		DFFF6B4A1BCCA9C50087611D /* TQTableViewCellRemoveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTableViewCellRemoveController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +173,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC214CF1BCDEEDF0039639C /* CoreLocation.framework in Frameworks */,
+				DFC214CD1BCDEED70039639C /* MobileCoreServices.framework in Frameworks */,
+				DFC214CB1BCDEECC0039639C /* AssetsLibrary.framework in Frameworks */,
 				904B1AC6AEA23E4C3AD70598 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +209,9 @@
 		41DAC355FC7E3990DC22E670 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DFC214CE1BCDEEDF0039639C /* CoreLocation.framework */,
+				DFC214CC1BCDEED70039639C /* MobileCoreServices.framework */,
+				DFC214CA1BCDEECC0039639C /* AssetsLibrary.framework */,
 				575B137DE54A2C88C9805997 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -164,6 +247,7 @@
 				DF0BAC061BB8CEB2008A8952 /* AppDelegate.swift */,
 				DFF5EEE91BC615B600B3E480 /* Common */,
 				DFF5EEF41BC6623400B3E480 /* Lib */,
+				DF3833051BCF8B1800A84EC2 /* login */,
 				DFD777381BBA3286008F4F34 /* main */,
 				DFD7773A1BBA32A0008F4F34 /* card */,
 				DFD777411BBA3412008F4F34 /* me */,
@@ -192,6 +276,80 @@
 			path = swiftShrbUITests;
 			sourceTree = "<group>";
 		};
+		DF3833051BCF8B1800A84EC2 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				DF3833061BCF8B5800A84EC2 /* LoginViewController.swift */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		DFC214BA1BCDEC7E0039639C /* QRView */ = {
+			isa = PBXGroup;
+			children = (
+				DFC214BB1BCDEC7E0039639C /* QRItem.h */,
+				DFC214BC1BCDEC7E0039639C /* QRItem.m */,
+				DFC214BD1BCDEC7E0039639C /* QRMenu.h */,
+				DFC214BE1BCDEC7E0039639C /* QRMenu.m */,
+				DFC214BF1BCDEC7E0039639C /* QRView.h */,
+				DFC214C01BCDEC7E0039639C /* QRView.m */,
+			);
+			path = QRView;
+			sourceTree = "<group>";
+		};
+		DFC214D21BCE26100039639C /* supermarket */ = {
+			isa = PBXGroup;
+			children = (
+				DFF5EEEE1BC65A6D00B3E480 /* SupermarketCollectController.swift */,
+				DF4FFD171BC8A36B00824999 /* ProductViewController.swift */,
+				DF4FFD191BC8A38500824999 /* ProductIsMemberViewController.swift */,
+				DFC214C81BCDEDCD0039639C /* SupermarketQRViewController.swift */,
+				DFC214D81BCE2DB90039639C /* SupermarketOrderViewController.swift */,
+				DFC215001BCE4FFA0039639C /* SuperMarketChoosePayTypeViewController.swift */,
+			);
+			name = supermarket;
+			sourceTree = "<group>";
+		};
+		DFC214D31BCE262F0039639C /* supermarket */ = {
+			isa = PBXGroup;
+			children = (
+				DFC214D41BCE26650039639C /* orderTableViewCell.swift */,
+				DFC214D51BCE26650039639C /* orderTableViewCell.xib */,
+				DFC214DA1BCE37D00039639C /* PriceGatherTableViewCell.swift */,
+				DFC214DB1BCE37D00039639C /* PriceGatherTableViewCell.xib */,
+				DFC214FC1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.swift */,
+				DFC214FD1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.xib */,
+			);
+			name = supermarket;
+			sourceTree = "<group>";
+		};
+		DFC214DE1BCE38110039639C /* TNCheckBoxGroup */ = {
+			isa = PBXGroup;
+			children = (
+				DFC214DF1BCE38110039639C /* TNCheckBox.h */,
+				DFC214E01BCE38110039639C /* TNCheckBox.m */,
+				DFC214E11BCE38110039639C /* TNCheckBoxData.h */,
+				DFC214E21BCE38110039639C /* TNCheckBoxData.m */,
+				DFC214E31BCE38110039639C /* TNCheckBoxDelegate.h */,
+				DFC214E41BCE38110039639C /* TNCheckBoxGroup.h */,
+				DFC214E51BCE38110039639C /* TNCheckBoxGroup.m */,
+				DFC214E61BCE38110039639C /* TNCheckBoxProtocol.h */,
+				DFC214E71BCE38110039639C /* TNCircularCheckBox.h */,
+				DFC214E81BCE38110039639C /* TNCircularCheckBox.m */,
+				DFC214E91BCE38110039639C /* TNCircularCheckBoxData.h */,
+				DFC214EA1BCE38110039639C /* TNCircularCheckBoxData.m */,
+				DFC214EB1BCE38110039639C /* TNImageCheckbox.h */,
+				DFC214EC1BCE38110039639C /* TNImageCheckbox.m */,
+				DFC214ED1BCE38110039639C /* TNImageCheckBoxData.h */,
+				DFC214EE1BCE38110039639C /* TNImageCheckBoxData.m */,
+				DFC214EF1BCE38110039639C /* TNRectangularCheckBox.h */,
+				DFC214F01BCE38110039639C /* TNRectangularCheckBox.m */,
+				DFC214F11BCE38110039639C /* TNRectangularCheckBoxData.h */,
+				DFC214F21BCE38110039639C /* TNRectangularCheckBoxData.m */,
+			);
+			path = TNCheckBoxGroup;
+			sourceTree = "<group>";
+		};
 		DFD777381BBA3286008F4F34 /* main */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,9 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				DF0BAC081BB8CEB2008A8952 /* HotFocusViewController.swift */,
-				DFF5EEEE1BC65A6D00B3E480 /* SupermarketCollectController.swift */,
-				DF4FFD171BC8A36B00824999 /* ProductViewController.swift */,
-				DF4FFD191BC8A38500824999 /* ProductIsMemberViewController.swift */,
+				DFC214D21BCE26100039639C /* supermarket */,
 			);
 			name = control;
 			sourceTree = "<group>";
@@ -227,6 +383,8 @@
 			isa = PBXGroup;
 			children = (
 				DF850ADE1BBA61DC0055DCA7 /* MerchModel.swift */,
+				DFE530BD1BC79050002CCAA0 /* ProductListModel.swift */,
+				DF3832FD1BCF407300A84EC2 /* CardInfoModel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -236,6 +394,7 @@
 			children = (
 				DFD777481BBA3608008F4F34 /* HotFocusTableViewCell.swift */,
 				DFD777491BBA3608008F4F34 /* HotFocusTableViewCell.xib */,
+				DFC214D31BCE262F0039639C /* supermarket */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -244,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				DF0BAC0A1BB8CEB2008A8952 /* CardAndCouponsViewController.swift */,
+				DF3833031BCF6F9600A84EC2 /* CompleteVoucherViewController.swift */,
 			);
 			name = control;
 			sourceTree = "<group>";
@@ -279,7 +439,6 @@
 		DFD777431BBA3421008F4F34 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				DFE530BD1BC79050002CCAA0 /* ProductListModel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -295,6 +454,8 @@
 		DFD777451BBA343D008F4F34 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				DF3832FF1BCF6D6400A84EC2 /* CardDetailTableViewCell.swift */,
+				DF3833001BCF6D6400A84EC2 /* CardDetailTableViewCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -303,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				DFF5EEEA1BC615D700B3E480 /* RequestDataTool.swift */,
+				DFC214D01BCE21CE0039639C /* UserDefaultsSaveInfo.swift */,
 				DFF5EEEC1BC6332A00B3E480 /* TBUser.swift */,
 				DFC9608A1BCB44D900A28DC7 /* SVProgressShow.h */,
 				DFC9608B1BCB44D900A28DC7 /* SVProgressShow.m */,
@@ -314,9 +476,21 @@
 		DFF5EEF41BC6623400B3E480 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				DFC214DE1BCE38110039639C /* TNCheckBoxGroup */,
+				DFC214BA1BCDEC7E0039639C /* QRView */,
+				DFFF6B481BCCA9C40087611D /* TQRemoveController */,
 				DFF5EEF51BC6624200B3E480 /* CollectionViewWaterfallLayout.swift */,
 			);
 			name = Lib;
+			sourceTree = "<group>";
+		};
+		DFFF6B481BCCA9C40087611D /* TQRemoveController */ = {
+			isa = PBXGroup;
+			children = (
+				DFFF6B491BCCA9C50087611D /* TQTableViewCellRemoveController.h */,
+				DFFF6B4A1BCCA9C50087611D /* TQTableViewCellRemoveController.m */,
+			);
+			path = TQRemoveController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,9 +602,13 @@
 			files = (
 				DFF5EEF31BC65AF400B3E480 /* SupermarketCollectionViewCell.xib in Resources */,
 				DFF5EEE81BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.xib in Resources */,
+				DF3833021BCF6D6400A84EC2 /* CardDetailTableViewCell.xib in Resources */,
 				DFD7774B1BBA3608008F4F34 /* HotFocusTableViewCell.xib in Resources */,
+				DFC214FF1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.xib in Resources */,
 				DF0BAC131BB8CEB2008A8952 /* LaunchScreen.storyboard in Resources */,
+				DFC214D71BCE26650039639C /* orderTableViewCell.xib in Resources */,
 				DF0BAC101BB8CEB2008A8952 /* Assets.xcassets in Resources */,
+				DFC214DD1BCE37D00039639C /* PriceGatherTableViewCell.xib in Resources */,
 				DF0BAC0E1BB8CEB2008A8952 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,22 +683,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF5EEEB1BC615D700B3E480 /* RequestDataTool.swift in Sources */,
+				DFC214D91BCE2DB90039639C /* SupermarketOrderViewController.swift in Sources */,
+				DF3833071BCF8B5800A84EC2 /* LoginViewController.swift in Sources */,
 				DFE530BE1BC79050002CCAA0 /* ProductListModel.swift in Sources */,
+				DFC214FA1BCE38110039639C /* TNRectangularCheckBox.m in Sources */,
+				DFC214F51BCE38110039639C /* TNCheckBoxGroup.m in Sources */,
+				DFC214D61BCE26650039639C /* orderTableViewCell.swift in Sources */,
+				DFFF6B4B1BCCA9C50087611D /* TQTableViewCellRemoveController.m in Sources */,
 				DFC9608C1BCB44D900A28DC7 /* SVProgressShow.m in Sources */,
 				DF4FFD1A1BC8A38500824999 /* ProductIsMemberViewController.swift in Sources */,
 				DF0BAC0B1BB8CEB2008A8952 /* CardAndCouponsViewController.swift in Sources */,
+				DFC214F91BCE38110039639C /* TNImageCheckBoxData.m in Sources */,
+				DFC214C11BCDEC7E0039639C /* QRItem.m in Sources */,
+				DFC214C21BCDEC7E0039639C /* QRMenu.m in Sources */,
+				DFC214F41BCE38110039639C /* TNCheckBoxData.m in Sources */,
+				DFC214D11BCE21CE0039639C /* UserDefaultsSaveInfo.swift in Sources */,
 				DF4FFD181BC8A36B00824999 /* ProductViewController.swift in Sources */,
+				DFC214FB1BCE38110039639C /* TNRectangularCheckBoxData.m in Sources */,
+				DFC214DC1BCE37D00039639C /* PriceGatherTableViewCell.swift in Sources */,
 				DFF5EEED1BC6332A00B3E480 /* TBUser.swift in Sources */,
 				DFF5EEEF1BC65A6D00B3E480 /* SupermarketCollectController.swift in Sources */,
 				DFF5EEF21BC65AF400B3E480 /* SupermarketCollectionViewCell.swift in Sources */,
+				DFC214F31BCE38110039639C /* TNCheckBox.m in Sources */,
 				DFF5EEF61BC6624200B3E480 /* CollectionViewWaterfallLayout.swift in Sources */,
 				DF850ADF1BBA61DC0055DCA7 /* MerchModel.swift in Sources */,
 				DF0BAC391BB8DAC7008A8952 /* Config.swift in Sources */,
+				DFC215011BCE4FFA0039639C /* SuperMarketChoosePayTypeViewController.swift in Sources */,
 				DF850AE11BBA8E1D0055DCA7 /* UserCenterViewController.swift in Sources */,
 				DFD7774A1BBA3608008F4F34 /* HotFocusTableViewCell.swift in Sources */,
+				DFC214F81BCE38110039639C /* TNImageCheckbox.m in Sources */,
+				DFC214C91BCDEDCD0039639C /* SupermarketQRViewController.swift in Sources */,
+				DFC214F71BCE38110039639C /* TNCircularCheckBoxData.m in Sources */,
+				DFC214C31BCDEC7E0039639C /* QRView.m in Sources */,
+				DFC214FE1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.swift in Sources */,
+				DF3832FE1BCF407300A84EC2 /* CardInfoModel.swift in Sources */,
+				DF3833041BCF6F9600A84EC2 /* CompleteVoucherViewController.swift in Sources */,
 				DF0BAC071BB8CEB2008A8952 /* AppDelegate.swift in Sources */,
 				DFF5EEE71BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.swift in Sources */,
 				DF0BAC091BB8CEB2008A8952 /* HotFocusViewController.swift in Sources */,
+				DFC214F61BCE38110039639C /* TNCircularCheckBox.m in Sources */,
+				DF3833011BCF6D6400A84EC2 /* CardDetailTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

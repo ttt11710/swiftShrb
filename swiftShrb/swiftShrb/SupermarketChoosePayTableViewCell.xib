@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SupermarketChoosePayTableViewCellId" rowHeight="252" id="KGk-i7-Jjw" customClass="SupermarketChoosePayTableViewCell" customModule="swiftShrb" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hb-ER-uxM" customClass="TNCheckBoxGroup">
+                        <rect key="frame" x="186" y="18" width="120" height="24"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="0Wu-So-MIx"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="2mR-Qk-OJh"/>
+                            <constraint firstAttribute="width" constant="120" id="BHM-Gs-UIv"/>
+                            <constraint firstAttribute="height" constant="24" id="Bgn-nZ-WXH"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="C7t-hI-G2i"/>
+                            <constraint firstAttribute="height" constant="24" id="NSB-59-l9E"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="RYQ-cU-RBe"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="wbk-aZ-8oC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2mR-Qk-OJh"/>
+                                <exclude reference="BHM-Gs-UIv"/>
+                                <exclude reference="C7t-hI-G2i"/>
+                                <exclude reference="NSB-59-l9E"/>
+                                <exclude reference="RYQ-cU-RBe"/>
+                                <exclude reference="wbk-aZ-8oC"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="2mR-Qk-OJh"/>
+                                <include reference="BHM-Gs-UIv"/>
+                                <include reference="NSB-59-l9E"/>
+                                <exclude reference="RYQ-cU-RBe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择支付方式" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePM-DH-ISP">
+                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7x5-wf-cMJ">
+                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                        <state key="normal" title="会员卡">
+                            <color key="titleColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="payLabelBtnPresed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gC9-jW-WWb"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vuz-LS-Ol3" userLabel="支付宝Button">
+                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="2R0-Mu-hwQ"/>
+                            <constraint firstAttribute="width" constant="25" id="r5n-wR-blN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2R0-Mu-hwQ"/>
+                                <exclude reference="r5n-wR-blN"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="2R0-Mu-hwQ"/>
+                                <include reference="r5n-wR-blN"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <action selector="payBtnPresed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3Yf-Qa-6zw"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avb-EU-aAd">
+                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                        <state key="normal" title="支付宝">
+                            <color key="titleColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="payLabelBtnPresed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xoN-2l-9lb"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufM-B3-zCa" userLabel="银联Button">
+                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="C6C-hm-UL3"/>
+                            <constraint firstAttribute="height" constant="25" id="YEg-z4-oVW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="C6C-hm-UL3"/>
+                                <exclude reference="YEg-z4-oVW"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="C6C-hm-UL3"/>
+                                <include reference="YEg-z4-oVW"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <action selector="payBtnPresed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SD0-JY-Kik"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwZ-mh-l4s" userLabel="会员卡Button">
+                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="WAM-x6-C1Q"/>
+                            <constraint firstAttribute="height" constant="25" id="jF2-85-IaO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WAM-x6-C1Q"/>
+                                <exclude reference="jF2-85-IaO"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="WAM-x6-C1Q"/>
+                                <include reference="jF2-85-IaO"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <action selector="payBtnPresed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nHB-Qf-68b"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbn-iM-y0t" userLabel="银联">
+                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                        <state key="normal" title="银联">
+                            <color key="titleColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="payLabelBtnPresed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8We-uh-elX"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IwZ-mh-l4s" firstAttribute="top" secondItem="ePM-DH-ISP" secondAttribute="bottom" constant="8" id="0dT-Fu-Txj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="1hb-ER-uxM" secondAttribute="trailing" constant="6" id="20r-ah-XzM"/>
+                    <constraint firstItem="IwZ-mh-l4s" firstAttribute="leading" secondItem="ePM-DH-ISP" secondAttribute="leading" id="9Y3-V2-Bgl"/>
+                    <constraint firstItem="1hb-ER-uxM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="9nE-uE-3p3"/>
+                    <constraint firstItem="Vuz-LS-Ol3" firstAttribute="leading" secondItem="ePM-DH-ISP" secondAttribute="leading" id="B1x-aQ-LTm"/>
+                    <constraint firstItem="qbn-iM-y0t" firstAttribute="centerY" secondItem="ufM-B3-zCa" secondAttribute="centerY" id="B4T-4Z-IL3"/>
+                    <constraint firstItem="ufM-B3-zCa" firstAttribute="leading" secondItem="ePM-DH-ISP" secondAttribute="leading" id="BvO-7e-4cz"/>
+                    <constraint firstItem="qbn-iM-y0t" firstAttribute="leading" secondItem="ufM-B3-zCa" secondAttribute="trailing" constant="8" id="NIJ-iJ-orS"/>
+                    <constraint firstItem="avb-EU-aAd" firstAttribute="leading" secondItem="Vuz-LS-Ol3" secondAttribute="trailing" constant="8" id="OlA-U4-Dsp"/>
+                    <constraint firstItem="ePM-DH-ISP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="VkX-g9-x1n"/>
+                    <constraint firstItem="ePM-DH-ISP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="90" id="Xtw-oz-KkS"/>
+                    <constraint firstItem="avb-EU-aAd" firstAttribute="centerY" secondItem="Vuz-LS-Ol3" secondAttribute="centerY" id="ZEn-rr-6Ie"/>
+                    <constraint firstItem="ufM-B3-zCa" firstAttribute="top" secondItem="Vuz-LS-Ol3" secondAttribute="bottom" constant="8" id="cmI-wy-fOt"/>
+                    <constraint firstItem="7x5-wf-cMJ" firstAttribute="leading" secondItem="IwZ-mh-l4s" secondAttribute="trailing" constant="8" id="eph-A5-GYi"/>
+                    <constraint firstItem="7x5-wf-cMJ" firstAttribute="centerY" secondItem="IwZ-mh-l4s" secondAttribute="centerY" id="qLg-az-R3n"/>
+                    <constraint firstItem="Vuz-LS-Ol3" firstAttribute="top" secondItem="IwZ-mh-l4s" secondAttribute="bottom" constant="8" id="sAv-95-2a5"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="ePM-DH-ISP"/>
+                        <exclude reference="7x5-wf-cMJ"/>
+                        <exclude reference="Vuz-LS-Ol3"/>
+                        <exclude reference="avb-EU-aAd"/>
+                        <exclude reference="ufM-B3-zCa"/>
+                        <exclude reference="IwZ-mh-l4s"/>
+                        <exclude reference="qbn-iM-y0t"/>
+                    </mask>
+                    <mask key="constraints">
+                        <exclude reference="VkX-g9-x1n"/>
+                        <exclude reference="Xtw-oz-KkS"/>
+                        <exclude reference="eph-A5-GYi"/>
+                        <exclude reference="qLg-az-R3n"/>
+                        <exclude reference="0dT-Fu-Txj"/>
+                        <exclude reference="9Y3-V2-Bgl"/>
+                        <exclude reference="B1x-aQ-LTm"/>
+                        <exclude reference="sAv-95-2a5"/>
+                        <exclude reference="OlA-U4-Dsp"/>
+                        <exclude reference="ZEn-rr-6Ie"/>
+                        <exclude reference="B4T-4Z-IL3"/>
+                        <exclude reference="NIJ-iJ-orS"/>
+                        <exclude reference="BvO-7e-4cz"/>
+                        <exclude reference="cmI-wy-fOt"/>
+                    </mask>
+                </variation>
+                <variation key="widthClass=compact">
+                    <mask key="subviews">
+                        <include reference="ePM-DH-ISP"/>
+                        <include reference="7x5-wf-cMJ"/>
+                        <include reference="Vuz-LS-Ol3"/>
+                        <include reference="avb-EU-aAd"/>
+                        <include reference="ufM-B3-zCa"/>
+                        <include reference="IwZ-mh-l4s"/>
+                        <include reference="qbn-iM-y0t"/>
+                    </mask>
+                    <mask key="constraints">
+                        <include reference="VkX-g9-x1n"/>
+                        <include reference="Xtw-oz-KkS"/>
+                        <include reference="eph-A5-GYi"/>
+                        <include reference="qLg-az-R3n"/>
+                        <include reference="0dT-Fu-Txj"/>
+                        <include reference="9Y3-V2-Bgl"/>
+                        <include reference="B1x-aQ-LTm"/>
+                        <include reference="sAv-95-2a5"/>
+                        <include reference="OlA-U4-Dsp"/>
+                        <include reference="ZEn-rr-6Ie"/>
+                        <include reference="B4T-4Z-IL3"/>
+                        <include reference="NIJ-iJ-orS"/>
+                        <include reference="BvO-7e-4cz"/>
+                        <include reference="cmI-wy-fOt"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="alipayBtn" destination="Vuz-LS-Ol3" id="hfm-2W-Aai"/>
+                <outlet property="alipayLabelBtn" destination="avb-EU-aAd" id="TKs-wO-XOH"/>
+                <outlet property="internetbankBtn" destination="ufM-B3-zCa" id="vQZ-WN-vnx"/>
+                <outlet property="internetbankLabelBtn" destination="qbn-iM-y0t" id="aXc-RK-Gw2"/>
+                <outlet property="memberBtn" destination="IwZ-mh-l4s" id="98s-EK-tBM"/>
+                <outlet property="memberLabelBtn" destination="7x5-wf-cMJ" id="e0F-i0-bvG"/>
+                <outlet property="payViewCheckCouponsView" destination="1hb-ER-uxM" id="L1U-qF-twP"/>
+            </connections>
+            <point key="canvasLocation" x="312" y="450"/>
+        </tableViewCell>
+    </objects>
+</document>

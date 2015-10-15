@@ -53,13 +53,25 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods/Alamofire.framework'
+  install_framework 'Pods/BFPaperButton.framework'
+  install_framework 'Pods/BFPaperTabBarController.framework'
+  install_framework 'Pods/DCAnimationKit.framework'
   install_framework 'Pods/SDWebImage.framework'
   install_framework 'Pods/SVProgressHUD.framework'
+  install_framework 'Pods/SVPullToRefresh.framework'
   install_framework 'Pods/SwiftyJSON.framework'
+  install_framework 'Pods/UIColor_BFPaperColors.framework'
+  install_framework 'Pods/pop.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods/Alamofire.framework'
+  install_framework 'Pods/BFPaperButton.framework'
+  install_framework 'Pods/BFPaperTabBarController.framework'
+  install_framework 'Pods/DCAnimationKit.framework'
   install_framework 'Pods/SDWebImage.framework'
   install_framework 'Pods/SVProgressHUD.framework'
+  install_framework 'Pods/SVPullToRefresh.framework'
   install_framework 'Pods/SwiftyJSON.framework'
+  install_framework 'Pods/UIColor_BFPaperColors.framework'
+  install_framework 'Pods/pop.framework'
 fi

@@ -5,3 +5,6 @@
 
 
 #import "SVProgressShow.h"
+#import "TQTableViewCellRemoveController.h"
+#import "QRView.h"
+#import "TNCheckBoxGroup.h"
