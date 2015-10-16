@@ -15,6 +15,8 @@ class UserCenterHeadPortraitTableViewCell: UITableViewCell {
     @IBOutlet weak var loginBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.loginBtn.userInteractionEnabled = false
         // Initialization code
     }
 

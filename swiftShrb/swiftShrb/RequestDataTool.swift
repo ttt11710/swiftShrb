@@ -12,13 +12,13 @@ import SwiftyJSON
 
 class RequestDataTool: NSObject {
     
-    class func processingData(json : JSON) ->JSON {
+    class func processingData(json : JSON ) ->JSON {
         
         switch json["code"].intValue
         {
         case 200:
             return json
-        case 404,503:
+        case 404,500,501,502,503:
             SVProgressShow.showErrorWithStatus(json["msg"].stringValue ?? "加载失败")
             return nil
         default:

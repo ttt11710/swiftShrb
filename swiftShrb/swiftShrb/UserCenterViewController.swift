@@ -25,8 +25,8 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setTableView()
-        self.requestLoginData()
+        self.creatTableView()
+        
 
         self.title = "我的"
         // Do any additional setup after loading the view.
@@ -35,45 +35,12 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.hidden = false
-    }
-
-    
-    func requestLoginData() {
-        
-        
-        Alamofire.request(.POST, baseUrl + "/user/v1.0/login?", parameters: ["phone":"18267856139","password":"1234567"])
-            
-            .response { request, response, data, error in
-                
-                if error == nil {
-                    let json  = JSON(data: data!)
-                    if json["code"].stringValue == "200" {
-                        // self.merchModel =  MerchModel.merchModel(json)
-                    }
-                    
-                    switch json["code"].intValue
-                    {
-                    case 200:
-                        CurrentUser.user = TBUser(json: json)
-                        print("111111111user = \(CurrentUser.user)")
-                        print("2222222222 userId = \(CurrentUser.user!.userId)")
-                        print("3333333333 userName = \(CurrentUser.user!.userName)")
-                        print("44444444444 token = \(CurrentUser.user!.token)")
-                        print("555555555555 imgUrl = \(CurrentUser.user!.imgUrl)")
-                        
-                        self.requestData()
-                        
-                    default:
-                        break
-                    }
-                }
-                self.tableView.reloadData()
-        }
+        self.requestData()
     }
 
     func requestData() {
         
-        Alamofire.request(.POST, baseUrl + "/user/v1.0/info?", parameters: ["token":CurrentUser.user?.token == nil ? "" : CurrentUser.user!.token,"userId":CurrentUser.user!.userId])
+        Alamofire.request(.POST, baseUrl + "/user/v1.0/info?", parameters: ["token":CurrentUser.user?.token == nil ? "" : CurrentUser.user!.token,"userId":CurrentUser.user?.userId == nil ? "" : CurrentUser.user!.userId])
             
             .response { request, response, data, error in
                 
@@ -88,6 +55,8 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
                     case 200:
                         self.memberImageViewUrl = CurrentUser.user!.imgUrl
                         self.memberNumLabelText = CurrentUser.user!.userId
+                    case 404:
+                        CurrentUser.user = nil
                     default:
                         break
                     }
@@ -97,7 +66,7 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
         
     }
     
-    func setTableView() {
+    func creatTableView() {
         tableView = UITableView(frame: CGRectMake(0, 44+20, screenWidth, screenHeight-44-20 - 49))
         tableView.delegate = self
         tableView.dataSource = self
@@ -125,7 +94,7 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
             let cell = tableView.dequeueReusableCellWithIdentifier("UserCenterHeadPortraitTableViewCellId", forIndexPath: indexPath) as! UserCenterHeadPortraitTableViewCell
             
             cell.selectionStyle = UITableViewCellSelectionStyle.None
-            if self.memberNumLabelText.isEmpty
+            if CurrentUser.user == nil
             {
                 cell.memberNumLabel.hidden = true
                 cell.loginBtn.hidden = false
@@ -135,8 +104,7 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
                 cell.loginBtn.hidden = true
             }
             cell.memberNumLabel.text = self.memberNumLabelText
-            cell.memberImageView.image = UIImage(named: "默认女头像")
-            
+            cell.memberImageView.sd_setImageWithURL(NSURL(string: self.memberImageViewUrl), placeholderImage:UIImage(named: "默认女头像"))
             return cell
          case 1:
             tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cellId")
@@ -197,9 +165,19 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let loginViewController = LoginViewController()
-        loginViewController.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(loginViewController, animated: true)
+        switch indexPath.section {
+        case 0:
+            let loginViewController = LoginViewController()
+            loginViewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(loginViewController, animated: true)
+        case 3:
+            let settingViewController = SettingViewController()
+            settingViewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(settingViewController, animated: true)
+        default:
+            break
+        }
+        
     }
     
         

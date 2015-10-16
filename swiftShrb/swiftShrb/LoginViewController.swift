@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class LoginViewController: UIViewController,UITextFieldDelegate {
     
@@ -62,6 +64,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
         self.phoneTextField = UITextField(frame: CGRectMake(self.staticUserName.frame.origin.x + self.staticUserName.frame.size.width + 16, 0, screenWidth - 16 - self.staticUserName.frame.size.width - 16, 55))
         self.phoneTextField.placeholder = "请输入手机号码"
+        self.phoneTextField.keyboardType = .NumberPad
+        self.phoneTextField.delegate = self
         self.registerView.addSubview(self.phoneTextField)
         
         self.betweenLine = UIImageView(frame: CGRectMake(self.staticUserName.frame.origin.x, 55, self.phoneTextField.frame.size.width, 1))
@@ -77,6 +81,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         self.passwordTextField = UITextField(frame: CGRectMake(self.phoneTextField.frame.origin.x, self.phoneTextField.frame.size.height, self.phoneTextField.frame.size.width, self.phoneTextField.frame.size.height))
         self.passwordTextField.placeholder = "请输入密码"
         self.passwordTextField.secureTextEntry = true
+        self.passwordTextField.delegate = self
         self.registerView.addSubview(self.passwordTextField)
         
     }
@@ -96,10 +101,11 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         self.forgetPasswordBtn.titleLabel?.font = font17
         self.forgetPasswordBtn.backgroundColor = UIColor.clearColor()
         self.forgetPasswordBtn.sizeToFit()
+        self.forgetPasswordBtn.addTarget(self, action: Selector("forgetPassword"), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(self.forgetPasswordBtn)
         
         self.belowLine = UIImageView(frame: CGRectMake(self.forgetPasswordBtn.frame.origin.x, self.forgetPasswordBtn.frame.origin.y + self.forgetPasswordBtn.frame.size.height - 5, self.forgetPasswordBtn.frame.size.width, 1))
-        self.belowLine.backgroundColor = shrbText
+        self.belowLine.backgroundColor = shrbLightText
         self.view.addSubview(self.belowLine)
         
         
@@ -115,6 +121,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         self.registerBtn.setTitle("注册", forState: .Normal)
         self.registerBtn.setTitleColor(shrbPink, forState: .Normal)
         self.registerBtn.sizeToFit()
+        self.registerBtn.addTarget(self, action: Selector("registerBtnPressed"), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(self.registerBtn)
         
     }
@@ -133,6 +140,33 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         
+        if isIphone4s {
+            UIView.animateWithDuration(0.25, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                self.view.layer.transform = CATransform3DIdentity
+                }, completion: { (finished : Bool) -> Void in
+                    
+            })
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.phoneTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if (touches as NSSet).anyObject()?.view == self.passwordTextField  {
+            
+            self.passwordTextField.secureTextEntry = false
+        }
+        
+        if (touches as NSSet).anyObject()?.view != self.passwordTextField && (touches as NSSet).anyObject()?.view != self.phoneTextField
+        {
+            self.phoneTextField.resignFirstResponder()
+            self.passwordTextField.resignFirstResponder()
+        }
+
     }
     
     
@@ -148,7 +182,37 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
         SVProgressShow.showWithStatus("正在登录...")
         
+        Alamofire.request(.POST, baseUrl + "/user/v1.0/login?", parameters:["phone":self.phoneTextField.text!,"password":self.passwordTextField.text!])
+            
+            .response { request, response, data, error in
+                
+                if error == nil {
+                    let json  = JSON(data: data!)
+                    
+                    if RequestDataTool.processingData(json) != nil {
+                        CurrentUser.user = TBUser(json: RequestDataTool.processingData(json))
+                        
+                        SVProgressShow.showSuccessWithStatus("登录成功")
+                        self.navigationController?.navigationBarHidden = false
+                        self.navigationController?.popViewControllerAnimated(true)
+                    }
+                    
+                }
+                else {
+                    SVProgressShow.showErrorWithStatus("请求失败!")
+                }
+                
+        }
+
         
+    }
+    
+    func forgetPassword() {
+        self.navigationController?.pushViewController(ForgetPasswordViewController(), animated: true)
+    }
+    
+    func registerBtnPressed() {
+        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
 
     override func didReceiveMemoryWarning() {

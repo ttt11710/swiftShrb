@@ -61,6 +61,6 @@
     </objects>
     <resources>
         <image name="infoBack" width="375" height="130"/>
-        <image name="默认女头像" width="80" height="80"/>
+        <image name="默认女头像" width="81" height="80"/>
     </resources>
 </document>

@@ -23,6 +23,7 @@ let isIphone4s = UIScreen.mainScreen().bounds.size.width <= 320
 
 let font14 = UIFont.systemFontOfSize(14.0)
 let font15 = UIFont.systemFontOfSize(15.0)
+let font16 = UIFont.systemFontOfSize(16.0)
 let font17 = UIFont.systemFontOfSize(17.0)
 let font18 = UIFont.systemFontOfSize(18.0)
 let font20 = UIFont.systemFontOfSize(20.0)
