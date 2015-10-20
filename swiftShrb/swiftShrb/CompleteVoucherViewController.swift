@@ -18,7 +18,7 @@ class CompleteVoucherViewController: UIViewController,UITableViewDelegate,UITabl
     var cardNo : String = ""
     
     
-    var cardInfoModel : CardInfoModel!
+    var cardInfoModel : [CardInfoModel] = []
     
     var tableView : UITableView!
     var completeBtn : BFPaperButton!
@@ -43,7 +43,7 @@ class CompleteVoucherViewController: UIViewController,UITableViewDelegate,UITabl
                 if error == nil {
                     let json  = JSON(data: data!)
                     
-                    self.cardInfoModel = CardInfoModel(json: RequestDataTool.processingDataMes(json)["data"])
+                    self.cardInfoModel = CardInfoModel.cardInfoModel(RequestDataTool.processingDataMes(json))
                     self.tableView.reloadData()
                     
                 }
@@ -117,13 +117,13 @@ class CompleteVoucherViewController: UIViewController,UITableViewDelegate,UITabl
             cell.backgroundColor = shrbPink
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             
-            if self.cardInfoModel != nil {
+            if self.cardInfoModel.count != 0 {
                 
-                cell.cardBackImageView.sd_setImageWithURL(self.cardInfoModel.cardImgUrl == nil ? nil : NSURL(string: self.cardInfoModel.cardImgUrl), placeholderImage: UIImage(named: "cardBack"))
-                cell.merchNameLabel.text = self.cardInfoModel.merchName
-                cell.amountLabel.text = String(format: "金额:￥%.2f", self.cardInfoModel.amount)
-                cell.scoreLabel.text = String(format: "积分:%.0f", self.cardInfoModel.score)
-                cell.cardNoLabel.text = String(format: "卡号:%@", self.cardInfoModel.cardNo)
+                cell.cardBackImageView.sd_setImageWithURL(self.cardInfoModel[indexPath.section].cardImgUrl == nil ? nil : NSURL(string: self.cardInfoModel[indexPath.section].cardImgUrl), placeholderImage: UIImage(named: "cardBack"))
+                cell.merchNameLabel.text = self.cardInfoModel[indexPath.section].merchName
+                cell.amountLabel.text = String(format: "金额:￥%.2f", self.cardInfoModel[indexPath.section].amount)
+                cell.scoreLabel.text = String(format: "积分:%.0f", self.cardInfoModel[indexPath.section].score)
+                cell.cardNoLabel.text = String(format: "卡号:%@", self.cardInfoModel[indexPath.section].cardNo)
             }
             
             

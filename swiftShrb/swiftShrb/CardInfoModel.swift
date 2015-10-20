@@ -16,6 +16,8 @@ class CardInfoModel: NSObject {
     var cardNo : String!
     var merchName : String!
     var cardImgUrl : String!
+    var merchTitle : String!
+    var merchId : String!
     
     init(json :JSON) {
         score = json["scode"].floatValue
@@ -23,5 +25,12 @@ class CardInfoModel: NSObject {
         cardNo = json["cardNo"].stringValue
         merchName = json["merchName"].stringValue
         cardImgUrl = json["cardImgUrl"].stringValue
+        merchTitle = json["merchTitle"].stringValue
+        merchId = json["merchId"].stringValue
     }
+    class func cardInfoModel(json:JSON) -> [CardInfoModel] {
+        
+        return json["data"].arrayValue.map{CardInfoModel(json: $0)}
+    }
+
 }

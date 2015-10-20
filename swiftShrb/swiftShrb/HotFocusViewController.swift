@@ -12,6 +12,8 @@ import SwiftyJSON
 import SDWebImage
 
 
+var defaultHotFocusViewController : HotFocusViewController!
+
 class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,TQTableViewCellRemoveControllerDelegate {
     
     var tableView : UITableView!
@@ -21,6 +23,8 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        defaultHotFocusViewController = self
         
         self.title = "热点"
         self.creatTableView()
@@ -34,10 +38,16 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.hidden = false
     }
+    
+    class func shareHotFocusViewController() -> HotFocusViewController {
+        return defaultHotFocusViewController
+    }
 
     
     //http://121.40.222.162:8080/tongbao/merch/v1.0/getMerchList?&orderBy=updateTime&pageCount=20&pageNum=1&sort=desc&whereString=
     func requestData() {
+        
+        SVProgressShow.showWithStatus("加载中...")
         Alamofire.request(.GET, baseUrl + "/merch/v1.0/getMerchList?", parameters: ["pageNum":"1","pageCount":"20","orderBy":"updateTime","sort":"desc","whereString":""])
             
             .response { request, response, data, error in
@@ -58,6 +68,7 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 else {
                     SVProgressShow.showErrorWithStatus("请求失败!")
                 }
+                SVProgressShow.dismiss()
                 self.tableView.reloadData()
                 
                 }

@@ -42,7 +42,9 @@ class CardAndCouponsViewController: UIViewController {
     }
     
     func gotoCardView() {
-        print("显示卡片页面")
+        let cardViewController = CardViewController()
+        cardViewController.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(cardViewController, animated: true)
     }
     
     func gotoCouponsView() {

@@ -111,6 +111,8 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
             let cell = tableView.dequeueReusableCellWithIdentifier("cellId", forIndexPath: indexPath) as UITableViewCell
             
             cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.accessoryType = .DisclosureIndicator
+            
             cell.imageView?.image = UIImage(named: dataArray1[indexPath.row] as! String)
             cell.textLabel?.text = dataArray1[indexPath.row] as? String
             cell.textLabel?.textColor = shrbText
@@ -122,6 +124,8 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
             let cell = tableView.dequeueReusableCellWithIdentifier("cellId", forIndexPath: indexPath) as UITableViewCell
             
             cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.accessoryType = .DisclosureIndicator
+            
             cell.imageView?.image = UIImage(named: dataArray2[indexPath.row] as! String)
             cell.textLabel?.text = dataArray2[indexPath.row] as? String
             cell.textLabel?.textColor = shrbText
@@ -133,6 +137,8 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
             let cell = tableView.dequeueReusableCellWithIdentifier("cellId", forIndexPath: indexPath) as UITableViewCell
             
             cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.accessoryType = .DisclosureIndicator
+            
             cell.imageView?.image = UIImage(named:"设置")
             cell.textLabel?.text = "设置"
             cell.textLabel?.textColor = shrbText
@@ -170,6 +176,23 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
             let loginViewController = LoginViewController()
             loginViewController.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(loginViewController, animated: true)
+        case 2:
+            switch indexPath.row {
+            case 0:
+                let helpCenterViewController = HelpCenterViewController()
+                helpCenterViewController.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(helpCenterViewController, animated: true)
+            case 1:
+                let tBServiceViewController = TBServiceViewController()
+                tBServiceViewController.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(tBServiceViewController, animated: true)
+            case 2:
+                let aboutTBViewController = AboutTBViewController()
+                aboutTBViewController.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(aboutTBViewController, animated: true)
+            default:
+                break
+            }
         case 3:
             let settingViewController = SettingViewController()
             settingViewController.hidesBottomBarWhenPushed = true
