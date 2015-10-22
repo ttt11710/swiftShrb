@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VoucherAmoutTableViewCellId" rowHeight="58" id="KGk-i7-Jjw" customClass="VoucherAmoutTableViewCell" customModule="swiftShrb" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="399" height="145"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wpc-Ub-G23" userLabel="金额View">
+                        <rect key="frame" x="79" y="45" width="240" height="56"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金额:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDA-bH-y7i">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="A3R-4Y-Yyb"/>
+                                    <constraint firstAttribute="width" constant="65" id="d3e-v3-Miu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="d3e-v3-Miu"/>
+                                        <exclude reference="A3R-4Y-Yyb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="d3e-v3-Miu"/>
+                                        <include reference="A3R-4Y-Yyb"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写充值金额" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YSZ-hn-BLF">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BvB-lJ-SPM"/>
+                                    <constraint firstAttribute="width" constant="144" id="i5I-KX-b97"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="i5I-KX-b97"/>
+                                        <exclude reference="BvB-lJ-SPM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="i5I-KX-b97"/>
+                                        <exclude reference="BvB-lJ-SPM"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="-1" id="NQs-Y2-k0G"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="98U-Rh-adw"/>
+                            <constraint firstItem="YSZ-hn-BLF" firstAttribute="top" secondItem="wpc-Ub-G23" secondAttribute="top" id="AVN-1p-7RL"/>
+                            <constraint firstItem="YSZ-hn-BLF" firstAttribute="leading" secondItem="TDA-bH-y7i" secondAttribute="trailing" id="Qtr-ys-kt6"/>
+                            <constraint firstItem="TDA-bH-y7i" firstAttribute="leading" secondItem="wpc-Ub-G23" secondAttribute="leading" constant="8" id="Xle-O8-c4V"/>
+                            <constraint firstItem="TDA-bH-y7i" firstAttribute="centerY" secondItem="wpc-Ub-G23" secondAttribute="centerY" id="nNs-fx-Nj1"/>
+                            <constraint firstItem="YSZ-hn-BLF" firstAttribute="height" secondItem="wpc-Ub-G23" secondAttribute="height" id="uEk-Dl-oDq"/>
+                            <constraint firstAttribute="trailing" secondItem="YSZ-hn-BLF" secondAttribute="trailing" id="yg4-oU-u5E"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="TDA-bH-y7i"/>
+                                <exclude reference="YSZ-hn-BLF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="98U-Rh-adw"/>
+                                <exclude reference="Xle-O8-c4V"/>
+                                <exclude reference="nNs-fx-Nj1"/>
+                                <exclude reference="Qtr-ys-kt6"/>
+                                <exclude reference="uEk-Dl-oDq"/>
+                                <exclude reference="AVN-1p-7RL"/>
+                                <exclude reference="yg4-oU-u5E"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="TDA-bH-y7i"/>
+                                <include reference="YSZ-hn-BLF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="98U-Rh-adw"/>
+                                <include reference="Xle-O8-c4V"/>
+                                <include reference="nNs-fx-Nj1"/>
+                                <include reference="Qtr-ys-kt6"/>
+                                <include reference="uEk-Dl-oDq"/>
+                                <include reference="AVN-1p-7RL"/>
+                                <include reference="yg4-oU-u5E"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wpc-Ub-G23" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Hp3-Hj-7bR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="wpc-Ub-G23" secondAttribute="trailing" constant="-8" id="eiU-V9-LN2"/>
+                    <constraint firstItem="wpc-Ub-G23" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="tXT-8L-UkQ"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Hp3-Hj-7bR"/>
+                        <exclude reference="eiU-V9-LN2"/>
+                        <exclude reference="tXT-8L-UkQ"/>
+                    </mask>
+                </variation>
+                <variation key="widthClass=compact">
+                    <mask key="constraints">
+                        <include reference="Hp3-Hj-7bR"/>
+                        <include reference="eiU-V9-LN2"/>
+                        <include reference="tXT-8L-UkQ"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="amountTextField" destination="YSZ-hn-BLF" id="AHg-33-QHC"/>
+            </connections>
+            <point key="canvasLocation" x="377.5" y="339"/>
+        </tableViewCell>
+    </objects>
+</document>

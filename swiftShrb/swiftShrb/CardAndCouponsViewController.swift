@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+var defaultCardAndCouponsViewController : CardAndCouponsViewController!
+
 class CardAndCouponsViewController: UIViewController {
     
     var cardBtn : UIButton!
@@ -17,6 +20,7 @@ class CardAndCouponsViewController: UIViewController {
         super.viewDidLoad()
         self.setView()
         
+        defaultCardAndCouponsViewController = self
         self.title = "卡包"
     }
     
@@ -25,6 +29,9 @@ class CardAndCouponsViewController: UIViewController {
         self.tabBarController?.tabBar.hidden = false
     }
 
+    class func shareCardAndCouponsViewController() -> CardAndCouponsViewController {
+        return defaultCardAndCouponsViewController
+    }
     
     func setView() {
         cardBtn = UIButton(frame: CGRectMake(16, 20 + 44 + 16, screenWidth-32, (screenWidth-32)/2))
@@ -41,7 +48,7 @@ class CardAndCouponsViewController: UIViewController {
         
     }
     
-    func gotoCardView() {
+     func gotoCardView() {
         let cardViewController = CardViewController()
         cardViewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(cardViewController, animated: true)

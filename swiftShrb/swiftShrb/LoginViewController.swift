@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class LoginViewController: UIViewController,UITextFieldDelegate {
+class LoginViewController: UIViewController,UITextFieldDelegate,UIViewControllerPreviewingDelegate {
     
 
     var paybayLogoImageView : UIImageView!
@@ -40,6 +40,21 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         self.creatPaybayLogo()
         self.creatRegisterView()
         self.creatLogin()
+        
+        
+        
+        let traitCollection : UITraitCollection = UITraitCollection()
+        
+        
+        if traitCollection.forceTouchCapability == UIForceTouchCapability.Available {
+            
+            print("已经打开了3D Touch功能")
+            self.registerForPreviewingWithDelegate(self, sourceView: self.view)
+        } else {
+            
+            print("没有打开3D Touch功能")
+        }
+
         
         // Do any additional setup after loading the view.
     }
@@ -218,6 +233,15 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        return LoginViewController()
+    }
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+        self.showViewController(LoginViewController(), sender: self)
     }
     
 

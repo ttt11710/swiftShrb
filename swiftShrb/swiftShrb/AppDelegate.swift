@@ -28,7 +28,61 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
         
+               
+        
+        let firstItemIcon : UIApplicationShortcutIcon = UIApplicationShortcutIcon(templateImageName: "vipIcon")
+        
+        let firstItem : UIMutableApplicationShortcutItem = UIMutableApplicationShortcutItem(type: "first", localizedTitle: "卡包", localizedSubtitle: nil, icon: firstItemIcon, userInfo: nil)
+        
+        let secondItemIcon : UIApplicationShortcutIcon = UIApplicationShortcutIcon(templateImageName: "设置Icon")
+        
+        let secondItem : UIMutableApplicationShortcutItem = UIMutableApplicationShortcutItem(type: "second", localizedTitle: "设置", localizedSubtitle: nil, icon: secondItemIcon, userInfo: nil)
+        
+        let thirdItemIcon : UIApplicationShortcutIcon = UIApplicationShortcutIcon(templateImageName: "QRIcon")
+        
+        let thirdItem : UIMutableApplicationShortcutItem = UIMutableApplicationShortcutItem(type: "third", localizedTitle: "扫码支付", localizedSubtitle: nil, icon: thirdItemIcon, userInfo: nil)
+        
+        application.shortcutItems = [firstItem,secondItem,thirdItem]
+        
         return true
+    }
+    
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        
+        
+        
+        let tabBarController : UITabBarController = UIApplication.sharedApplication().keyWindow?.rootViewController as! UITabBarController
+        
+        
+        if shortcutItem.type == "first" {
+            tabBarController.selectedIndex = 1
+            
+            let cardViewController = CardViewController()
+            cardViewController.hidesBottomBarWhenPushed = true
+            
+            let nav = tabBarController.selectedViewController as! UINavigationController
+            nav.pushViewController(cardViewController, animated: true)
+        }
+        else if shortcutItem.type == "second" {
+            tabBarController.selectedIndex = 2
+            
+            let settingViewController = SettingViewController()
+            settingViewController.hidesBottomBarWhenPushed = true
+            let nav = tabBarController.selectedViewController as! UINavigationController
+            nav.pushViewController(settingViewController, animated: true)
+        }
+        else {
+            tabBarController.selectedIndex = 0
+            UserDefaultsSaveInfo.userDefaultsStandardUserDefaultsObject("viewControllers[0]", keyString: "QRPay")
+            
+            let supermarketQRViewController = SupermarketQRViewController()
+            supermarketQRViewController.merchId = "201508111544260859"
+            supermarketQRViewController.hidesBottomBarWhenPushed = true
+            
+            let nav = tabBarController.selectedViewController as! UINavigationController
+            nav.pushViewController(supermarketQRViewController, animated: true)
+
+        }
     }
     
     func setupWithStatusBar(application: UIApplication) {

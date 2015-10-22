@@ -4,6 +4,7 @@ PODS:
     - UIColor+BFPaperColors
   - BFPaperTabBarController (2.1.11):
     - UIColor+BFPaperColors
+  - CBZSplashView (1.0.0)
   - DCAnimationKit (0.0.6)
   - pop (1.0.8)
   - SDWebImage (3.7.3):
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - Alamofire
   - BFPaperButton
   - BFPaperTabBarController
+  - CBZSplashView
   - DCAnimationKit
   - pop
   - SDWebImage
@@ -29,6 +31,7 @@ SPEC CHECKSUMS:
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
   BFPaperButton: 16b3ec9c2964d24f89f623a4113321d3f003ed60
   BFPaperTabBarController: 197befdaa258e3790664be49f7c979e38264d355
+  CBZSplashView: 9ce4cba22024476ff4a97d6433e7347da6376016
   DCAnimationKit: 7133bef877ce1aa113dcfeea1380ca67f91f7608
   pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84

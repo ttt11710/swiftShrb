@@ -26,7 +26,6 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         self.creatTableView()
-        
 
         self.title = "我的"
         // Do any additional setup after loading the view.
@@ -173,9 +172,17 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
         
         switch indexPath.section {
         case 0:
-            let loginViewController = LoginViewController()
-            loginViewController.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(loginViewController, animated: true)
+            if CurrentUser.user == nil {
+                let loginViewController = LoginViewController()
+                loginViewController.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(loginViewController, animated: true)
+            }
+            else {
+                let basicInfoViewController = BasicInfoViewController()
+                basicInfoViewController.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(basicInfoViewController, animated: true)
+            }
+            
         case 2:
             switch indexPath.row {
             case 0:

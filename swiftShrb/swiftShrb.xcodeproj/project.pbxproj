@@ -17,6 +17,12 @@
 		DF0BAC1E1BB8CEB2008A8952 /* swiftShrbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC1D1BB8CEB2008A8952 /* swiftShrbTests.swift */; };
 		DF0BAC291BB8CEB2008A8952 /* swiftShrbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC281BB8CEB2008A8952 /* swiftShrbUITests.swift */; };
 		DF0BAC391BB8DAC7008A8952 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC381BB8DAC7008A8952 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
+		DF29F3C31BD72586008D15D0 /* PayQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3C21BD72586008D15D0 /* PayQRViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF29F3C51BD7580E008D15D0 /* VoucherCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3C41BD7580E008D15D0 /* VoucherCenterViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF29F3C81BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3C61BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		DF29F3C91BD75DFD008D15D0 /* VoucherAmoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF29F3C71BD75DFD008D15D0 /* VoucherAmoutTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		DF29F3CC1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3CA1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		DF29F3CD1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF29F3CB1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		DF3832FE1BCF407300A84EC2 /* CardInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3832FD1BCF407300A84EC2 /* CardInfoModel.swift */; settings = {ASSET_TAGS = (); }; };
 		DF3833011BCF6D6400A84EC2 /* CardDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3832FF1BCF6D6400A84EC2 /* CardDetailTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		DF3833021BCF6D6400A84EC2 /* CardDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF3833001BCF6D6400A84EC2 /* CardDetailTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -36,6 +42,12 @@
 		DF850AE11BBA8E1D0055DCA7 /* UserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DF8F4FA01BD5E66500049D54 /* AutoresizeLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4F9E1BD5E66500049D54 /* AutoresizeLabelTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		DF8F4FA11BD5E66500049D54 /* AutoresizeLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF8F4F9F1BD5E66500049D54 /* AutoresizeLabelTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		DF8F4FA31BD6040200049D54 /* TradingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FA21BD6040200049D54 /* TradingRecordViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF8F4FA61BD6043200049D54 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FA41BD6043200049D54 /* ExpenseTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		DF8F4FA71BD6043200049D54 /* ExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF8F4FA51BD6043200049D54 /* ExpenseTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		DF8F4FA91BD607FD00049D54 /* CardTradeRecordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FA81BD607FD00049D54 /* CardTradeRecordsModel.swift */; settings = {ASSET_TAGS = (); }; };
+		DF8F4FAB1BD61D1300049D54 /* BasicInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FAA1BD61D1300049D54 /* BasicInfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF8F4FAD1BD6244300049D54 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FAC1BD6244300049D54 /* UserInfoModel.swift */; settings = {ASSET_TAGS = (); }; };
 		DFC214C11BCDEC7E0039639C /* QRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214BC1BCDEC7E0039639C /* QRItem.m */; settings = {ASSET_TAGS = (); }; };
 		DFC214C21BCDEC7E0039639C /* QRMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214BE1BCDEC7E0039639C /* QRMenu.m */; settings = {ASSET_TAGS = (); }; };
 		DFC214C31BCDEC7E0039639C /* QRView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214C01BCDEC7E0039639C /* QRView.m */; settings = {ASSET_TAGS = (); }; };
@@ -118,6 +130,12 @@
 		DF0BAC281BB8CEB2008A8952 /* swiftShrbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftShrbUITests.swift; sourceTree = "<group>"; };
 		DF0BAC2A1BB8CEB2008A8952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF0BAC381BB8DAC7008A8952 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		DF29F3C21BD72586008D15D0 /* PayQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayQRViewController.swift; sourceTree = "<group>"; };
+		DF29F3C41BD7580E008D15D0 /* VoucherCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherCenterViewController.swift; sourceTree = "<group>"; };
+		DF29F3C61BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherAmoutTableViewCell.swift; sourceTree = "<group>"; };
+		DF29F3C71BD75DFD008D15D0 /* VoucherAmoutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherAmoutTableViewCell.xib; sourceTree = "<group>"; };
+		DF29F3CA1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChanrgeTypeTableViewCell.swift; sourceTree = "<group>"; };
+		DF29F3CB1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChanrgeTypeTableViewCell.xib; sourceTree = "<group>"; };
 		DF3832FD1BCF407300A84EC2 /* CardInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInfoModel.swift; sourceTree = "<group>"; };
 		DF3832FF1BCF6D6400A84EC2 /* CardDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailTableViewCell.swift; sourceTree = "<group>"; };
 		DF3833001BCF6D6400A84EC2 /* CardDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -137,6 +155,12 @@
 		DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterViewController.swift; sourceTree = "<group>"; };
 		DF8F4F9E1BD5E66500049D54 /* AutoresizeLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoresizeLabelTableViewCell.swift; sourceTree = "<group>"; };
 		DF8F4F9F1BD5E66500049D54 /* AutoresizeLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoresizeLabelTableViewCell.xib; sourceTree = "<group>"; };
+		DF8F4FA21BD6040200049D54 /* TradingRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingRecordViewController.swift; sourceTree = "<group>"; };
+		DF8F4FA41BD6043200049D54 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
+		DF8F4FA51BD6043200049D54 /* ExpenseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseTableViewCell.xib; sourceTree = "<group>"; };
+		DF8F4FA81BD607FD00049D54 /* CardTradeRecordsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTradeRecordsModel.swift; sourceTree = "<group>"; };
+		DF8F4FAA1BD61D1300049D54 /* BasicInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInfoViewController.swift; sourceTree = "<group>"; };
+		DF8F4FAC1BD6244300049D54 /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		DFC214BB1BCDEC7E0039639C /* QRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRItem.h; sourceTree = "<group>"; };
 		DFC214BC1BCDEC7E0039639C /* QRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRItem.m; sourceTree = "<group>"; };
 		DFC214BD1BCDEC7E0039639C /* QRMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRMenu.h; sourceTree = "<group>"; };
@@ -414,6 +438,9 @@
 			children = (
 				DFC65C271BD4C32900772F59 /* CardViewController.swift */,
 				DFC65C291BD4DE7500772F59 /* CardDetailViewController.swift */,
+				DF8F4FA21BD6040200049D54 /* TradingRecordViewController.swift */,
+				DF29F3C21BD72586008D15D0 /* PayQRViewController.swift */,
+				DF29F3C41BD7580E008D15D0 /* VoucherCenterViewController.swift */,
 				DF3833031BCF6F9600A84EC2 /* CompleteVoucherViewController.swift */,
 			);
 			name = card;
@@ -488,6 +515,7 @@
 		DFD777401BBA33FC008F4F34 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				DF8F4FA81BD607FD00049D54 /* CardTradeRecordsModel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -518,6 +546,7 @@
 		DFD777431BBA3421008F4F34 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				DF8F4FAC1BD6244300049D54 /* UserInfoModel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -526,6 +555,7 @@
 			isa = PBXGroup;
 			children = (
 				DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */,
+				DF8F4FAA1BD61D1300049D54 /* BasicInfoViewController.swift */,
 				DF76E6531BD0C1CD00562B81 /* SettingViewController.swift */,
 				DF76E6591BD0CE9B00562B81 /* UpdatePayPassViewController.swift */,
 				DF76E65B1BD0E9A200562B81 /* UpdatePassViewController.swift */,
@@ -543,6 +573,12 @@
 				DF8F4F9F1BD5E66500049D54 /* AutoresizeLabelTableViewCell.xib */,
 				DF3832FF1BCF6D6400A84EC2 /* CardDetailTableViewCell.swift */,
 				DF3833001BCF6D6400A84EC2 /* CardDetailTableViewCell.xib */,
+				DF8F4FA41BD6043200049D54 /* ExpenseTableViewCell.swift */,
+				DF8F4FA51BD6043200049D54 /* ExpenseTableViewCell.xib */,
+				DF29F3C61BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift */,
+				DF29F3C71BD75DFD008D15D0 /* VoucherAmoutTableViewCell.xib */,
+				DF29F3CA1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.swift */,
+				DF29F3CB1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -689,11 +725,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF5EEF31BC65AF400B3E480 /* SupermarketCollectionViewCell.xib in Resources */,
+				DF29F3CD1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.xib in Resources */,
 				DFF5EEE81BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.xib in Resources */,
 				DF3833021BCF6D6400A84EC2 /* CardDetailTableViewCell.xib in Resources */,
 				DF76E6581BD0C44E00562B81 /* SettingTableViewCell.xib in Resources */,
 				DFD7774B1BBA3608008F4F34 /* HotFocusTableViewCell.xib in Resources */,
 				DFC214FF1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.xib in Resources */,
+				DF8F4FA71BD6043200049D54 /* ExpenseTableViewCell.xib in Resources */,
+				DF29F3C91BD75DFD008D15D0 /* VoucherAmoutTableViewCell.xib in Resources */,
 				DF8F4FA11BD5E66500049D54 /* AutoresizeLabelTableViewCell.xib in Resources */,
 				DF0BAC131BB8CEB2008A8952 /* LaunchScreen.storyboard in Resources */,
 				DFC214D71BCE26650039639C /* orderTableViewCell.xib in Resources */,
@@ -772,24 +811,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF29F3C31BD72586008D15D0 /* PayQRViewController.swift in Sources */,
 				DFF5EEEB1BC615D700B3E480 /* RequestDataTool.swift in Sources */,
 				DF76E65E1BD0F75900562B81 /* PasswordDataProcessing.swift in Sources */,
 				DF76E6521BD0983E00562B81 /* RegisterViewController.swift in Sources */,
 				DFC214D91BCE2DB90039639C /* SupermarketOrderViewController.swift in Sources */,
 				DF3833071BCF8B5800A84EC2 /* LoginViewController.swift in Sources */,
 				DFE530BE1BC79050002CCAA0 /* ProductListModel.swift in Sources */,
+				DF29F3C81BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift in Sources */,
+				DF8F4FA61BD6043200049D54 /* ExpenseTableViewCell.swift in Sources */,
 				DF76E6501BD08CD500562B81 /* ForgetPasswordViewController.swift in Sources */,
 				DFC65C1E1BD4805700772F59 /* AboutTBViewController.swift in Sources */,
 				DFC214FA1BCE38110039639C /* TNRectangularCheckBox.m in Sources */,
 				DFC214F51BCE38110039639C /* TNCheckBoxGroup.m in Sources */,
 				DFC214D61BCE26650039639C /* orderTableViewCell.swift in Sources */,
 				DFFF6B4B1BCCA9C50087611D /* TQTableViewCellRemoveController.m in Sources */,
+				DF8F4FAB1BD61D1300049D54 /* BasicInfoViewController.swift in Sources */,
 				DFC9608C1BCB44D900A28DC7 /* SVProgressShow.m in Sources */,
 				DFC65C2A1BD4DE7500772F59 /* CardDetailViewController.swift in Sources */,
 				DF4FFD1A1BC8A38500824999 /* ProductIsMemberViewController.swift in Sources */,
 				DF0BAC0B1BB8CEB2008A8952 /* CardAndCouponsViewController.swift in Sources */,
 				DFC214F91BCE38110039639C /* TNImageCheckBoxData.m in Sources */,
 				DFC214C11BCDEC7E0039639C /* QRItem.m in Sources */,
+				DF29F3CC1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.swift in Sources */,
 				DFC214C21BCDEC7E0039639C /* QRMenu.m in Sources */,
 				DFC65C281BD4C32900772F59 /* CardViewController.swift in Sources */,
 				DFC214F41BCE38110039639C /* TNCheckBoxData.m in Sources */,
@@ -805,6 +849,9 @@
 				DF76E6541BD0C1CD00562B81 /* SettingViewController.swift in Sources */,
 				DFF5EEF21BC65AF400B3E480 /* SupermarketCollectionViewCell.swift in Sources */,
 				DFC214F31BCE38110039639C /* TNCheckBox.m in Sources */,
+				DF29F3C51BD7580E008D15D0 /* VoucherCenterViewController.swift in Sources */,
+				DF8F4FA31BD6040200049D54 /* TradingRecordViewController.swift in Sources */,
+				DF8F4FA91BD607FD00049D54 /* CardTradeRecordsModel.swift in Sources */,
 				DF76E65A1BD0CE9B00562B81 /* UpdatePayPassViewController.swift in Sources */,
 				DFF5EEF61BC6624200B3E480 /* CollectionViewWaterfallLayout.swift in Sources */,
 				DFC65C201BD48D3F00772F59 /* ParentClassViewController.swift in Sources */,
@@ -822,6 +869,7 @@
 				DF3832FE1BCF407300A84EC2 /* CardInfoModel.swift in Sources */,
 				DF3833041BCF6F9600A84EC2 /* CompleteVoucherViewController.swift in Sources */,
 				DF0BAC071BB8CEB2008A8952 /* AppDelegate.swift in Sources */,
+				DF8F4FAD1BD6244300049D54 /* UserInfoModel.swift in Sources */,
 				DFF5EEE71BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.swift in Sources */,
 				DF0BAC091BB8CEB2008A8952 /* HotFocusViewController.swift in Sources */,
 				DFC214F61BCE38110039639C /* TNCircularCheckBox.m in Sources */,

@@ -95,6 +95,7 @@ class CardDetailViewController: UIViewController,UITableViewDelegate,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "会员卡详情"
         self.view.backgroundColor = shrbTableViewColor
         self.requestData()
         self.creatTableView()
@@ -105,6 +106,8 @@ class CardDetailViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     func requestData() {
+        
+        SVProgressShow.showWithStatus("加载中...")
         
         //http://121.40.222.162:8080/tongbao/card/v1.0/findCardDetail?&cardNo=1441780304974&merchId=201508111544260856&token=a58aca31642dfe555757a6b4943d9a6b&userId=1441591396095000842
         Alamofire.request(.GET, baseUrl + "/card/v1.0/findCardDetail?", parameters: ["token":CurrentUser.user?.token == nil ? "" : CurrentUser.user!.token,"userId":CurrentUser.user?.userId == nil ? "" : CurrentUser.user!.userId,"merchId":self.merchId,"cardNo":self.cardNo])
@@ -145,6 +148,7 @@ class CardDetailViewController: UIViewController,UITableViewDelegate,UITableView
         self.payBtn.backgroundColor = shrbPink
         self.payBtn.setTitle("扫码支付", forState: .Normal)
         self.payBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        self.payBtn.addTarget(self, action: Selector("goToQRView"), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(self.payBtn)
         
         
@@ -153,6 +157,8 @@ class CardDetailViewController: UIViewController,UITableViewDelegate,UITableView
         self.voucherBtn.backgroundColor = shrbPink
         self.voucherBtn.setTitle("充值", forState: .Normal)
         self.voucherBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        self.voucherBtn.addTarget(self, action: Selector("goVoucherCenterBtn"), forControlEvents: UIControlEvents.TouchUpInside)
+
         self.view.addSubview(self.voucherBtn)
     }
     
@@ -329,7 +335,52 @@ class CardDetailViewController: UIViewController,UITableViewDelegate,UITableView
 
         }
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+        if indexPath.section == 3 && indexPath.row == 0 {
+            let tradingRecordViewController = TradingRecordViewController()
+            tradingRecordViewController.cardNo = self.cardNo
+            self.navigationController?.pushViewController(tradingRecordViewController, animated: true)
+        }
+    }
+    
+    func goToQRView() {
+        
+        UserDefaultsSaveInfo.userDefaultsStandardUserDefaultsObject("viewControllers[1]", keyString: "QRPay")
+       
+        if self.validateCamera() {
+            
+            let payQRViewController = PayQRViewController()
+            payQRViewController.merchId = self.merchId
+            self.navigationController?.pushViewController(payQRViewController, animated: true)
+            
+        }
+        else {
+            
+            let alertController = UIAlertController(title: "提示", message: "没有摄像头或摄像头不可用", preferredStyle: UIAlertControllerStyle.Alert)
+            let okAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default, handler: nil)
+            alertController.addAction(okAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+        }
 
+    }
+    
+    func validateCamera() -> Bool{
+        return UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) && UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.Rear)
+    }
+    
+    func goVoucherCenterBtn() {
+        UserDefaultsSaveInfo.userDefaultsStandardUserDefaultsObject("viewControllers[0]", keyString: "QRPay")
+        
+        let voucherCenterViewController = VoucherCenterViewController()
+        voucherCenterViewController.cardInfoModel = self.cardInfoModel
+        voucherCenterViewController.merchId = self.merchId
+        self.navigationController?.pushViewController(voucherCenterViewController, animated: true)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

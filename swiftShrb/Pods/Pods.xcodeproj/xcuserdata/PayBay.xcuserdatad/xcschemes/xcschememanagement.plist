@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CBZSplashView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DCAnimationKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,11 +67,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3773E6EA3A0786B0DCEE1C54D82FA0A7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>3DA374BB5346C86BB9E37D7D8A3F9705</key>
 		<dict>
 			<key>primary</key>
@@ -77,12 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4A31957E8C8E87D34F591EED2E6418C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A94609A2B2E2DF23717B423E2C7426D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>65EB674F5BA83DCC5DD33605CF3437EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>838400556E85888824B61130375885A8</key>
+		<key>6791409F0C51554E69BE704050F22486</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D428B2A7088537AAAA934F26DB4BFA5</key>
+		<key>9D7B2E54C5C287F60BEF8551DF32A508</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,12 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C85D880C21B4D4B3A18C46A33299313A</key>
+		<key>E270A649D309072438809C839A6A3EF3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F9B442ADC5A54025122E8076600082A6</key>
+		<key>F0C9C56A828B503E60F0532DF12EDB0C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

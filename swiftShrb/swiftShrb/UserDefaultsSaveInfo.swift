@@ -10,9 +10,9 @@ import UIKit
 
 class UserDefaultsSaveInfo: NSObject {
 
-   class func userDefaultsStandardUserDefaultsObject(removeString : String, setobjectString : String, keyString : String) {
+   class func userDefaultsStandardUserDefaultsObject(setobjectString : String, keyString : String) {
     
-        NSUserDefaults.standardUserDefaults().removeObjectForKey(removeString)
+        NSUserDefaults.standardUserDefaults().removeObjectForKey(keyString)
         NSUserDefaults.standardUserDefaults().setObject(setobjectString, forKey: keyString)
     }
 }

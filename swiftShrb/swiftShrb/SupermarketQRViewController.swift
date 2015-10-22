@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import Alamofire
 import SwiftyJSON
+import CBZSplashView
 
 class SupermarketQRViewController: UIViewController,QRViewDelegate,AVCaptureMetadataOutputObjectsDelegate {
 
@@ -23,6 +24,9 @@ class SupermarketQRViewController: UIViewController,QRViewDelegate,AVCaptureMeta
     var Strcode : ((String)->())!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.title = "二维码/条码"
         
         let device : AVCaptureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         
@@ -71,6 +75,10 @@ class SupermarketQRViewController: UIViewController,QRViewDelegate,AVCaptureMeta
             cropRect.size.width / screenWidth)
         
         
+        let icon = UIImage(named: "默认女头像")
+        let splashView : CBZSplashView = CBZSplashView(icon: icon, backgroundColor:shrbPink)
+        self.view.addSubview(splashView)
+        splashView.startAnimation()
         
     }
     
@@ -125,6 +133,7 @@ class SupermarketQRViewController: UIViewController,QRViewDelegate,AVCaptureMeta
         
         let supermarketOrderViewController = SupermarketOrderViewController()
         supermarketOrderViewController.merchId = self.merchId
+        supermarketOrderViewController.hidesBottomBarWhenPushed = true
         nav.pushViewController(supermarketOrderViewController, animated: false)
         
     }

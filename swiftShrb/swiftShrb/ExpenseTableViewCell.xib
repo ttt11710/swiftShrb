@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpenseTableViewCellId" rowHeight="302" id="KGk-i7-Jjw" customClass="ExpenseTableViewCell" customModule="swiftShrb" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="249"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="248"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="18:23  2016/06/15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIH-PU-kQF">
+                        <rect key="frame" x="97" y="114" width="125" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="WNz-eO-uzD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WNz-eO-uzD"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="WNz-eO-uzD"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNP-oo-UlH">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="dNP-oo-UlH" secondAttribute="bottom" constant="4" id="URo-pW-nzj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fIH-PU-kQF" secondAttribute="trailing" constant="8" id="UeO-pz-s8u"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dNP-oo-UlH" secondAttribute="trailing" constant="16" id="dVW-sa-6Ho"/>
+                    <constraint firstItem="dNP-oo-UlH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="egI-cq-ovE"/>
+                    <constraint firstItem="fIH-PU-kQF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="hp2-Kz-kpH"/>
+                    <constraint firstItem="dNP-oo-UlH" firstAttribute="top" secondItem="fIH-PU-kQF" secondAttribute="bottom" constant="4" id="t8t-9K-j5Z"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="dNP-oo-UlH"/>
+                    </mask>
+                    <mask key="constraints">
+                        <exclude reference="URo-pW-nzj"/>
+                        <exclude reference="dVW-sa-6Ho"/>
+                        <exclude reference="egI-cq-ovE"/>
+                        <exclude reference="t8t-9K-j5Z"/>
+                        <exclude reference="UeO-pz-s8u"/>
+                        <exclude reference="hp2-Kz-kpH"/>
+                    </mask>
+                </variation>
+                <variation key="widthClass=compact">
+                    <mask key="subviews">
+                        <include reference="dNP-oo-UlH"/>
+                    </mask>
+                    <mask key="constraints">
+                        <include reference="URo-pW-nzj"/>
+                        <include reference="dVW-sa-6Ho"/>
+                        <include reference="egI-cq-ovE"/>
+                        <include reference="t8t-9K-j5Z"/>
+                        <include reference="UeO-pz-s8u"/>
+                        <include reference="hp2-Kz-kpH"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="fIH-PU-kQF" id="wpk-gb-Emc"/>
+                <outlet property="expenseTextView" destination="dNP-oo-UlH" id="kae-KB-1aN"/>
+            </connections>
+            <point key="canvasLocation" x="389" y="377"/>
+        </tableViewCell>
+    </objects>
+</document>

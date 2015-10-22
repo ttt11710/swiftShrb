@@ -18,7 +18,7 @@ class CompleteVoucherViewController: UIViewController,UITableViewDelegate,UITabl
     var cardNo : String = ""
     
     
-    var cardInfoModel : [CardInfoModel] = []
+    var cardInfoModel : CardInfoModel!
     
     var tableView : UITableView!
     var completeBtn : BFPaperButton!
@@ -43,7 +43,7 @@ class CompleteVoucherViewController: UIViewController,UITableViewDelegate,UITabl
                 if error == nil {
                     let json  = JSON(data: data!)
                     
-                    self.cardInfoModel = CardInfoModel.cardInfoModel(RequestDataTool.processingDataMes(json))
+                    self.cardInfoModel = CardInfoModel(json: RequestDataTool.processingDataMes(json)["data"])
                     self.tableView.reloadData()
                     
                 }
@@ -117,13 +117,13 @@ class CompleteVoucherViewController: UIViewController,UITableViewDelegate,UITabl
             cell.backgroundColor = shrbPink
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             
-            if self.cardInfoModel.count != 0 {
+            if self.cardInfoModel != nil {
                 
-                cell.cardBackImageView.sd_setImageWithURL(self.cardInfoModel[indexPath.section].cardImgUrl == nil ? nil : NSURL(string: self.cardInfoModel[indexPath.section].cardImgUrl), placeholderImage: UIImage(named: "cardBack"))
-                cell.merchNameLabel.text = self.cardInfoModel[indexPath.section].merchName
-                cell.amountLabel.text = String(format: "金额:￥%.2f", self.cardInfoModel[indexPath.section].amount)
-                cell.scoreLabel.text = String(format: "积分:%.0f", self.cardInfoModel[indexPath.section].score)
-                cell.cardNoLabel.text = String(format: "卡号:%@", self.cardInfoModel[indexPath.section].cardNo)
+                cell.cardBackImageView.sd_setImageWithURL(self.cardInfoModel.cardImgUrl == nil ? nil : NSURL(string: self.cardInfoModel.cardImgUrl), placeholderImage: UIImage(named: "cardBack"))
+                cell.merchNameLabel.text = self.cardInfoModel.merchName
+                cell.amountLabel.text = String(format: "金额:￥%.2f", self.cardInfoModel.amount)
+                cell.scoreLabel.text = String(format: "积分:%.0f", self.cardInfoModel.score)
+                cell.cardNoLabel.text = String(format: "卡号:%@", self.cardInfoModel.cardNo)
             }
             
             
@@ -160,9 +160,14 @@ class CompleteVoucherViewController: UIViewController,UITableViewDelegate,UITabl
     func completeBtnPressed(sender : UIButton) {
         
         let QRPay : String = NSUserDefaults.standardUserDefaults().stringForKey("QRPay")!
-        if QRPay == "SupermarketNewStore" {
-            
+        if QRPay == "viewControllers[1]" {
             self.navigationController?.popToViewController(self.navigationController!.viewControllers[1], animated: true)
+        }
+        else if QRPay == "viewControllers[-4]" {
+            self.navigationController?.popToViewController(self.navigationController!.viewControllers[(self.navigationController?.viewControllers.count)!-4], animated: true)
+        }
+        else if QRPay == "viewControllers[0]" {
+            self.navigationController?.popToRootViewControllerAnimated(true)
         }
     }
     

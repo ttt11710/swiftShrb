@@ -14,6 +14,8 @@ import SDWebImage
 class SupermarketCollectController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate,CollectionViewWaterfallLayoutDelegate {
 
     
+    var showSVProgressShow : Bool = true
+    
     var merchId : String = ""
     var merchTitle : String = ""
     
@@ -62,8 +64,11 @@ class SupermarketCollectController: UIViewController, UICollectionViewDataSource
     
     func requestData() {
         
+        if self.showSVProgressShow {
+            
+            SVProgressShow.showWithStatus("加载中...")
+        }
         
-        SVProgressShow.showWithStatus("加载中...")
         
         Alamofire.request(.GET, baseUrl + "/product/v1.0/getProductList?", parameters: ["merchId":self.merchId,"pageNum":"1","pageCount":"20","orderBy":"updateTime","sort":"desc","whereString":""])
             
@@ -93,12 +98,14 @@ class SupermarketCollectController: UIViewController, UICollectionViewDataSource
                 let delayInSeconds : Double = 1.0
                 let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)))
                 dispatch_after(popTime, dispatch_get_main_queue(), { () -> Void in
-                    SVProgressShow.showSuccessWithStatus("加载完成!")
+                    if self.showSVProgressShow {
+                        SVProgressShow.showSuccessWithStatus("加载完成!")
+                    }
                 })
         }
         
     }
-
+    
     
     func createCollection() {
        
@@ -414,7 +421,7 @@ class SupermarketCollectController: UIViewController, UICollectionViewDataSource
     
     func goToQRView() {
         
-        UserDefaultsSaveInfo.userDefaultsStandardUserDefaultsObject("QRPay", setobjectString: "SupermarketNewStore", keyString: "QRPay")
+        UserDefaultsSaveInfo.userDefaultsStandardUserDefaultsObject("viewControllers[1]", keyString: "QRPay")
         
         UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             
@@ -427,9 +434,22 @@ class SupermarketCollectController: UIViewController, UICollectionViewDataSource
                       
                         if self.validateCamera() {
                             
-                            let supermarketQRViewController = SupermarketQRViewController()
-                            supermarketQRViewController.merchId = self.merchId
-                            self.navigationController?.pushViewController(supermarketQRViewController, animated: true)
+                            self.QRLabel.hidden = true
+                            UIView.animateWithDuration(0.8, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+                                self.QRViewBtn.layer.transform = CATransform3DMakeTranslation(-(self.QRViewBtn.frame.origin.x - screenWidth/2 + self.QRViewBtn.frame.size.width/2), -(self.QRViewBtn.frame.origin.y - screenHeight/2+self.QRViewBtn.frame.size.height/2), 0)
+                                }, completion: { (finished : Bool) -> Void in
+                                    
+                            })
+                            
+                            UIView.animateWithDuration(0.0, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+                                
+                                }, completion: { (finished : Bool) -> Void in
+                                    let supermarketQRViewController = SupermarketQRViewController()
+                                    supermarketQRViewController.merchId = self.merchId
+                                    self.navigationController?.pushViewController(supermarketQRViewController, animated: true)
+                                    self.QRViewBtn.layer.transform = CATransform3DIdentity
+                                    self.QRLabel.hidden = false
+                            })
                             
                         }
                         else {
@@ -437,11 +457,8 @@ class SupermarketCollectController: UIViewController, UICollectionViewDataSource
                             let alertController = UIAlertController(title: "提示", message: "没有摄像头或摄像头不可用", preferredStyle: UIAlertControllerStyle.Alert)
                             let okAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default, handler: nil)
                             alertController.addAction(okAction)
-                          //  self.presentViewController(alertController, animated: true, completion: nil)
+                            self.presentViewController(alertController, animated: true, completion: nil)
                             
-                            let supermarketOrderViewController = SupermarketOrderViewController()
-                            supermarketOrderViewController.merchId = self.merchId
-                            self.navigationController?.pushViewController(supermarketOrderViewController, animated: true)
                         }
                 })
                 
@@ -452,11 +469,19 @@ class SupermarketCollectController: UIViewController, UICollectionViewDataSource
         return UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) && UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.Rear)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-    
-//        if (touches as NSSet).anyObject()?.view == self.selectTypeTableView {
-//            print("ok")
-//        }
+    override func previewActionItems() -> [UIPreviewActionItem] {
+        
+        let action1 = UIPreviewAction(title: "不知道干嘛", style: .Default) { (action, preViewController) -> Void in
+//            let nav : UINavigationController = self.navigationController!
+//            let supermarketQRViewController = SupermarketQRViewController()
+//            supermarketQRViewController.merchId = self.merchId
+//            supermarketQRViewController.hidesBottomBarWhenPushed = true
+//            nav.pushViewController(supermarketQRViewController, animated: true)
+        }
+        let action2 = UIPreviewAction(title: "香蕉你个不拉拉", style: .Default) { (action, preViewController) -> Void in
+        }
+        let actions : NSArray = [action1,action2]
+        return actions as! [UIPreviewActionItem]
     }
     
     override func didReceiveMemoryWarning() {

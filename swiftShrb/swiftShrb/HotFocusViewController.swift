@@ -14,22 +14,38 @@ import SDWebImage
 
 var defaultHotFocusViewController : HotFocusViewController!
 
-class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,TQTableViewCellRemoveControllerDelegate {
+class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,TQTableViewCellRemoveControllerDelegate,UIViewControllerPreviewingDelegate {
     
     var tableView : UITableView!
     var cellRemoveController : TQTableViewCellRemoveController!
     
     var merchModel = [MerchModel]()
     
+    
+    var supermarketCollectController = SupermarketCollectController()
+    var indexPath : NSIndexPath!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         defaultHotFocusViewController = self
+        
+        
+      //  self.registerForPreviewingWithDelegate(self, sourceView: self.view)
+        
         
         self.title = "热点"
         self.creatTableView()
         self.preferredStatusBarStyle()
         self.requestData()
+        
+        if self.traitCollection.forceTouchCapability == UIForceTouchCapability.Available {
+            self.registerForPreviewingWithDelegate(self, sourceView: self.tableView)
+        }
+        
+        let payQRViewButtonItem : UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "QRIcon"), style: UIBarButtonItemStyle.Plain, target: self, action: Selector("showQRView"))
+        
+        self.navigationItem.rightBarButtonItem = payQRViewButtonItem
         
     }
     
@@ -89,7 +105,18 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
     }
     
-//    //child ViewController的作为状态栏
+    func showQRView() {
+        
+        UserDefaultsSaveInfo.userDefaultsStandardUserDefaultsObject("viewControllers[0]", keyString: "QRPay")
+        
+        let supermarketQRViewController = SupermarketQRViewController()
+        supermarketQRViewController.merchId = "201508111544260859"
+        supermarketQRViewController.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(supermarketQRViewController, animated: true)
+        
+    }
+    
+    //    //child ViewController的作为状态栏
 //    override func childViewControllerForStatusBarStyle() -> UIViewController? {
 //        super.setNeedsStatusBarAppearanceUpdate()
 //        return nil;
@@ -182,6 +209,33 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
         self.tableView.reloadData()
         
     }
+    
+    //按了之后弹出的页面
+    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        
+        self.indexPath = self.tableView.indexPathForRowAtPoint(location)!
+    
+        print(self.indexPath.row)
+        let supermarketCollectController = SupermarketCollectController()
+        supermarketCollectController.merchId = self.merchModel[self.indexPath.row].merchId
+        supermarketCollectController.merchTitle = self.merchModel[self.indexPath.row].merchTitle
+        supermarketCollectController.showSVProgressShow = false
+       // supermarketCollectController.preferredContentSize = CGSizeMake(0, 240)
+        let cell : UITableViewCell = self.tableView.cellForRowAtIndexPath(self.indexPath)!
+        previewingContext.sourceRect = cell.frame
+       
+        return supermarketCollectController
+    }
+    //再按弹出的页面
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+        
+        let viewControllerToCommit = SupermarketCollectController()
+        viewControllerToCommit.merchId = self.merchModel[self.indexPath.row].merchId
+        viewControllerToCommit.merchTitle = self.merchModel[self.indexPath.row].merchTitle
+        viewControllerToCommit.hidesBottomBarWhenPushed = true
+        self.showViewController(viewControllerToCommit, sender: self)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
