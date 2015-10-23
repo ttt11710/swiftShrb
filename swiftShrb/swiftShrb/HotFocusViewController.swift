@@ -92,7 +92,7 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func creatTableView() {
-        tableView = UITableView(frame: CGRectMake(0, 44+20, screenWidth, screenHeight-44-20 - 49))
+        tableView = UITableView(frame: CGRectMake(0, 0, screenWidth, screenHeight))
         tableView.backgroundColor = shrbTableViewColor
         tableView.separatorStyle = .None
         tableView.delegate = self
@@ -178,13 +178,24 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let delayInSeconds : Double = 1.0
         let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)))
         dispatch_after(popTime, dispatch_get_main_queue(), { () -> Void in
+          
+            if self.merchModel[indexPath.row].showType == "0" {
+                let supermarketCollectController = SupermarketCollectController()
+                supermarketCollectController.merchId = self.merchModel[indexPath.row].merchId
+                supermarketCollectController.merchTitle = self.merchModel[indexPath.row].merchTitle
+                supermarketCollectController.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(supermarketCollectController, animated: true)
+                SVProgressShow.dismiss()
+            }
+            else {
+                let storeViewController = StoreViewController()
+                storeViewController.merchId = self.merchModel[indexPath.row].merchId
+                storeViewController.merchTitle = self.merchModel[indexPath.row].merchTitle
+                storeViewController.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(storeViewController, animated: true)
+                SVProgressShow.dismiss()
+            }
             
-            let supermarketCollectController = SupermarketCollectController()
-            supermarketCollectController.merchId = self.merchModel[indexPath.row].merchId
-            supermarketCollectController.merchTitle = self.merchModel[indexPath.row].merchTitle
-            supermarketCollectController.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(supermarketCollectController, animated: true)
-            SVProgressShow.dismiss()
         })
     }
     

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeskNumTableViewCellId" id="KGk-i7-Jjw" customClass="DeskNumTableViewCell" customModule="swiftShrb" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择桌号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42s-0c-xWA">
+                        <rect key="frame" x="18" y="11" width="68" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入桌号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcx-1P-3fV">
+                        <rect key="frame" x="94" y="0.0" width="206" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="2yz-PC-EGi"/>
+                            <constraint firstAttribute="width" constant="97" id="sBz-jE-skB"/>
+                        </constraints>
+                        <color key="textColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sBz-jE-skB"/>
+                                <exclude reference="2yz-PC-EGi"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact" misplaced="YES">
+                            <rect key="frame" x="86" y="0.0" width="206" height="52"/>
+                            <mask key="constraints">
+                                <exclude reference="sBz-jE-skB"/>
+                                <exclude reference="2yz-PC-EGi"/>
+                            </mask>
+                        </variation>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qcx-1P-3fV" firstAttribute="leading" secondItem="42s-0c-xWA" secondAttribute="trailing" constant="8" id="3GD-XM-Pcs"/>
+                    <constraint firstItem="qcx-1P-3fV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="6QS-vX-Wce"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="42s-0c-xWA" secondAttribute="leading" constant="-10" id="Bpl-6o-5ah"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qcx-1P-3fV" secondAttribute="bottom" constant="-8" id="T0p-M8-kMT"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qcx-1P-3fV" secondAttribute="trailing" constant="12" id="l4a-lB-3h3"/>
+                    <constraint firstItem="42s-0c-xWA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="w74-tz-BpA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="deskTextField" destination="qcx-1P-3fV" id="DrQ-Wi-qgG"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
