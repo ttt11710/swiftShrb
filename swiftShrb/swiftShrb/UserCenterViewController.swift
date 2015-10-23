@@ -66,7 +66,7 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     func creatTableView() {
-        tableView = UITableView(frame: CGRectMake(0, 44+20, screenWidth, screenHeight-44-20 - 49))
+        tableView = UITableView(frame: CGRectMake(0, 0, screenWidth, screenHeight))
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = shrbTableViewColor

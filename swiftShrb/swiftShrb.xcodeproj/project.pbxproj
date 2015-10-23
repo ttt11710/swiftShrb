@@ -16,82 +16,89 @@
 		DF0BAC131BB8CEB2008A8952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0BAC111BB8CEB2008A8952 /* LaunchScreen.storyboard */; };
 		DF0BAC1E1BB8CEB2008A8952 /* swiftShrbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC1D1BB8CEB2008A8952 /* swiftShrbTests.swift */; };
 		DF0BAC291BB8CEB2008A8952 /* swiftShrbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC281BB8CEB2008A8952 /* swiftShrbUITests.swift */; };
-		DF0BAC391BB8DAC7008A8952 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC381BB8DAC7008A8952 /* Config.swift */; settings = {ASSET_TAGS = (); }; };
-		DF29F3C31BD72586008D15D0 /* PayQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3C21BD72586008D15D0 /* PayQRViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF29F3C51BD7580E008D15D0 /* VoucherCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3C41BD7580E008D15D0 /* VoucherCenterViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF29F3C81BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3C61BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		DF29F3C91BD75DFD008D15D0 /* VoucherAmoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF29F3C71BD75DFD008D15D0 /* VoucherAmoutTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DF29F3CC1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3CA1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		DF29F3CD1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF29F3CB1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DF3832FE1BCF407300A84EC2 /* CardInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3832FD1BCF407300A84EC2 /* CardInfoModel.swift */; settings = {ASSET_TAGS = (); }; };
-		DF3833011BCF6D6400A84EC2 /* CardDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3832FF1BCF6D6400A84EC2 /* CardDetailTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		DF3833021BCF6D6400A84EC2 /* CardDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF3833001BCF6D6400A84EC2 /* CardDetailTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DF3833041BCF6F9600A84EC2 /* CompleteVoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3833031BCF6F9600A84EC2 /* CompleteVoucherViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF3833071BCF8B5800A84EC2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3833061BCF8B5800A84EC2 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF4FFD181BC8A36B00824999 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FFD171BC8A36B00824999 /* ProductViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF4FFD1A1BC8A38500824999 /* ProductIsMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FFD191BC8A38500824999 /* ProductIsMemberViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF76E6501BD08CD500562B81 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E64F1BD08CD500562B81 /* ForgetPasswordViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF76E6521BD0983E00562B81 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E6511BD0983E00562B81 /* RegisterViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF76E6541BD0C1CD00562B81 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E6531BD0C1CD00562B81 /* SettingViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF76E6571BD0C44E00562B81 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E6551BD0C44E00562B81 /* SettingTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		DF76E6581BD0C44E00562B81 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF76E6561BD0C44E00562B81 /* SettingTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DF76E65A1BD0CE9B00562B81 /* UpdatePayPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E6591BD0CE9B00562B81 /* UpdatePayPassViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF76E65C1BD0E9A200562B81 /* UpdatePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E65B1BD0E9A200562B81 /* UpdatePassViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF76E65E1BD0F75900562B81 /* PasswordDataProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E65D1BD0F75900562B81 /* PasswordDataProcessing.swift */; settings = {ASSET_TAGS = (); }; };
-		DF850ADF1BBA61DC0055DCA7 /* MerchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF850ADE1BBA61DC0055DCA7 /* MerchModel.swift */; settings = {ASSET_TAGS = (); }; };
-		DF850AE11BBA8E1D0055DCA7 /* UserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF8F4FA01BD5E66500049D54 /* AutoresizeLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4F9E1BD5E66500049D54 /* AutoresizeLabelTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		DF8F4FA11BD5E66500049D54 /* AutoresizeLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF8F4F9F1BD5E66500049D54 /* AutoresizeLabelTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DF8F4FA31BD6040200049D54 /* TradingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FA21BD6040200049D54 /* TradingRecordViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF8F4FA61BD6043200049D54 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FA41BD6043200049D54 /* ExpenseTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		DF8F4FA71BD6043200049D54 /* ExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF8F4FA51BD6043200049D54 /* ExpenseTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DF8F4FA91BD607FD00049D54 /* CardTradeRecordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FA81BD607FD00049D54 /* CardTradeRecordsModel.swift */; settings = {ASSET_TAGS = (); }; };
-		DF8F4FAB1BD61D1300049D54 /* BasicInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FAA1BD61D1300049D54 /* BasicInfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DF8F4FAD1BD6244300049D54 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FAC1BD6244300049D54 /* UserInfoModel.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC214C11BCDEC7E0039639C /* QRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214BC1BCDEC7E0039639C /* QRItem.m */; settings = {ASSET_TAGS = (); }; };
-		DFC214C21BCDEC7E0039639C /* QRMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214BE1BCDEC7E0039639C /* QRMenu.m */; settings = {ASSET_TAGS = (); }; };
-		DFC214C31BCDEC7E0039639C /* QRView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214C01BCDEC7E0039639C /* QRView.m */; settings = {ASSET_TAGS = (); }; };
-		DFC214C91BCDEDCD0039639C /* SupermarketQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214C81BCDEDCD0039639C /* SupermarketQRViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DF0BAC391BB8DAC7008A8952 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC381BB8DAC7008A8952 /* Config.swift */; };
+		DF29F3C31BD72586008D15D0 /* PayQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3C21BD72586008D15D0 /* PayQRViewController.swift */; };
+		DF29F3C51BD7580E008D15D0 /* VoucherCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3C41BD7580E008D15D0 /* VoucherCenterViewController.swift */; };
+		DF29F3C81BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3C61BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift */; };
+		DF29F3C91BD75DFD008D15D0 /* VoucherAmoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF29F3C71BD75DFD008D15D0 /* VoucherAmoutTableViewCell.xib */; };
+		DF29F3CC1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3CA1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.swift */; };
+		DF29F3CD1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF29F3CB1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.xib */; };
+		DF3832FE1BCF407300A84EC2 /* CardInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3832FD1BCF407300A84EC2 /* CardInfoModel.swift */; };
+		DF3833011BCF6D6400A84EC2 /* CardDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3832FF1BCF6D6400A84EC2 /* CardDetailTableViewCell.swift */; };
+		DF3833021BCF6D6400A84EC2 /* CardDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF3833001BCF6D6400A84EC2 /* CardDetailTableViewCell.xib */; };
+		DF3833041BCF6F9600A84EC2 /* CompleteVoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3833031BCF6F9600A84EC2 /* CompleteVoucherViewController.swift */; };
+		DF3833071BCF8B5800A84EC2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3833061BCF8B5800A84EC2 /* LoginViewController.swift */; };
+		DF4FFD181BC8A36B00824999 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FFD171BC8A36B00824999 /* ProductViewController.swift */; };
+		DF4FFD1A1BC8A38500824999 /* ProductIsMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FFD191BC8A38500824999 /* ProductIsMemberViewController.swift */; };
+		DF76E6501BD08CD500562B81 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E64F1BD08CD500562B81 /* ForgetPasswordViewController.swift */; };
+		DF76E6521BD0983E00562B81 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E6511BD0983E00562B81 /* RegisterViewController.swift */; };
+		DF76E6541BD0C1CD00562B81 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E6531BD0C1CD00562B81 /* SettingViewController.swift */; };
+		DF76E6571BD0C44E00562B81 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E6551BD0C44E00562B81 /* SettingTableViewCell.swift */; };
+		DF76E6581BD0C44E00562B81 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF76E6561BD0C44E00562B81 /* SettingTableViewCell.xib */; };
+		DF76E65A1BD0CE9B00562B81 /* UpdatePayPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E6591BD0CE9B00562B81 /* UpdatePayPassViewController.swift */; };
+		DF76E65C1BD0E9A200562B81 /* UpdatePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E65B1BD0E9A200562B81 /* UpdatePassViewController.swift */; };
+		DF76E65E1BD0F75900562B81 /* PasswordDataProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E65D1BD0F75900562B81 /* PasswordDataProcessing.swift */; };
+		DF850ADF1BBA61DC0055DCA7 /* MerchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF850ADE1BBA61DC0055DCA7 /* MerchModel.swift */; };
+		DF850AE11BBA8E1D0055DCA7 /* UserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */; };
+		DF8F4FA01BD5E66500049D54 /* AutoresizeLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4F9E1BD5E66500049D54 /* AutoresizeLabelTableViewCell.swift */; };
+		DF8F4FA11BD5E66500049D54 /* AutoresizeLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF8F4F9F1BD5E66500049D54 /* AutoresizeLabelTableViewCell.xib */; };
+		DF8F4FA31BD6040200049D54 /* TradingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FA21BD6040200049D54 /* TradingRecordViewController.swift */; };
+		DF8F4FA61BD6043200049D54 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FA41BD6043200049D54 /* ExpenseTableViewCell.swift */; };
+		DF8F4FA71BD6043200049D54 /* ExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF8F4FA51BD6043200049D54 /* ExpenseTableViewCell.xib */; };
+		DF8F4FA91BD607FD00049D54 /* CardTradeRecordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FA81BD607FD00049D54 /* CardTradeRecordsModel.swift */; };
+		DF8F4FAB1BD61D1300049D54 /* BasicInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FAA1BD61D1300049D54 /* BasicInfoViewController.swift */; };
+		DF8F4FAD1BD6244300049D54 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FAC1BD6244300049D54 /* UserInfoModel.swift */; };
+		DFA35ECC1BD9FEB3008E2B3D /* DeskNumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA35ECA1BD9FEB3008E2B3D /* DeskNumTableViewCell.swift */; };
+		DFA35ECD1BD9FEB3008E2B3D /* DeskNumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA35ECB1BD9FEB3008E2B3D /* DeskNumTableViewCell.xib */; };
+		DFA35ED01BDA0178008E2B3D /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA35ECF1BDA0178008E2B3D /* StoreViewController.swift */; };
+		DFA35ED71BDA0398008E2B3D /* HJCAdjustNumButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DFA35ED21BDA0398008E2B3D /* HJCAdjustNumButton.bundle */; };
+		DFA35ED81BDA0398008E2B3D /* HJCAjustNumButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA35ED41BDA0398008E2B3D /* HJCAjustNumButton.m */; };
+		DFA35ED91BDA0398008E2B3D /* HJCAjustNumButton3.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA35ED61BDA0398008E2B3D /* HJCAjustNumButton3.m */; };
+		DFA35EDB1BDA37EA008E2B3D /* ShoppingCardDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA35EDA1BDA37EA008E2B3D /* ShoppingCardDataItem.swift */; };
+		DFC214C11BCDEC7E0039639C /* QRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214BC1BCDEC7E0039639C /* QRItem.m */; };
+		DFC214C21BCDEC7E0039639C /* QRMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214BE1BCDEC7E0039639C /* QRMenu.m */; };
+		DFC214C31BCDEC7E0039639C /* QRView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214C01BCDEC7E0039639C /* QRView.m */; };
+		DFC214C91BCDEDCD0039639C /* SupermarketQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214C81BCDEDCD0039639C /* SupermarketQRViewController.swift */; };
 		DFC214CB1BCDEECC0039639C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC214CA1BCDEECC0039639C /* AssetsLibrary.framework */; };
 		DFC214CD1BCDEED70039639C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC214CC1BCDEED70039639C /* MobileCoreServices.framework */; };
 		DFC214CF1BCDEEDF0039639C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC214CE1BCDEEDF0039639C /* CoreLocation.framework */; };
-		DFC214D11BCE21CE0039639C /* UserDefaultsSaveInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214D01BCE21CE0039639C /* UserDefaultsSaveInfo.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC214D61BCE26650039639C /* orderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214D41BCE26650039639C /* orderTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC214D71BCE26650039639C /* orderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC214D51BCE26650039639C /* orderTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DFC214D91BCE2DB90039639C /* SupermarketOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214D81BCE2DB90039639C /* SupermarketOrderViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC214DC1BCE37D00039639C /* PriceGatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214DA1BCE37D00039639C /* PriceGatherTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC214DD1BCE37D00039639C /* PriceGatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC214DB1BCE37D00039639C /* PriceGatherTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DFC214F31BCE38110039639C /* TNCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214E01BCE38110039639C /* TNCheckBox.m */; settings = {ASSET_TAGS = (); }; };
-		DFC214F41BCE38110039639C /* TNCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214E21BCE38110039639C /* TNCheckBoxData.m */; settings = {ASSET_TAGS = (); }; };
-		DFC214F51BCE38110039639C /* TNCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214E51BCE38110039639C /* TNCheckBoxGroup.m */; settings = {ASSET_TAGS = (); }; };
-		DFC214F61BCE38110039639C /* TNCircularCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214E81BCE38110039639C /* TNCircularCheckBox.m */; settings = {ASSET_TAGS = (); }; };
-		DFC214F71BCE38110039639C /* TNCircularCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214EA1BCE38110039639C /* TNCircularCheckBoxData.m */; settings = {ASSET_TAGS = (); }; };
-		DFC214F81BCE38110039639C /* TNImageCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214EC1BCE38110039639C /* TNImageCheckbox.m */; settings = {ASSET_TAGS = (); }; };
-		DFC214F91BCE38110039639C /* TNImageCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214EE1BCE38110039639C /* TNImageCheckBoxData.m */; settings = {ASSET_TAGS = (); }; };
-		DFC214FA1BCE38110039639C /* TNRectangularCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214F01BCE38110039639C /* TNRectangularCheckBox.m */; settings = {ASSET_TAGS = (); }; };
-		DFC214FB1BCE38110039639C /* TNRectangularCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214F21BCE38110039639C /* TNRectangularCheckBoxData.m */; settings = {ASSET_TAGS = (); }; };
-		DFC214FE1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214FC1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC214FF1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC214FD1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DFC215011BCE4FFA0039639C /* SuperMarketChoosePayTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC215001BCE4FFA0039639C /* SuperMarketChoosePayTypeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC65C1E1BD4805700772F59 /* AboutTBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC65C1D1BD4805700772F59 /* AboutTBViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC65C201BD48D3F00772F59 /* ParentClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC65C1F1BD48D3F00772F59 /* ParentClassViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC65C221BD4976500772F59 /* HelpCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC65C211BD4976500772F59 /* HelpCenterViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC65C241BD4B8D400772F59 /* TBServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC65C231BD4B8D400772F59 /* TBServiceViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC65C281BD4C32900772F59 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC65C271BD4C32900772F59 /* CardViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC65C2A1BD4DE7500772F59 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC65C291BD4DE7500772F59 /* CardDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		DFC9608C1BCB44D900A28DC7 /* SVProgressShow.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC9608B1BCB44D900A28DC7 /* SVProgressShow.m */; settings = {ASSET_TAGS = (); }; };
-		DFD7774A1BBA3608008F4F34 /* HotFocusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD777481BBA3608008F4F34 /* HotFocusTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		DFD7774B1BBA3608008F4F34 /* HotFocusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD777491BBA3608008F4F34 /* HotFocusTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DFE530BE1BC79050002CCAA0 /* ProductListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE530BD1BC79050002CCAA0 /* ProductListModel.swift */; settings = {ASSET_TAGS = (); }; };
-		DFF5EEE71BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEE51BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		DFF5EEE81BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF5EEE61BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DFF5EEEB1BC615D700B3E480 /* RequestDataTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEEA1BC615D700B3E480 /* RequestDataTool.swift */; settings = {ASSET_TAGS = (); }; };
-		DFF5EEED1BC6332A00B3E480 /* TBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEEC1BC6332A00B3E480 /* TBUser.swift */; settings = {ASSET_TAGS = (); }; };
-		DFF5EEEF1BC65A6D00B3E480 /* SupermarketCollectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEEE1BC65A6D00B3E480 /* SupermarketCollectController.swift */; settings = {ASSET_TAGS = (); }; };
-		DFF5EEF21BC65AF400B3E480 /* SupermarketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEF01BC65AF400B3E480 /* SupermarketCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		DFF5EEF31BC65AF400B3E480 /* SupermarketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF5EEF11BC65AF400B3E480 /* SupermarketCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DFF5EEF61BC6624200B3E480 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEF51BC6624200B3E480 /* CollectionViewWaterfallLayout.swift */; settings = {ASSET_TAGS = (); }; };
-		DFFF6B4B1BCCA9C50087611D /* TQTableViewCellRemoveController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFF6B4A1BCCA9C50087611D /* TQTableViewCellRemoveController.m */; settings = {ASSET_TAGS = (); }; };
+		DFC214D11BCE21CE0039639C /* UserDefaultsSaveInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214D01BCE21CE0039639C /* UserDefaultsSaveInfo.swift */; };
+		DFC214D61BCE26650039639C /* orderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214D41BCE26650039639C /* orderTableViewCell.swift */; };
+		DFC214D71BCE26650039639C /* orderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC214D51BCE26650039639C /* orderTableViewCell.xib */; };
+		DFC214D91BCE2DB90039639C /* SupermarketOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214D81BCE2DB90039639C /* SupermarketOrderViewController.swift */; };
+		DFC214DC1BCE37D00039639C /* PriceGatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214DA1BCE37D00039639C /* PriceGatherTableViewCell.swift */; };
+		DFC214DD1BCE37D00039639C /* PriceGatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC214DB1BCE37D00039639C /* PriceGatherTableViewCell.xib */; };
+		DFC214F31BCE38110039639C /* TNCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214E01BCE38110039639C /* TNCheckBox.m */; };
+		DFC214F41BCE38110039639C /* TNCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214E21BCE38110039639C /* TNCheckBoxData.m */; };
+		DFC214F51BCE38110039639C /* TNCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214E51BCE38110039639C /* TNCheckBoxGroup.m */; };
+		DFC214F61BCE38110039639C /* TNCircularCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214E81BCE38110039639C /* TNCircularCheckBox.m */; };
+		DFC214F71BCE38110039639C /* TNCircularCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214EA1BCE38110039639C /* TNCircularCheckBoxData.m */; };
+		DFC214F81BCE38110039639C /* TNImageCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214EC1BCE38110039639C /* TNImageCheckbox.m */; };
+		DFC214F91BCE38110039639C /* TNImageCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214EE1BCE38110039639C /* TNImageCheckBoxData.m */; };
+		DFC214FA1BCE38110039639C /* TNRectangularCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214F01BCE38110039639C /* TNRectangularCheckBox.m */; };
+		DFC214FB1BCE38110039639C /* TNRectangularCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214F21BCE38110039639C /* TNRectangularCheckBoxData.m */; };
+		DFC214FE1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC214FC1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.swift */; };
+		DFC214FF1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC214FD1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.xib */; };
+		DFC215011BCE4FFA0039639C /* SuperMarketChoosePayTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC215001BCE4FFA0039639C /* SuperMarketChoosePayTypeViewController.swift */; };
+		DFC65C1E1BD4805700772F59 /* AboutTBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC65C1D1BD4805700772F59 /* AboutTBViewController.swift */; };
+		DFC65C201BD48D3F00772F59 /* ParentClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC65C1F1BD48D3F00772F59 /* ParentClassViewController.swift */; };
+		DFC65C221BD4976500772F59 /* HelpCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC65C211BD4976500772F59 /* HelpCenterViewController.swift */; };
+		DFC65C241BD4B8D400772F59 /* TBServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC65C231BD4B8D400772F59 /* TBServiceViewController.swift */; };
+		DFC65C281BD4C32900772F59 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC65C271BD4C32900772F59 /* CardViewController.swift */; };
+		DFC65C2A1BD4DE7500772F59 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC65C291BD4DE7500772F59 /* CardDetailViewController.swift */; };
+		DFC9608C1BCB44D900A28DC7 /* SVProgressShow.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC9608B1BCB44D900A28DC7 /* SVProgressShow.m */; };
+		DFD7774A1BBA3608008F4F34 /* HotFocusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD777481BBA3608008F4F34 /* HotFocusTableViewCell.swift */; };
+		DFD7774B1BBA3608008F4F34 /* HotFocusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD777491BBA3608008F4F34 /* HotFocusTableViewCell.xib */; };
+		DFE530BE1BC79050002CCAA0 /* ProductListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE530BD1BC79050002CCAA0 /* ProductListModel.swift */; };
+		DFF5EEE71BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEE51BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.swift */; };
+		DFF5EEE81BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF5EEE61BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.xib */; };
+		DFF5EEEB1BC615D700B3E480 /* RequestDataTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEEA1BC615D700B3E480 /* RequestDataTool.swift */; };
+		DFF5EEED1BC6332A00B3E480 /* TBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEEC1BC6332A00B3E480 /* TBUser.swift */; };
+		DFF5EEEF1BC65A6D00B3E480 /* SupermarketCollectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEEE1BC65A6D00B3E480 /* SupermarketCollectController.swift */; };
+		DFF5EEF21BC65AF400B3E480 /* SupermarketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEF01BC65AF400B3E480 /* SupermarketCollectionViewCell.swift */; };
+		DFF5EEF31BC65AF400B3E480 /* SupermarketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF5EEF11BC65AF400B3E480 /* SupermarketCollectionViewCell.xib */; };
+		DFF5EEF61BC6624200B3E480 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEF51BC6624200B3E480 /* CollectionViewWaterfallLayout.swift */; };
+		DFFF6B4B1BCCA9C50087611D /* TQTableViewCellRemoveController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFF6B4A1BCCA9C50087611D /* TQTableViewCellRemoveController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +168,15 @@
 		DF8F4FA81BD607FD00049D54 /* CardTradeRecordsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTradeRecordsModel.swift; sourceTree = "<group>"; };
 		DF8F4FAA1BD61D1300049D54 /* BasicInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInfoViewController.swift; sourceTree = "<group>"; };
 		DF8F4FAC1BD6244300049D54 /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		DFA35ECA1BD9FEB3008E2B3D /* DeskNumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeskNumTableViewCell.swift; sourceTree = "<group>"; };
+		DFA35ECB1BD9FEB3008E2B3D /* DeskNumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeskNumTableViewCell.xib; sourceTree = "<group>"; };
+		DFA35ECF1BDA0178008E2B3D /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		DFA35ED21BDA0398008E2B3D /* HJCAdjustNumButton.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HJCAdjustNumButton.bundle; sourceTree = "<group>"; };
+		DFA35ED31BDA0398008E2B3D /* HJCAjustNumButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCAjustNumButton.h; sourceTree = "<group>"; };
+		DFA35ED41BDA0398008E2B3D /* HJCAjustNumButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCAjustNumButton.m; sourceTree = "<group>"; };
+		DFA35ED51BDA0398008E2B3D /* HJCAjustNumButton3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCAjustNumButton3.h; sourceTree = "<group>"; };
+		DFA35ED61BDA0398008E2B3D /* HJCAjustNumButton3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCAjustNumButton3.m; sourceTree = "<group>"; };
+		DFA35EDA1BDA37EA008E2B3D /* ShoppingCardDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCardDataItem.swift; sourceTree = "<group>"; };
 		DFC214BB1BCDEC7E0039639C /* QRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRItem.h; sourceTree = "<group>"; };
 		DFC214BC1BCDEC7E0039639C /* QRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRItem.m; sourceTree = "<group>"; };
 		DFC214BD1BCDEC7E0039639C /* QRMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRMenu.h; sourceTree = "<group>"; };
@@ -367,6 +383,35 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		DFA35EC91BD9FE89008E2B3D /* order */ = {
+			isa = PBXGroup;
+			children = (
+				DFA35ECA1BD9FEB3008E2B3D /* DeskNumTableViewCell.swift */,
+				DFA35ECB1BD9FEB3008E2B3D /* DeskNumTableViewCell.xib */,
+			);
+			name = order;
+			sourceTree = "<group>";
+		};
+		DFA35ECE1BDA0139008E2B3D /* order */ = {
+			isa = PBXGroup;
+			children = (
+				DFA35ECF1BDA0178008E2B3D /* StoreViewController.swift */,
+			);
+			name = order;
+			sourceTree = "<group>";
+		};
+		DFA35ED11BDA0398008E2B3D /* HJCAdjustNumButton */ = {
+			isa = PBXGroup;
+			children = (
+				DFA35ED21BDA0398008E2B3D /* HJCAdjustNumButton.bundle */,
+				DFA35ED31BDA0398008E2B3D /* HJCAjustNumButton.h */,
+				DFA35ED41BDA0398008E2B3D /* HJCAjustNumButton.m */,
+				DFA35ED51BDA0398008E2B3D /* HJCAjustNumButton3.h */,
+				DFA35ED61BDA0398008E2B3D /* HJCAjustNumButton3.m */,
+			);
+			path = HJCAdjustNumButton;
+			sourceTree = "<group>";
+		};
 		DFC214BA1BCDEC7E0039639C /* QRView */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +523,7 @@
 			children = (
 				DF0BAC081BB8CEB2008A8952 /* HotFocusViewController.swift */,
 				DFC214D21BCE26100039639C /* supermarket */,
+				DFA35ECE1BDA0139008E2B3D /* order */,
 			);
 			name = control;
 			sourceTree = "<group>";
@@ -498,6 +544,7 @@
 				DFD777481BBA3608008F4F34 /* HotFocusTableViewCell.swift */,
 				DFD777491BBA3608008F4F34 /* HotFocusTableViewCell.xib */,
 				DFC214D31BCE262F0039639C /* supermarket */,
+				DFA35EC91BD9FE89008E2B3D /* order */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -547,6 +594,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8F4FAC1BD6244300049D54 /* UserInfoModel.swift */,
+				DFA35EDA1BDA37EA008E2B3D /* ShoppingCardDataItem.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -600,6 +648,7 @@
 		DFF5EEF41BC6623400B3E480 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				DFA35ED11BDA0398008E2B3D /* HJCAdjustNumButton */,
 				DFC214DE1BCE38110039639C /* TNCheckBoxGroup */,
 				DFC214BA1BCDEC7E0039639C /* QRView */,
 				DFFF6B481BCCA9C40087611D /* TQRemoveController */,
@@ -727,6 +776,7 @@
 				DFF5EEF31BC65AF400B3E480 /* SupermarketCollectionViewCell.xib in Resources */,
 				DF29F3CD1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.xib in Resources */,
 				DFF5EEE81BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.xib in Resources */,
+				DFA35ECD1BD9FEB3008E2B3D /* DeskNumTableViewCell.xib in Resources */,
 				DF3833021BCF6D6400A84EC2 /* CardDetailTableViewCell.xib in Resources */,
 				DF76E6581BD0C44E00562B81 /* SettingTableViewCell.xib in Resources */,
 				DFD7774B1BBA3608008F4F34 /* HotFocusTableViewCell.xib in Resources */,
@@ -739,6 +789,7 @@
 				DF0BAC101BB8CEB2008A8952 /* Assets.xcassets in Resources */,
 				DFC214DD1BCE37D00039639C /* PriceGatherTableViewCell.xib in Resources */,
 				DF0BAC0E1BB8CEB2008A8952 /* Main.storyboard in Resources */,
+				DFA35ED71BDA0398008E2B3D /* HJCAdjustNumButton.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +864,7 @@
 			files = (
 				DF29F3C31BD72586008D15D0 /* PayQRViewController.swift in Sources */,
 				DFF5EEEB1BC615D700B3E480 /* RequestDataTool.swift in Sources */,
+				DFA35ED01BDA0178008E2B3D /* StoreViewController.swift in Sources */,
 				DF76E65E1BD0F75900562B81 /* PasswordDataProcessing.swift in Sources */,
 				DF76E6521BD0983E00562B81 /* RegisterViewController.swift in Sources */,
 				DFC214D91BCE2DB90039639C /* SupermarketOrderViewController.swift in Sources */,
@@ -828,6 +880,7 @@
 				DFFF6B4B1BCCA9C50087611D /* TQTableViewCellRemoveController.m in Sources */,
 				DF8F4FAB1BD61D1300049D54 /* BasicInfoViewController.swift in Sources */,
 				DFC9608C1BCB44D900A28DC7 /* SVProgressShow.m in Sources */,
+				DFA35ED81BDA0398008E2B3D /* HJCAjustNumButton.m in Sources */,
 				DFC65C2A1BD4DE7500772F59 /* CardDetailViewController.swift in Sources */,
 				DF4FFD1A1BC8A38500824999 /* ProductIsMemberViewController.swift in Sources */,
 				DF0BAC0B1BB8CEB2008A8952 /* CardAndCouponsViewController.swift in Sources */,
@@ -846,6 +899,7 @@
 				DF76E6571BD0C44E00562B81 /* SettingTableViewCell.swift in Sources */,
 				DFF5EEED1BC6332A00B3E480 /* TBUser.swift in Sources */,
 				DFF5EEEF1BC65A6D00B3E480 /* SupermarketCollectController.swift in Sources */,
+				DFA35ECC1BD9FEB3008E2B3D /* DeskNumTableViewCell.swift in Sources */,
 				DF76E6541BD0C1CD00562B81 /* SettingViewController.swift in Sources */,
 				DFF5EEF21BC65AF400B3E480 /* SupermarketCollectionViewCell.swift in Sources */,
 				DFC214F31BCE38110039639C /* TNCheckBox.m in Sources */,
@@ -854,6 +908,7 @@
 				DF8F4FA91BD607FD00049D54 /* CardTradeRecordsModel.swift in Sources */,
 				DF76E65A1BD0CE9B00562B81 /* UpdatePayPassViewController.swift in Sources */,
 				DFF5EEF61BC6624200B3E480 /* CollectionViewWaterfallLayout.swift in Sources */,
+				DFA35ED91BDA0398008E2B3D /* HJCAjustNumButton3.m in Sources */,
 				DFC65C201BD48D3F00772F59 /* ParentClassViewController.swift in Sources */,
 				DF850ADF1BBA61DC0055DCA7 /* MerchModel.swift in Sources */,
 				DF0BAC391BB8DAC7008A8952 /* Config.swift in Sources */,
@@ -874,6 +929,7 @@
 				DF0BAC091BB8CEB2008A8952 /* HotFocusViewController.swift in Sources */,
 				DFC214F61BCE38110039639C /* TNCircularCheckBox.m in Sources */,
 				DF3833011BCF6D6400A84EC2 /* CardDetailTableViewCell.swift in Sources */,
+				DFA35EDB1BDA37EA008E2B3D /* ShoppingCardDataItem.swift in Sources */,
 				DF76E65C1BD0E9A200562B81 /* UpdatePassViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1018,11 +1074,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = swiftShrb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paybay.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "00c8c847-e50b-43eb-a887-0c4df8e88712";
 				SWIFT_OBJC_BRIDGING_HEADER = "swiftShrb/swiftShrb-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1034,11 +1094,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = swiftShrb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paybay.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "00c8c847-e50b-43eb-a887-0c4df8e88712";
 				SWIFT_OBJC_BRIDGING_HEADER = "swiftShrb/swiftShrb-Bridging-Header.h";
 			};
 			name = Release;

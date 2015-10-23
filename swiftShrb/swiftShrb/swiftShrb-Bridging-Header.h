@@ -9,3 +9,4 @@
 #import "QRView.h"
 #import "TNCheckBoxGroup.h"
 #import "TNCheckBoxData.h"
+#import "HJCAjustNumButton.h"

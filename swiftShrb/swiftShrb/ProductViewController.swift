@@ -143,15 +143,15 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
                 imageView.clipsToBounds = true
                 imageView.contentMode = .ScaleAspectFill
                 if index == 0 {
-                    imageView.sd_setImageWithURL(NSURL(string: self.imageArray[self.imageArray.count-1].stringValue), placeholderImage: UIImage(named: "热点无图片"))
+                    imageView.sd_setImageWithURL(NSURL(string: (self.imageArray[self.imageArray.count-1] as! String))!, placeholderImage: UIImage(named: "热点无图片"))
                     imageView.tag = self.imageArray.count - 1
                 }
                 else if index == (self.imageArray.count + 1) {
-                    imageView.sd_setImageWithURL(NSURL(string: self.imageArray[0].stringValue), placeholderImage: UIImage(named: "热点无图片"))
+                    imageView.sd_setImageWithURL(NSURL(string: (self.imageArray[0] as! String))!, placeholderImage: UIImage(named: "热点无图片"))
                     imageView.tag = 0
                 }
                 else {
-                    imageView.sd_setImageWithURL(NSURL(string: self.imageArray[index-1].stringValue), placeholderImage: UIImage(named: "热点无图片"))
+                    imageView.sd_setImageWithURL(NSURL(string: self.imageArray[index-1] as! String)!, placeholderImage: UIImage(named: "热点无图片"))
                     imageView.tag = index-1
                 }
                 
