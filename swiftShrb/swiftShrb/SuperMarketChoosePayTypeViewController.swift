@@ -29,6 +29,8 @@ class SuperMarketChoosePayTypeViewController: UIViewController,UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "支付"
+        
         self.creatTableView()
         
         // Do any additional setup after loading the view.
@@ -45,6 +47,10 @@ class SuperMarketChoosePayTypeViewController: UIViewController,UITableViewDelega
         self.tableView.tableFooterView = UIView()
         self.tableView.backgroundColor = shrbTableViewColor
         self.view.addSubview(self.tableView)
+        
+    }
+    
+    func creatBtn() {
         
     }
     
@@ -97,7 +103,7 @@ class SuperMarketChoosePayTypeViewController: UIViewController,UITableViewDelega
             
             let checkBoxData = TNImageCheckBoxData()
             checkBoxData.identifier = "check"
-            checkBoxData.labelText = "100PMB电子券"
+            checkBoxData.labelText = "100RMB电子券"
             checkBoxData.labelColor = UIColor(red: 78.0/255.0, green: 78.0/255.0, blue: 78.0/255.0, alpha: 1)
             checkBoxData.labelFont = font14
             checkBoxData.checked = true
@@ -149,7 +155,7 @@ class SuperMarketChoosePayTypeViewController: UIViewController,UITableViewDelega
                         if RequestDataTool.processingData(json) != nil {
                             self.cardInfoModel = CardInfoModel(json: RequestDataTool.processingData(json)["data"])
                             self.cardNo = self.cardInfoModel.cardNo
-                            Alamofire.request(.GET, baseUrl + "/card/v1.0/pay?", parameters: ["userId":CurrentUser.user!.userId,"token":CurrentUser.user?.token == nil ? "" : CurrentUser.user!.token,"merchId":self.merchId,"cardNo":self.cardInfoModel.cardNo,"payAmount":(0)])
+                            Alamofire.request(.GET, baseUrl + "/card/v1.0/pay?", parameters: ["userId":CurrentUser.user!.userId,"token":CurrentUser.user?.token == nil ? "" : CurrentUser.user!.token,"merchId":self.merchId,"cardNo":self.cardInfoModel.cardNo,"payAmount":(450)])
                                 .response { request, response, data, error in
                                     
                                     if error == nil {

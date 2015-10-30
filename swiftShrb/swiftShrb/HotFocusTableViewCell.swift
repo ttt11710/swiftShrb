@@ -11,7 +11,7 @@ import UIKit
 class HotFocusTableViewCell: UITableViewCell {
 
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var hotImageView: UIImageView!
+    @IBOutlet weak var hotImageView: MyImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -55,7 +55,11 @@ class CardAndCouponsViewController: UIViewController {
     }
     
     func gotoCouponsView() {
-        print("显示电子券页面")
+       
+        let couponsTableViewController = CouponsTableViewController()
+        couponsTableViewController.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(couponsTableViewController, animated: true)
+
     }
 
 

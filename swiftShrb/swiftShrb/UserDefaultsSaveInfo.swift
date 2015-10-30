@@ -15,4 +15,17 @@ class UserDefaultsSaveInfo: NSObject {
         NSUserDefaults.standardUserDefaults().removeObjectForKey(keyString)
         NSUserDefaults.standardUserDefaults().setObject(setobjectString, forKey: keyString)
     }
+    
+    class func userDefaultsStandardUserDefaultsInteger(setInteger : NSInteger, keyInteger : String) {
+        
+        NSUserDefaults.standardUserDefaults().removeObjectForKey(keyInteger)
+        NSUserDefaults.standardUserDefaults().setInteger(setInteger, forKey: keyInteger)    }
+    
+    
+    class func userDefaultsStandardUserDefaultsDouble(setDouble : Double, keyDouble : String) {
+        
+        NSUserDefaults.standardUserDefaults().removeObjectForKey(keyDouble)
+        NSUserDefaults.standardUserDefaults().setDouble(setDouble, forKey: keyDouble)
+    }
+
 }

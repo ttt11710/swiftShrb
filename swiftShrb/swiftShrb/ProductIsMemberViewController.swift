@@ -62,6 +62,7 @@ class ProductIsMemberViewController: UIViewController, UIScrollViewDelegate {
         self.initTradeNameAndPriceView()
         self.initDescriptionAndregisterView()
         self.initMemberCardView()
+        self.cardAnimation()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -194,7 +195,7 @@ class ProductIsMemberViewController: UIViewController, UIScrollViewDelegate {
         self.collectBtn.setBackgroundImage(UIImage(named: "shoucang"), forState: UIControlState.Normal)
         self.collectBtn.setBackgroundImage(UIImage(named: "shoucang"), forState: UIControlState.Highlighted)
         self.collectBtn.frame = CGRectMake(0, 0, (self.blurEffectView.frame.size.width-1)/2, self.blurEffectView.frame.size.height)
-        self.collectBtn.addTarget(self, action: Selector(""), forControlEvents: UIControlEvents.TouchUpOutside)
+        self.collectBtn.addTarget(self, action: Selector("collectBtnPressed"), forControlEvents: UIControlEvents.TouchUpInside)
         self.blurEffectView.addSubview(self.collectBtn)
         
         let lineImageView = UIImageView(frame: CGRectMake((self.blurEffectView.frame.size.width)/2, 5, 1, 30))
@@ -204,7 +205,7 @@ class ProductIsMemberViewController: UIViewController, UIScrollViewDelegate {
         self.shareBtn.setBackgroundImage(UIImage(named: "fenxiang"), forState: UIControlState.Normal)
         self.shareBtn.setBackgroundImage(UIImage(named: "fenxiang"), forState: UIControlState.Highlighted)
         self.shareBtn.frame = CGRectMake((self.blurEffectView.frame.size.width+1)/2, 0, (self.blurEffectView.frame.size.width-1)/2, self.blurEffectView.frame.size.height)
-        self.shareBtn.addTarget(self, action: Selector(""), forControlEvents: UIControlEvents.TouchUpOutside)
+        self.shareBtn.addTarget(self, action: Selector("shareBtnPressed"), forControlEvents: UIControlEvents.TouchUpInside)
         self.blurEffectView.addSubview(self.shareBtn)
         
     }
@@ -249,6 +250,11 @@ class ProductIsMemberViewController: UIViewController, UIScrollViewDelegate {
         self.priceLabel.sizeToFit()
         self.tradeNameAndPriceView.addSubview(self.priceLabel)
         
+        let attrString : NSMutableAttributedString = NSMutableAttributedString(string: self.priceLabel.text!)
+        
+        attrString.addAttribute(NSStrikethroughStyleAttributeName, value:NSNumber(integer: 1), range: NSMakeRange(0, (self.priceLabel.text?.characters.count)!))
+        
+        self.priceLabel.attributedText = attrString
     }
     
     func initDescriptionAndregisterView() {
@@ -327,6 +333,9 @@ class ProductIsMemberViewController: UIViewController, UIScrollViewDelegate {
         self.cardNumberLabel.textColor = shrbText
         cardNumberView.addSubview(self.cardNumberLabel)
         
+        let gotoCardDetailTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("gotoCardDetailTap"))
+        view.addGestureRecognizer(gotoCardDetailTap)
+        
         if (self.cardView.frame.size.height + self.tradeNameAndPriceView.frame.size.height + 8 + self.descriptionAndRegisterView.frame.size.height + 8 + self.memberCardbackView.frame.size.height) < (screenHeight - 20 - 44) {
            
             self.mainScrollView.scrollEnabled = false
@@ -337,7 +346,30 @@ class ProductIsMemberViewController: UIViewController, UIScrollViewDelegate {
         self.mainScrollView.contentSize = CGSizeMake(0, self.cardView.frame.size.height + self.tradeNameAndPriceView.frame.size.height + 8 + self.descriptionAndRegisterView.frame.size.height + 10 + self.memberCardbackView.frame.size.height)
 
     }
-    
+    func cardAnimation() {
+        
+        
+        self.cardView.layer.transform = CATransform3DMakeScale(0, 0, 1)
+        self.prodNameLabel.alpha = 0
+        self.vipPriceLabel.alpha = 0
+        self.priceLabel.alpha = 0
+        self.prodDescLabel.alpha = 0
+        
+        UIView.animateWithDuration(0.8, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            self.cardView.layer.transform = CATransform3DIdentity
+            }) { (finished : Bool) -> Void in
+                
+        }
+        
+        UIView.animateWithDuration(2.0, delay: 0.5, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+            self.prodDescLabel.alpha = 1
+            self.prodNameLabel.alpha = 1
+            self.vipPriceLabel.alpha = 1
+            self.priceLabel.alpha = 1
+
+            }, completion: nil)
+    }
+
     func startTime() {
         self.timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("timerFun"), userInfo: nil, repeats: true)
         
@@ -391,6 +423,93 @@ class ProductIsMemberViewController: UIViewController, UIScrollViewDelegate {
         else {
             self.imagePageControl.currentPage = page - 1
         }
+    }
+    
+    func collectBtnPressed() {
+        SVProgressShow.showWithStatus("收藏中")
+        let delayInSeconds : Int64 = 1
+        let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+        dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+            SVProgressShow.showSuccessWithStatus("收藏成功!")
+        }
+        
+    }
+    
+    func shareBtnPressed() {
+        let action1 : DOPAction = DOPAction(name: "微信", iconName: "weixin") { () -> Void in
+            SVProgressShow.showWithStatus("分享中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("微信分享成功!")
+            }
+        }
+        
+        let action2 : DOPAction = DOPAction(name: "QQ", iconName: "qq") { () -> Void in
+            SVProgressShow.showWithStatus("分享中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("QQ分享成功!")
+            }
+        }
+        
+        let action3 : DOPAction = DOPAction(name: "微信朋友圈", iconName: "wxFriends") { () -> Void in
+            SVProgressShow.showWithStatus("分享中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("微信朋友圈分享成功!")
+            }
+        }
+        
+        let action4 : DOPAction = DOPAction(name: "QQ空间", iconName: "qzone") { () -> Void in
+            SVProgressShow.showWithStatus("分享中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("QQ空间分享成功!")
+            }
+        }
+        
+        let action5 : DOPAction = DOPAction(name: "微博", iconName: "weibo") { () -> Void in
+            SVProgressShow.showWithStatus("分享中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("新浪微博分享成功!")
+            }
+        }
+        
+        let action6 : DOPAction = DOPAction(name: "短信", iconName: "sms") { () -> Void in
+            SVProgressShow.showWithStatus("短信发送中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("短信发送成功!")
+            }
+        }
+        
+        let action7 : DOPAction = DOPAction(name: "邮件", iconName: "email") { () -> Void in
+            SVProgressShow.showWithStatus("邮件发送中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("邮件发送成功!")
+            }
+        }
+        
+        let actions : NSArray = ["",[action1,action2,action3,action4],"",[action5,action6,action7]]
+        let myAs : DOPScrollableActionSheet = DOPScrollableActionSheet(actionArray: actions as [AnyObject])
+        myAs.show()
+    }
+
+    
+    func gotoCardDetailTap() {
+        let cardDetailViewController = CardDetailViewController()
+        cardDetailViewController.merchId = self.cardDataDic["merchId"].stringValue
+        cardDetailViewController.cardNo = self.cardDataDic["cardNo"].stringValue
+        self.navigationController?.pushViewController(cardDetailViewController, animated: true)
     }
     
     

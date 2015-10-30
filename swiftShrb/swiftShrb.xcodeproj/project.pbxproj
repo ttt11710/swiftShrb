@@ -17,6 +17,8 @@
 		DF0BAC1E1BB8CEB2008A8952 /* swiftShrbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC1D1BB8CEB2008A8952 /* swiftShrbTests.swift */; };
 		DF0BAC291BB8CEB2008A8952 /* swiftShrbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC281BB8CEB2008A8952 /* swiftShrbUITests.swift */; };
 		DF0BAC391BB8DAC7008A8952 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAC381BB8DAC7008A8952 /* Config.swift */; };
+		DF11CC1B1BDE057300EC82C6 /* ProductDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11CC1A1BDE057300EC82C6 /* ProductDescriptionView.swift */; };
+		DF11CC1F1BDE2EF300EC82C6 /* DOPScrollableActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = DF11CC1E1BDE2EF300EC82C6 /* DOPScrollableActionSheet.m */; };
 		DF29F3C31BD72586008D15D0 /* PayQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3C21BD72586008D15D0 /* PayQRViewController.swift */; };
 		DF29F3C51BD7580E008D15D0 /* VoucherCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3C41BD7580E008D15D0 /* VoucherCenterViewController.swift */; };
 		DF29F3C81BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F3C61BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift */; };
@@ -38,6 +40,10 @@
 		DF76E65A1BD0CE9B00562B81 /* UpdatePayPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E6591BD0CE9B00562B81 /* UpdatePayPassViewController.swift */; };
 		DF76E65C1BD0E9A200562B81 /* UpdatePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E65B1BD0E9A200562B81 /* UpdatePassViewController.swift */; };
 		DF76E65E1BD0F75900562B81 /* PasswordDataProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF76E65D1BD0F75900562B81 /* PasswordDataProcessing.swift */; };
+		DF7DCD461BE1AD7A003D48B5 /* GiveCouponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7DCD451BE1AD7A003D48B5 /* GiveCouponsViewController.swift */; };
+		DF7DCD481BE1BC9A003D48B5 /* UserCouponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7DCD471BE1BC9A003D48B5 /* UserCouponsViewController.swift */; };
+		DF7DCD4B1BE1E5C9003D48B5 /* MyImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7DCD4A1BE1E5C9003D48B5 /* MyImageView.m */; };
+		DF7DCD4F1BE1F390003D48B5 /* UITableView+Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7DCD4E1BE1F390003D48B5 /* UITableView+Wave.m */; };
 		DF850ADF1BBA61DC0055DCA7 /* MerchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF850ADE1BBA61DC0055DCA7 /* MerchModel.swift */; };
 		DF850AE11BBA8E1D0055DCA7 /* UserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */; };
 		DF8F4FA01BD5E66500049D54 /* AutoresizeLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4F9E1BD5E66500049D54 /* AutoresizeLabelTableViewCell.swift */; };
@@ -48,6 +54,20 @@
 		DF8F4FA91BD607FD00049D54 /* CardTradeRecordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FA81BD607FD00049D54 /* CardTradeRecordsModel.swift */; };
 		DF8F4FAB1BD61D1300049D54 /* BasicInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FAA1BD61D1300049D54 /* BasicInfoViewController.swift */; };
 		DF8F4FAD1BD6244300049D54 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F4FAC1BD6244300049D54 /* UserInfoModel.swift */; };
+		DF9AEC561BE0986C00E81A07 /* ServeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEC551BE0986C00E81A07 /* ServeSelectViewController.swift */; };
+		DF9AEC591BE09D8900E81A07 /* AppleRefundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEC571BE09D8900E81A07 /* AppleRefundTableViewCell.swift */; };
+		DF9AEC5A1BE09D8900E81A07 /* AppleRefundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF9AEC581BE09D8900E81A07 /* AppleRefundTableViewCell.xib */; };
+		DF9AEC601BE0A42200E81A07 /* IQActionSheetPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEC5D1BE0A42200E81A07 /* IQActionSheetPickerView.m */; };
+		DF9AEC611BE0A42200E81A07 /* IQActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEC5F1BE0A42200E81A07 /* IQActionSheetViewController.m */; };
+		DF9AEC631BE0A50700E81A07 /* AppleRefundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEC621BE0A50700E81A07 /* AppleRefundViewController.swift */; };
+		DF9AEC651BE0A96000E81A07 /* SuccessAppleRefundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEC641BE0A96000E81A07 /* SuccessAppleRefundViewController.swift */; };
+		DF9AEC681BE0ABCF00E81A07 /* CollectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEC671BE0ABCF00E81A07 /* CollectViewController.swift */; };
+		DF9AEC6B1BE0B55400E81A07 /* CouponsDetailReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEC691BE0B55400E81A07 /* CouponsDetailReceiveTableViewCell.swift */; };
+		DF9AEC6C1BE0B55400E81A07 /* CouponsDetailReceiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF9AEC6A1BE0B55400E81A07 /* CouponsDetailReceiveTableViewCell.xib */; };
+		DF9AEC6E1BE0B94900E81A07 /* CouponsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEC6D1BE0B94900E81A07 /* CouponsTableViewController.swift */; };
+		DF9AEC711BE0BB0800E81A07 /* CouponsDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEC6F1BE0BB0800E81A07 /* CouponsDetailTableViewCell.swift */; };
+		DF9AEC721BE0BB0800E81A07 /* CouponsDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF9AEC701BE0BB0800E81A07 /* CouponsDetailTableViewCell.xib */; };
+		DF9AEC741BE0D0A900E81A07 /* CouponsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEC731BE0D0A900E81A07 /* CouponsDetailViewController.swift */; };
 		DFA35ECC1BD9FEB3008E2B3D /* DeskNumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA35ECA1BD9FEB3008E2B3D /* DeskNumTableViewCell.swift */; };
 		DFA35ECD1BD9FEB3008E2B3D /* DeskNumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA35ECB1BD9FEB3008E2B3D /* DeskNumTableViewCell.xib */; };
 		DFA35ED01BDA0178008E2B3D /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA35ECF1BDA0178008E2B3D /* StoreViewController.swift */; };
@@ -55,6 +75,12 @@
 		DFA35ED81BDA0398008E2B3D /* HJCAjustNumButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA35ED41BDA0398008E2B3D /* HJCAjustNumButton.m */; };
 		DFA35ED91BDA0398008E2B3D /* HJCAjustNumButton3.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA35ED61BDA0398008E2B3D /* HJCAjustNumButton3.m */; };
 		DFA35EDB1BDA37EA008E2B3D /* ShoppingCardDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA35EDA1BDA37EA008E2B3D /* ShoppingCardDataItem.swift */; };
+		DFB34ED81BDF16EE003CB678 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB34ED71BDF16EE003CB678 /* OrdersViewController.swift */; };
+		DFB34EDA1BDF4C30003CB678 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB34ED91BDF4C30003CB678 /* PayViewController.swift */; };
+		DFB34EDD1BDF5013003CB678 /* OrderChoosePayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB34EDB1BDF5013003CB678 /* OrderChoosePayTableViewCell.swift */; };
+		DFB34EDE1BDF5013003CB678 /* OrderChoosePayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFB34EDC1BDF5013003CB678 /* OrderChoosePayTableViewCell.xib */; };
+		DFB34EE01BDF79AD003CB678 /* OrderTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB34EDF1BDF79AD003CB678 /* OrderTabBarController.swift */; };
+		DFB34EE41BDF79EF003CB678 /* NTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB34EE31BDF79EF003CB678 /* NTButton.m */; };
 		DFC214C11BCDEC7E0039639C /* QRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214BC1BCDEC7E0039639C /* QRItem.m */; };
 		DFC214C21BCDEC7E0039639C /* QRMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214BE1BCDEC7E0039639C /* QRMenu.m */; };
 		DFC214C31BCDEC7E0039639C /* QRView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC214C01BCDEC7E0039639C /* QRView.m */; };
@@ -98,6 +124,12 @@
 		DFF5EEF21BC65AF400B3E480 /* SupermarketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEF01BC65AF400B3E480 /* SupermarketCollectionViewCell.swift */; };
 		DFF5EEF31BC65AF400B3E480 /* SupermarketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF5EEF11BC65AF400B3E480 /* SupermarketCollectionViewCell.xib */; };
 		DFF5EEF61BC6624200B3E480 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF5EEF51BC6624200B3E480 /* CollectionViewWaterfallLayout.swift */; };
+		DFF75C8B1BE05B7F0060AE7B /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF75C8A1BE05B7F0060AE7B /* OrderListViewController.swift */; };
+		DFF75C8E1BE05EBA0060AE7B /* OrderFinishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF75C8C1BE05EBA0060AE7B /* OrderFinishTableViewCell.swift */; };
+		DFF75C8F1BE05EBA0060AE7B /* OrderFinishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF75C8D1BE05EBA0060AE7B /* OrderFinishTableViewCell.xib */; };
+		DFF75C941BE06FA60060AE7B /* RefundOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF75C931BE06FA60060AE7B /* RefundOrderViewController.swift */; };
+		DFF75C961BE072C10060AE7B /* OrderListDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF75C951BE072C10060AE7B /* OrderListDetialViewController.swift */; };
+		DFF75C9A1BE08F7A0060AE7B /* CallBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF75C991BE08F7A0060AE7B /* CallBackButton.m */; };
 		DFFF6B4B1BCCA9C50087611D /* TQTableViewCellRemoveController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFF6B4A1BCCA9C50087611D /* TQTableViewCellRemoveController.m */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +169,9 @@
 		DF0BAC281BB8CEB2008A8952 /* swiftShrbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftShrbUITests.swift; sourceTree = "<group>"; };
 		DF0BAC2A1BB8CEB2008A8952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF0BAC381BB8DAC7008A8952 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		DF11CC1A1BDE057300EC82C6 /* ProductDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDescriptionView.swift; sourceTree = "<group>"; };
+		DF11CC1D1BDE2EF300EC82C6 /* DOPScrollableActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPScrollableActionSheet.h; sourceTree = "<group>"; };
+		DF11CC1E1BDE2EF300EC82C6 /* DOPScrollableActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPScrollableActionSheet.m; sourceTree = "<group>"; };
 		DF29F3C21BD72586008D15D0 /* PayQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayQRViewController.swift; sourceTree = "<group>"; };
 		DF29F3C41BD7580E008D15D0 /* VoucherCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherCenterViewController.swift; sourceTree = "<group>"; };
 		DF29F3C61BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherAmoutTableViewCell.swift; sourceTree = "<group>"; };
@@ -158,6 +193,12 @@
 		DF76E6591BD0CE9B00562B81 /* UpdatePayPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatePayPassViewController.swift; sourceTree = "<group>"; };
 		DF76E65B1BD0E9A200562B81 /* UpdatePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatePassViewController.swift; sourceTree = "<group>"; };
 		DF76E65D1BD0F75900562B81 /* PasswordDataProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordDataProcessing.swift; sourceTree = "<group>"; };
+		DF7DCD451BE1AD7A003D48B5 /* GiveCouponsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiveCouponsViewController.swift; sourceTree = "<group>"; };
+		DF7DCD471BE1BC9A003D48B5 /* UserCouponsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCouponsViewController.swift; sourceTree = "<group>"; };
+		DF7DCD491BE1E5C9003D48B5 /* MyImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyImageView.h; sourceTree = "<group>"; };
+		DF7DCD4A1BE1E5C9003D48B5 /* MyImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyImageView.m; sourceTree = "<group>"; };
+		DF7DCD4D1BE1F390003D48B5 /* UITableView+Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Wave.h"; sourceTree = "<group>"; };
+		DF7DCD4E1BE1F390003D48B5 /* UITableView+Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Wave.m"; sourceTree = "<group>"; };
 		DF850ADE1BBA61DC0055DCA7 /* MerchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchModel.swift; sourceTree = "<group>"; };
 		DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterViewController.swift; sourceTree = "<group>"; };
 		DF8F4F9E1BD5E66500049D54 /* AutoresizeLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoresizeLabelTableViewCell.swift; sourceTree = "<group>"; };
@@ -168,6 +209,22 @@
 		DF8F4FA81BD607FD00049D54 /* CardTradeRecordsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTradeRecordsModel.swift; sourceTree = "<group>"; };
 		DF8F4FAA1BD61D1300049D54 /* BasicInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInfoViewController.swift; sourceTree = "<group>"; };
 		DF8F4FAC1BD6244300049D54 /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		DF9AEC551BE0986C00E81A07 /* ServeSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServeSelectViewController.swift; sourceTree = "<group>"; };
+		DF9AEC571BE09D8900E81A07 /* AppleRefundTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleRefundTableViewCell.swift; sourceTree = "<group>"; };
+		DF9AEC581BE09D8900E81A07 /* AppleRefundTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppleRefundTableViewCell.xib; sourceTree = "<group>"; };
+		DF9AEC5C1BE0A42200E81A07 /* IQActionSheetPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQActionSheetPickerView.h; sourceTree = "<group>"; };
+		DF9AEC5D1BE0A42200E81A07 /* IQActionSheetPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQActionSheetPickerView.m; sourceTree = "<group>"; };
+		DF9AEC5E1BE0A42200E81A07 /* IQActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQActionSheetViewController.h; sourceTree = "<group>"; };
+		DF9AEC5F1BE0A42200E81A07 /* IQActionSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQActionSheetViewController.m; sourceTree = "<group>"; };
+		DF9AEC621BE0A50700E81A07 /* AppleRefundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleRefundViewController.swift; sourceTree = "<group>"; };
+		DF9AEC641BE0A96000E81A07 /* SuccessAppleRefundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessAppleRefundViewController.swift; sourceTree = "<group>"; };
+		DF9AEC671BE0ABCF00E81A07 /* CollectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectViewController.swift; sourceTree = "<group>"; };
+		DF9AEC691BE0B55400E81A07 /* CouponsDetailReceiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsDetailReceiveTableViewCell.swift; sourceTree = "<group>"; };
+		DF9AEC6A1BE0B55400E81A07 /* CouponsDetailReceiveTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponsDetailReceiveTableViewCell.xib; sourceTree = "<group>"; };
+		DF9AEC6D1BE0B94900E81A07 /* CouponsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsTableViewController.swift; sourceTree = "<group>"; };
+		DF9AEC6F1BE0BB0800E81A07 /* CouponsDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsDetailTableViewCell.swift; sourceTree = "<group>"; };
+		DF9AEC701BE0BB0800E81A07 /* CouponsDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponsDetailTableViewCell.xib; sourceTree = "<group>"; };
+		DF9AEC731BE0D0A900E81A07 /* CouponsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsDetailViewController.swift; sourceTree = "<group>"; };
 		DFA35ECA1BD9FEB3008E2B3D /* DeskNumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeskNumTableViewCell.swift; sourceTree = "<group>"; };
 		DFA35ECB1BD9FEB3008E2B3D /* DeskNumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeskNumTableViewCell.xib; sourceTree = "<group>"; };
 		DFA35ECF1BDA0178008E2B3D /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +234,13 @@
 		DFA35ED51BDA0398008E2B3D /* HJCAjustNumButton3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCAjustNumButton3.h; sourceTree = "<group>"; };
 		DFA35ED61BDA0398008E2B3D /* HJCAjustNumButton3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCAjustNumButton3.m; sourceTree = "<group>"; };
 		DFA35EDA1BDA37EA008E2B3D /* ShoppingCardDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCardDataItem.swift; sourceTree = "<group>"; };
+		DFB34ED71BDF16EE003CB678 /* OrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		DFB34ED91BDF4C30003CB678 /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		DFB34EDB1BDF5013003CB678 /* OrderChoosePayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderChoosePayTableViewCell.swift; sourceTree = "<group>"; };
+		DFB34EDC1BDF5013003CB678 /* OrderChoosePayTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderChoosePayTableViewCell.xib; sourceTree = "<group>"; };
+		DFB34EDF1BDF79AD003CB678 /* OrderTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTabBarController.swift; sourceTree = "<group>"; };
+		DFB34EE21BDF79EF003CB678 /* NTButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTButton.h; sourceTree = "<group>"; };
+		DFB34EE31BDF79EF003CB678 /* NTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTButton.m; sourceTree = "<group>"; };
 		DFC214BB1BCDEC7E0039639C /* QRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRItem.h; sourceTree = "<group>"; };
 		DFC214BC1BCDEC7E0039639C /* QRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRItem.m; sourceTree = "<group>"; };
 		DFC214BD1BCDEC7E0039639C /* QRMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRMenu.h; sourceTree = "<group>"; };
@@ -236,6 +300,13 @@
 		DFF5EEF01BC65AF400B3E480 /* SupermarketCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupermarketCollectionViewCell.swift; sourceTree = "<group>"; };
 		DFF5EEF11BC65AF400B3E480 /* SupermarketCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SupermarketCollectionViewCell.xib; sourceTree = "<group>"; };
 		DFF5EEF51BC6624200B3E480 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
+		DFF75C8A1BE05B7F0060AE7B /* OrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
+		DFF75C8C1BE05EBA0060AE7B /* OrderFinishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderFinishTableViewCell.swift; sourceTree = "<group>"; };
+		DFF75C8D1BE05EBA0060AE7B /* OrderFinishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderFinishTableViewCell.xib; sourceTree = "<group>"; };
+		DFF75C931BE06FA60060AE7B /* RefundOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefundOrderViewController.swift; sourceTree = "<group>"; };
+		DFF75C951BE072C10060AE7B /* OrderListDetialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListDetialViewController.swift; sourceTree = "<group>"; };
+		DFF75C981BE08F7A0060AE7B /* CallBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallBackButton.h; sourceTree = "<group>"; };
+		DFF75C991BE08F7A0060AE7B /* CallBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallBackButton.m; sourceTree = "<group>"; };
 		DFFF6B491BCCA9C50087611D /* TQTableViewCellRemoveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTableViewCellRemoveController.h; sourceTree = "<group>"; };
 		DFFF6B4A1BCCA9C50087611D /* TQTableViewCellRemoveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTableViewCellRemoveController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -349,6 +420,15 @@
 			path = swiftShrbUITests;
 			sourceTree = "<group>";
 		};
+		DF11CC1C1BDE2EF300EC82C6 /* DOPScrollableActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				DF11CC1D1BDE2EF300EC82C6 /* DOPScrollableActionSheet.h */,
+				DF11CC1E1BDE2EF300EC82C6 /* DOPScrollableActionSheet.m */,
+			);
+			path = DOPScrollableActionSheet;
+			sourceTree = "<group>";
+		};
 		DF3833051BCF8B1800A84EC2 /* login */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,11 +463,46 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		DF7DCD4C1BE1F390003D48B5 /* UITableView+Wave */ = {
+			isa = PBXGroup;
+			children = (
+				DF7DCD4D1BE1F390003D48B5 /* UITableView+Wave.h */,
+				DF7DCD4E1BE1F390003D48B5 /* UITableView+Wave.m */,
+			);
+			path = "UITableView+Wave";
+			sourceTree = "<group>";
+		};
+		DF9AEC5B1BE0A42200E81A07 /* IQActionSheetPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				DF9AEC5C1BE0A42200E81A07 /* IQActionSheetPickerView.h */,
+				DF9AEC5D1BE0A42200E81A07 /* IQActionSheetPickerView.m */,
+				DF9AEC5E1BE0A42200E81A07 /* IQActionSheetViewController.h */,
+				DF9AEC5F1BE0A42200E81A07 /* IQActionSheetViewController.m */,
+			);
+			path = IQActionSheetPickerView;
+			sourceTree = "<group>";
+		};
+		DF9AEC661BE0AB4800E81A07 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				DF76E6531BD0C1CD00562B81 /* SettingViewController.swift */,
+				DF76E6591BD0CE9B00562B81 /* UpdatePayPassViewController.swift */,
+				DF76E65B1BD0E9A200562B81 /* UpdatePassViewController.swift */,
+			);
+			name = setting;
+			sourceTree = "<group>";
+		};
 		DFA35EC91BD9FE89008E2B3D /* order */ = {
 			isa = PBXGroup;
 			children = (
+				DFC214D41BCE26650039639C /* orderTableViewCell.swift */,
+				DFC214D51BCE26650039639C /* orderTableViewCell.xib */,
 				DFA35ECA1BD9FEB3008E2B3D /* DeskNumTableViewCell.swift */,
 				DFA35ECB1BD9FEB3008E2B3D /* DeskNumTableViewCell.xib */,
+				DF11CC1A1BDE057300EC82C6 /* ProductDescriptionView.swift */,
+				DFB34EDB1BDF5013003CB678 /* OrderChoosePayTableViewCell.swift */,
+				DFB34EDC1BDF5013003CB678 /* OrderChoosePayTableViewCell.xib */,
 			);
 			name = order;
 			sourceTree = "<group>";
@@ -396,6 +511,8 @@
 			isa = PBXGroup;
 			children = (
 				DFA35ECF1BDA0178008E2B3D /* StoreViewController.swift */,
+				DFB34ED71BDF16EE003CB678 /* OrdersViewController.swift */,
+				DFB34ED91BDF4C30003CB678 /* PayViewController.swift */,
 			);
 			name = order;
 			sourceTree = "<group>";
@@ -410,6 +527,15 @@
 				DFA35ED61BDA0398008E2B3D /* HJCAjustNumButton3.m */,
 			);
 			path = HJCAdjustNumButton;
+			sourceTree = "<group>";
+		};
+		DFB34EE11BDF79EF003CB678 /* NTButton */ = {
+			isa = PBXGroup;
+			children = (
+				DFB34EE21BDF79EF003CB678 /* NTButton.h */,
+				DFB34EE31BDF79EF003CB678 /* NTButton.m */,
+			);
+			path = NTButton;
 			sourceTree = "<group>";
 		};
 		DFC214BA1BCDEC7E0039639C /* QRView */ = {
@@ -441,8 +567,8 @@
 		DFC214D31BCE262F0039639C /* supermarket */ = {
 			isa = PBXGroup;
 			children = (
-				DFC214D41BCE26650039639C /* orderTableViewCell.swift */,
-				DFC214D51BCE26650039639C /* orderTableViewCell.xib */,
+				DFF5EEF01BC65AF400B3E480 /* SupermarketCollectionViewCell.swift */,
+				DFF5EEF11BC65AF400B3E480 /* SupermarketCollectionViewCell.xib */,
 				DFC214DA1BCE37D00039639C /* PriceGatherTableViewCell.swift */,
 				DFC214DB1BCE37D00039639C /* PriceGatherTableViewCell.xib */,
 				DFC214FC1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.swift */,
@@ -494,6 +620,10 @@
 		DFC65C261BD4C2E800772F59 /* coupons */ = {
 			isa = PBXGroup;
 			children = (
+				DF9AEC6D1BE0B94900E81A07 /* CouponsTableViewController.swift */,
+				DF9AEC731BE0D0A900E81A07 /* CouponsDetailViewController.swift */,
+				DF7DCD451BE1AD7A003D48B5 /* GiveCouponsViewController.swift */,
+				DF7DCD471BE1BC9A003D48B5 /* UserCouponsViewController.swift */,
 			);
 			name = coupons;
 			sourceTree = "<group>";
@@ -582,10 +712,12 @@
 			children = (
 				DFF5EEE51BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.swift */,
 				DFF5EEE61BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.xib */,
-				DFF5EEF01BC65AF400B3E480 /* SupermarketCollectionViewCell.swift */,
-				DFF5EEF11BC65AF400B3E480 /* SupermarketCollectionViewCell.xib */,
 				DF76E6551BD0C44E00562B81 /* SettingTableViewCell.swift */,
 				DF76E6561BD0C44E00562B81 /* SettingTableViewCell.xib */,
+				DFF75C8C1BE05EBA0060AE7B /* OrderFinishTableViewCell.swift */,
+				DFF75C8D1BE05EBA0060AE7B /* OrderFinishTableViewCell.xib */,
+				DF9AEC571BE09D8900E81A07 /* AppleRefundTableViewCell.swift */,
+				DF9AEC581BE09D8900E81A07 /* AppleRefundTableViewCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -604,12 +736,12 @@
 			children = (
 				DF850AE01BBA8E1C0055DCA7 /* UserCenterViewController.swift */,
 				DF8F4FAA1BD61D1300049D54 /* BasicInfoViewController.swift */,
-				DF76E6531BD0C1CD00562B81 /* SettingViewController.swift */,
-				DF76E6591BD0CE9B00562B81 /* UpdatePayPassViewController.swift */,
-				DF76E65B1BD0E9A200562B81 /* UpdatePassViewController.swift */,
-				DFC65C1D1BD4805700772F59 /* AboutTBViewController.swift */,
+				DFF75C901BE06F240060AE7B /* order */,
+				DF9AEC671BE0ABCF00E81A07 /* CollectViewController.swift */,
 				DFC65C211BD4976500772F59 /* HelpCenterViewController.swift */,
 				DFC65C231BD4B8D400772F59 /* TBServiceViewController.swift */,
+				DFC65C1D1BD4805700772F59 /* AboutTBViewController.swift */,
+				DF9AEC661BE0AB4800E81A07 /* setting */,
 			);
 			name = control;
 			sourceTree = "<group>";
@@ -627,6 +759,10 @@
 				DF29F3C71BD75DFD008D15D0 /* VoucherAmoutTableViewCell.xib */,
 				DF29F3CA1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.swift */,
 				DF29F3CB1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.xib */,
+				DF9AEC691BE0B55400E81A07 /* CouponsDetailReceiveTableViewCell.swift */,
+				DF9AEC6A1BE0B55400E81A07 /* CouponsDetailReceiveTableViewCell.xib */,
+				DF9AEC6F1BE0BB0800E81A07 /* CouponsDetailTableViewCell.swift */,
+				DF9AEC701BE0BB0800E81A07 /* CouponsDetailTableViewCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -634,6 +770,8 @@
 		DFF5EEE91BC615B600B3E480 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DF7DCD491BE1E5C9003D48B5 /* MyImageView.h */,
+				DF7DCD4A1BE1E5C9003D48B5 /* MyImageView.m */,
 				DF76E65D1BD0F75900562B81 /* PasswordDataProcessing.swift */,
 				DFF5EEEA1BC615D700B3E480 /* RequestDataTool.swift */,
 				DFC214D01BCE21CE0039639C /* UserDefaultsSaveInfo.swift */,
@@ -648,6 +786,11 @@
 		DFF5EEF41BC6623400B3E480 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				DF7DCD4C1BE1F390003D48B5 /* UITableView+Wave */,
+				DF9AEC5B1BE0A42200E81A07 /* IQActionSheetPickerView */,
+				DFF75C971BE08F7A0060AE7B /* CallBackButton */,
+				DFB34EE11BDF79EF003CB678 /* NTButton */,
+				DF11CC1C1BDE2EF300EC82C6 /* DOPScrollableActionSheet */,
 				DFA35ED11BDA0398008E2B3D /* HJCAdjustNumButton */,
 				DFC214DE1BCE38110039639C /* TNCheckBoxGroup */,
 				DFC214BA1BCDEC7E0039639C /* QRView */,
@@ -655,6 +798,45 @@
 				DFF5EEF51BC6624200B3E480 /* CollectionViewWaterfallLayout.swift */,
 			);
 			name = Lib;
+			sourceTree = "<group>";
+		};
+		DFF75C901BE06F240060AE7B /* order */ = {
+			isa = PBXGroup;
+			children = (
+				DFB34EDF1BDF79AD003CB678 /* OrderTabBarController.swift */,
+				DFF75C911BE06F5C0060AE7B /* orderForm */,
+				DFF75C921BE06F760060AE7B /* refundForm */,
+			);
+			name = order;
+			sourceTree = "<group>";
+		};
+		DFF75C911BE06F5C0060AE7B /* orderForm */ = {
+			isa = PBXGroup;
+			children = (
+				DFF75C8A1BE05B7F0060AE7B /* OrderListViewController.swift */,
+				DFF75C951BE072C10060AE7B /* OrderListDetialViewController.swift */,
+				DF9AEC551BE0986C00E81A07 /* ServeSelectViewController.swift */,
+				DF9AEC621BE0A50700E81A07 /* AppleRefundViewController.swift */,
+				DF9AEC641BE0A96000E81A07 /* SuccessAppleRefundViewController.swift */,
+			);
+			name = orderForm;
+			sourceTree = "<group>";
+		};
+		DFF75C921BE06F760060AE7B /* refundForm */ = {
+			isa = PBXGroup;
+			children = (
+				DFF75C931BE06FA60060AE7B /* RefundOrderViewController.swift */,
+			);
+			name = refundForm;
+			sourceTree = "<group>";
+		};
+		DFF75C971BE08F7A0060AE7B /* CallBackButton */ = {
+			isa = PBXGroup;
+			children = (
+				DFF75C981BE08F7A0060AE7B /* CallBackButton.h */,
+				DFF75C991BE08F7A0060AE7B /* CallBackButton.m */,
+			);
+			path = CallBackButton;
 			sourceTree = "<group>";
 		};
 		DFFF6B481BCCA9C40087611D /* TQRemoveController */ = {
@@ -776,11 +958,16 @@
 				DFF5EEF31BC65AF400B3E480 /* SupermarketCollectionViewCell.xib in Resources */,
 				DF29F3CD1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.xib in Resources */,
 				DFF5EEE81BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.xib in Resources */,
+				DFF75C8F1BE05EBA0060AE7B /* OrderFinishTableViewCell.xib in Resources */,
 				DFA35ECD1BD9FEB3008E2B3D /* DeskNumTableViewCell.xib in Resources */,
 				DF3833021BCF6D6400A84EC2 /* CardDetailTableViewCell.xib in Resources */,
 				DF76E6581BD0C44E00562B81 /* SettingTableViewCell.xib in Resources */,
 				DFD7774B1BBA3608008F4F34 /* HotFocusTableViewCell.xib in Resources */,
 				DFC214FF1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.xib in Resources */,
+				DF9AEC6C1BE0B55400E81A07 /* CouponsDetailReceiveTableViewCell.xib in Resources */,
+				DFB34EDE1BDF5013003CB678 /* OrderChoosePayTableViewCell.xib in Resources */,
+				DF9AEC5A1BE09D8900E81A07 /* AppleRefundTableViewCell.xib in Resources */,
+				DF9AEC721BE0BB0800E81A07 /* CouponsDetailTableViewCell.xib in Resources */,
 				DF8F4FA71BD6043200049D54 /* ExpenseTableViewCell.xib in Resources */,
 				DF29F3C91BD75DFD008D15D0 /* VoucherAmoutTableViewCell.xib in Resources */,
 				DF8F4FA11BD5E66500049D54 /* AutoresizeLabelTableViewCell.xib in Resources */,
@@ -864,18 +1051,26 @@
 			files = (
 				DF29F3C31BD72586008D15D0 /* PayQRViewController.swift in Sources */,
 				DFF5EEEB1BC615D700B3E480 /* RequestDataTool.swift in Sources */,
+				DF9AEC601BE0A42200E81A07 /* IQActionSheetPickerView.m in Sources */,
 				DFA35ED01BDA0178008E2B3D /* StoreViewController.swift in Sources */,
+				DFF75C8B1BE05B7F0060AE7B /* OrderListViewController.swift in Sources */,
 				DF76E65E1BD0F75900562B81 /* PasswordDataProcessing.swift in Sources */,
 				DF76E6521BD0983E00562B81 /* RegisterViewController.swift in Sources */,
 				DFC214D91BCE2DB90039639C /* SupermarketOrderViewController.swift in Sources */,
 				DF3833071BCF8B5800A84EC2 /* LoginViewController.swift in Sources */,
 				DFE530BE1BC79050002CCAA0 /* ProductListModel.swift in Sources */,
 				DF29F3C81BD75DFD008D15D0 /* VoucherAmoutTableViewCell.swift in Sources */,
+				DF9AEC681BE0ABCF00E81A07 /* CollectViewController.swift in Sources */,
 				DF8F4FA61BD6043200049D54 /* ExpenseTableViewCell.swift in Sources */,
+				DFF75C8E1BE05EBA0060AE7B /* OrderFinishTableViewCell.swift in Sources */,
 				DF76E6501BD08CD500562B81 /* ForgetPasswordViewController.swift in Sources */,
 				DFC65C1E1BD4805700772F59 /* AboutTBViewController.swift in Sources */,
+				DF7DCD461BE1AD7A003D48B5 /* GiveCouponsViewController.swift in Sources */,
+				DF9AEC561BE0986C00E81A07 /* ServeSelectViewController.swift in Sources */,
 				DFC214FA1BCE38110039639C /* TNRectangularCheckBox.m in Sources */,
 				DFC214F51BCE38110039639C /* TNCheckBoxGroup.m in Sources */,
+				DFB34EDA1BDF4C30003CB678 /* PayViewController.swift in Sources */,
+				DF9AEC631BE0A50700E81A07 /* AppleRefundViewController.swift in Sources */,
 				DFC214D61BCE26650039639C /* orderTableViewCell.swift in Sources */,
 				DFFF6B4B1BCCA9C50087611D /* TQTableViewCellRemoveController.m in Sources */,
 				DF8F4FAB1BD61D1300049D54 /* BasicInfoViewController.swift in Sources */,
@@ -887,30 +1082,40 @@
 				DFC214F91BCE38110039639C /* TNImageCheckBoxData.m in Sources */,
 				DFC214C11BCDEC7E0039639C /* QRItem.m in Sources */,
 				DF29F3CC1BD76A95008D15D0 /* ChanrgeTypeTableViewCell.swift in Sources */,
+				DF7DCD481BE1BC9A003D48B5 /* UserCouponsViewController.swift in Sources */,
 				DFC214C21BCDEC7E0039639C /* QRMenu.m in Sources */,
 				DFC65C281BD4C32900772F59 /* CardViewController.swift in Sources */,
+				DF7DCD4B1BE1E5C9003D48B5 /* MyImageView.m in Sources */,
 				DFC214F41BCE38110039639C /* TNCheckBoxData.m in Sources */,
+				DF11CC1F1BDE2EF300EC82C6 /* DOPScrollableActionSheet.m in Sources */,
 				DFC214D11BCE21CE0039639C /* UserDefaultsSaveInfo.swift in Sources */,
 				DF4FFD181BC8A36B00824999 /* ProductViewController.swift in Sources */,
+				DFF75C941BE06FA60060AE7B /* RefundOrderViewController.swift in Sources */,
 				DFC214FB1BCE38110039639C /* TNRectangularCheckBoxData.m in Sources */,
 				DFC65C241BD4B8D400772F59 /* TBServiceViewController.swift in Sources */,
 				DFC214DC1BCE37D00039639C /* PriceGatherTableViewCell.swift in Sources */,
+				DFB34EE41BDF79EF003CB678 /* NTButton.m in Sources */,
 				DF8F4FA01BD5E66500049D54 /* AutoresizeLabelTableViewCell.swift in Sources */,
 				DF76E6571BD0C44E00562B81 /* SettingTableViewCell.swift in Sources */,
 				DFF5EEED1BC6332A00B3E480 /* TBUser.swift in Sources */,
 				DFF5EEEF1BC65A6D00B3E480 /* SupermarketCollectController.swift in Sources */,
 				DFA35ECC1BD9FEB3008E2B3D /* DeskNumTableViewCell.swift in Sources */,
+				DF9AEC6E1BE0B94900E81A07 /* CouponsTableViewController.swift in Sources */,
 				DF76E6541BD0C1CD00562B81 /* SettingViewController.swift in Sources */,
+				DF9AEC611BE0A42200E81A07 /* IQActionSheetViewController.m in Sources */,
 				DFF5EEF21BC65AF400B3E480 /* SupermarketCollectionViewCell.swift in Sources */,
+				DFB34EDD1BDF5013003CB678 /* OrderChoosePayTableViewCell.swift in Sources */,
 				DFC214F31BCE38110039639C /* TNCheckBox.m in Sources */,
 				DF29F3C51BD7580E008D15D0 /* VoucherCenterViewController.swift in Sources */,
 				DF8F4FA31BD6040200049D54 /* TradingRecordViewController.swift in Sources */,
 				DF8F4FA91BD607FD00049D54 /* CardTradeRecordsModel.swift in Sources */,
 				DF76E65A1BD0CE9B00562B81 /* UpdatePayPassViewController.swift in Sources */,
 				DFF5EEF61BC6624200B3E480 /* CollectionViewWaterfallLayout.swift in Sources */,
+				DF9AEC741BE0D0A900E81A07 /* CouponsDetailViewController.swift in Sources */,
 				DFA35ED91BDA0398008E2B3D /* HJCAjustNumButton3.m in Sources */,
 				DFC65C201BD48D3F00772F59 /* ParentClassViewController.swift in Sources */,
 				DF850ADF1BBA61DC0055DCA7 /* MerchModel.swift in Sources */,
+				DF9AEC6B1BE0B55400E81A07 /* CouponsDetailReceiveTableViewCell.swift in Sources */,
 				DF0BAC391BB8DAC7008A8952 /* Config.swift in Sources */,
 				DFC215011BCE4FFA0039639C /* SuperMarketChoosePayTypeViewController.swift in Sources */,
 				DF850AE11BBA8E1D0055DCA7 /* UserCenterViewController.swift in Sources */,
@@ -918,17 +1123,26 @@
 				DFC214F81BCE38110039639C /* TNImageCheckbox.m in Sources */,
 				DFC214C91BCDEDCD0039639C /* SupermarketQRViewController.swift in Sources */,
 				DFC65C221BD4976500772F59 /* HelpCenterViewController.swift in Sources */,
+				DF9AEC711BE0BB0800E81A07 /* CouponsDetailTableViewCell.swift in Sources */,
 				DFC214F71BCE38110039639C /* TNCircularCheckBoxData.m in Sources */,
+				DF7DCD4F1BE1F390003D48B5 /* UITableView+Wave.m in Sources */,
 				DFC214C31BCDEC7E0039639C /* QRView.m in Sources */,
 				DFC214FE1BCE4C6E0039639C /* SupermarketChoosePayTableViewCell.swift in Sources */,
 				DF3832FE1BCF407300A84EC2 /* CardInfoModel.swift in Sources */,
 				DF3833041BCF6F9600A84EC2 /* CompleteVoucherViewController.swift in Sources */,
 				DF0BAC071BB8CEB2008A8952 /* AppDelegate.swift in Sources */,
+				DF9AEC651BE0A96000E81A07 /* SuccessAppleRefundViewController.swift in Sources */,
 				DF8F4FAD1BD6244300049D54 /* UserInfoModel.swift in Sources */,
 				DFF5EEE71BC5FF6B00B3E480 /* UserCenterHeadPortraitTableViewCell.swift in Sources */,
 				DF0BAC091BB8CEB2008A8952 /* HotFocusViewController.swift in Sources */,
+				DFF75C961BE072C10060AE7B /* OrderListDetialViewController.swift in Sources */,
+				DF11CC1B1BDE057300EC82C6 /* ProductDescriptionView.swift in Sources */,
+				DF9AEC591BE09D8900E81A07 /* AppleRefundTableViewCell.swift in Sources */,
+				DFB34ED81BDF16EE003CB678 /* OrdersViewController.swift in Sources */,
 				DFC214F61BCE38110039639C /* TNCircularCheckBox.m in Sources */,
 				DF3833011BCF6D6400A84EC2 /* CardDetailTableViewCell.swift in Sources */,
+				DFB34EE01BDF79AD003CB678 /* OrderTabBarController.swift in Sources */,
+				DFF75C9A1BE08F7A0060AE7B /* CallBackButton.m in Sources */,
 				DFA35EDB1BDA37EA008E2B3D /* ShoppingCardDataItem.swift in Sources */,
 				DF76E65C1BD0E9A200562B81 /* UpdatePassViewController.swift in Sources */,
 			);

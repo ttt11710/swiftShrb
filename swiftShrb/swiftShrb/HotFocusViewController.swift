@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import SDWebImage
+import CBZSplashView
+
 
 
 var defaultHotFocusViewController : HotFocusViewController!
@@ -21,12 +23,12 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     var merchModel = [MerchModel]()
     
+    var firstTimeShowThisView : Bool = true
     
     var supermarketCollectController = SupermarketCollectController()
     var indexPath : NSIndexPath!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         defaultHotFocusViewController = self
         
@@ -53,6 +55,15 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.hidden = false
+        
+        if self.firstTimeShowThisView {
+            let icon = UIImage(named: "默认女头像")
+            let splashView : CBZSplashView = CBZSplashView(icon: icon, backgroundColor:shrbPink)
+            self.view.addSubview(splashView)
+            splashView.startAnimation()
+            self.firstTimeShowThisView = false
+        }
+        
     }
     
     class func shareHotFocusViewController() -> HotFocusViewController {
@@ -155,7 +166,23 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         
         cell.descriptionLabel.text = self.merchModel[indexPath.row].merchDesc
-        cell.hotImageView.sd_setImageWithURL(NSURL(string: self.merchModel[indexPath.row].merchImglist[0].imgUrl), placeholderImage: UIImage(named: "热点无图片"))
+       // cell.hotImageView.sd_setImageWithURL(NSURL(string: self.merchModel[indexPath.row].merchImglist[0].imgUrl), placeholderImage: UIImage(named: "热点无图片"))
+        
+        let imageUrlArray : NSMutableArray = NSMutableArray()
+        
+        if self.merchModel[indexPath.row].merchImglist.count == 0 {
+            imageUrlArray.addObject("热点无图片")
+        }
+        else {
+            for index in 0..<self.merchModel[indexPath.row].merchImglist.count {
+                imageUrlArray.addObject(self.merchModel[indexPath.row].merchImglist[index].imgUrl)
+            }
+        }
+        
+        cell.hotImageView.currentInt = 0;
+        cell.hotImageView.initImageArr()
+        cell.hotImageView.imageArr = imageUrlArray;
+        cell.hotImageView.beginAnimation()
         
         return cell
     }
@@ -175,28 +202,34 @@ class HotFocusViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         SVProgressShow.showWithStatus("进入店铺...")
         
-        let delayInSeconds : Double = 1.0
-        let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)))
-        dispatch_after(popTime, dispatch_get_main_queue(), { () -> Void in
-          
-            if self.merchModel[indexPath.row].showType == "0" {
-                let supermarketCollectController = SupermarketCollectController()
-                supermarketCollectController.merchId = self.merchModel[indexPath.row].merchId
-                supermarketCollectController.merchTitle = self.merchModel[indexPath.row].merchTitle
-                supermarketCollectController.hidesBottomBarWhenPushed = true
-                self.navigationController?.pushViewController(supermarketCollectController, animated: true)
-                SVProgressShow.dismiss()
-            }
-            else {
-                let storeViewController = StoreViewController()
-                storeViewController.merchId = self.merchModel[indexPath.row].merchId
-                storeViewController.merchTitle = self.merchModel[indexPath.row].merchTitle
-                storeViewController.hidesBottomBarWhenPushed = true
-                self.navigationController?.pushViewController(storeViewController, animated: true)
-                SVProgressShow.dismiss()
-            }
-            
-        })
+        let cell : HotFocusTableViewCell = self.tableView.cellForRowAtIndexPath(indexPath) as! HotFocusTableViewCell
+        
+        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            cell.hotImageView.layer.transform = CATransform3DMakeScale(0.8, 0.8, 1)
+            }) { (finished : Bool) -> Void in
+               UIView.animateWithDuration(0.8, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                cell.hotImageView.layer.transform = CATransform3DIdentity
+                }, completion: { (finished : Bool) -> Void in
+                    
+                    if self.merchModel[indexPath.row].showType == "0" {
+                        let supermarketCollectController = SupermarketCollectController()
+                        supermarketCollectController.merchId = self.merchModel[indexPath.row].merchId
+                        supermarketCollectController.merchTitle = self.merchModel[indexPath.row].merchTitle
+                        supermarketCollectController.hidesBottomBarWhenPushed = true
+                        self.navigationController?.pushViewController(supermarketCollectController, animated: true)
+                        SVProgressShow.dismiss()
+                    }
+                    else {
+                        let storeViewController = StoreViewController()
+                        storeViewController.merchId = self.merchModel[indexPath.row].merchId
+                        storeViewController.merchTitle = self.merchModel[indexPath.row].merchTitle
+                        storeViewController.hidesBottomBarWhenPushed = true
+                        self.navigationController?.pushViewController(storeViewController, animated: true)
+                        SVProgressShow.dismiss()
+                    }
+
+               })
+        }
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {

@@ -101,8 +101,8 @@ class TradingRecordViewController: UIViewController,UITableViewDelegate,UITableV
         cell.selectionStyle = UITableViewCellSelectionStyle.None
     
         let timeStamp : String = self.cardTradeRecordsModel[indexPath.row].acceptTime
-        let date1 : NSInteger = NSInteger(timeStamp)!
-        let date2 : NSDate = NSDate(timeIntervalSince1970: 3600)
+        let date1 : NSTimeInterval = NSTimeInterval(timeStamp)!/1000
+        let date2 : NSDate = NSDate(timeIntervalSince1970: date1)
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "HH:mm   yyyy/MM/dd"
         let dateString : String = dateFormatter.stringFromDate(date2)

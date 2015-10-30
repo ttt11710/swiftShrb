@@ -34,7 +34,7 @@ class RequestDataTool: NSObject {
         {
         case 200:
             return json
-        case 404,503:
+        case 404,503,201,202:
             SVProgressShow.showErrorWithStatus(json["mes"].stringValue ?? "加载失败")
             return nil
         default:

@@ -13,6 +13,7 @@ class CardDetailTableViewCell: UITableViewCell {
     
     
 
+    @IBOutlet weak var cardBackView: UIView!
     @IBOutlet weak var cardBackImageView: UIImageView!
     @IBOutlet weak var merchNameLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!

@@ -162,6 +162,7 @@ class CardDetailViewController: UIViewController,UITableViewDelegate,UITableView
         self.view.addSubview(self.voucherBtn)
     }
     
+    
     func initData() {
         
         self.rowDataMutableArray = ["会员规则\n1、会员卡注册不需缴纳任何费用。\n2、针对不同商家使用同一张会员卡，但优惠金额由商家决定。\n3、会员卡注销时需缴纳余额5%的手续费，且注销后不再享受会员优惠。","积分规则\n1、免费注册会员，即刻赠送20积分。\n2、成功交易一笔订单可获得积分，不同商品积分标准不同。\n3、消费时可使用积分抵消现金，不同商品使用标准不同。"]
@@ -294,8 +295,25 @@ class CardDetailViewController: UIViewController,UITableViewDelegate,UITableView
             if self.cardInfoModel != nil {
                 cell.cardBackImageView.sd_setImageWithURL(NSURL(string: self.cardInfoModel.cardImgUrl as String), placeholderImage: UIImage(named: "cardBack"))
                 cell.merchNameLabel.text = self.cardInfoModel.merchName
-                cell.amountLabel.text = String(format: "金额:￥%.2f", self.cardInfoModel.amount)
-                cell.scoreLabel.text = String(format: "积分:%.0f", self.cardInfoModel.score)
+                
+                let string : String = String(format: "金额:￥%.2f", self.cardInfoModel.amount)
+                let attrString : NSMutableAttributedString = NSMutableAttributedString(string: string)
+                
+                attrString.addAttribute(NSForegroundColorAttributeName, value:UIColor(red: 255.0/255.0, green: 212.0/255.0, blue: 0.0/255.0, alpha: 1), range: NSMakeRange(3, string.characters.count-3))
+                
+                attrString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(18), range: NSMakeRange(0, 3))
+                attrString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(24), range: NSMakeRange(3, string.characters.count-3))
+                cell.amountLabel.attributedText = attrString
+                
+                let integralString : String = String(format: "积分:%.0f", self.cardInfoModel.score)
+                let integralAttrString : NSMutableAttributedString = NSMutableAttributedString(string: integralString)
+                
+                integralAttrString.addAttribute(NSForegroundColorAttributeName, value:UIColor(red: 255.0/255.0, green: 212.0/255.0, blue: 0.0/255.0, alpha: 1), range: NSMakeRange(3, integralString.characters.count-3))
+                
+                integralAttrString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(18), range: NSMakeRange(0, 3))
+                integralAttrString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(24), range: NSMakeRange(3, integralString.characters.count-3))
+                cell.scoreLabel.attributedText = integralAttrString
+                
                 cell.cardNoLabel.text = String(format: "卡号:%@", self.cardInfoModel.cardNo)
             }
             
@@ -347,7 +365,7 @@ class CardDetailViewController: UIViewController,UITableViewDelegate,UITableView
     
     func goToQRView() {
         
-        UserDefaultsSaveInfo.userDefaultsStandardUserDefaultsObject("viewControllers[1]", keyString: "QRPay")
+        
        
         if self.validateCamera() {
             

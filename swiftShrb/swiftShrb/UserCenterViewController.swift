@@ -182,6 +182,19 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
                 basicInfoViewController.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(basicInfoViewController, animated: true)
             }
+        case 1:
+            switch indexPath.row {
+            case 0:
+                let orderTabBarController = OrderTabBarController()
+                orderTabBarController.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(orderTabBarController, animated: true)
+            case 1:
+                let collectViewController = CollectViewController()
+                collectViewController.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(collectViewController, animated: true)
+            default:
+                break
+            }
             
         case 2:
             switch indexPath.row {

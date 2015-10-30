@@ -10,7 +10,6 @@ import UIKit
 
 class ShoppingCardDataItem: NSObject {
     
-    var count : NSInteger!
-    var prodList = [ProdList]()
-
+    var count : String!
+    var prodList : ProdList!
 }

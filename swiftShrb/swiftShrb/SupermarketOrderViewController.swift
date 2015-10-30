@@ -39,7 +39,9 @@ class SupermarketOrderViewController: UIViewController,UITableViewDelegate,UITab
         tableView.delegate = self
         tableView.dataSource = self
         self.view.addSubview(tableView)
-    
+        
+        self.tableView.reloadDataAnimateWithWave(.RightToLeftWaveAnimation)
+
     }
     
     func creatSubmitOrderBtn() {
@@ -100,7 +102,7 @@ class SupermarketOrderViewController: UIViewController,UITableViewDelegate,UITab
             
             let checkBoxData = TNImageCheckBoxData()
             checkBoxData.identifier = "check"
-            checkBoxData.labelText = "100PMB电子券"
+            checkBoxData.labelText = "100RMB电子券"
             checkBoxData.labelColor = UIColor(red: 78.0/255.0, green: 78.0/255.0, blue: 78.0/255.0, alpha: 1)
             checkBoxData.labelFont = font14
             checkBoxData.checked = true

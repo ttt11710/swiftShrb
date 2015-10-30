@@ -121,8 +121,24 @@ class CompleteVoucherViewController: UIViewController,UITableViewDelegate,UITabl
                 
                 cell.cardBackImageView.sd_setImageWithURL(self.cardInfoModel.cardImgUrl == nil ? nil : NSURL(string: self.cardInfoModel.cardImgUrl), placeholderImage: UIImage(named: "cardBack"))
                 cell.merchNameLabel.text = self.cardInfoModel.merchName
-                cell.amountLabel.text = String(format: "金额:￥%.2f", self.cardInfoModel.amount)
-                cell.scoreLabel.text = String(format: "积分:%.0f", self.cardInfoModel.score)
+                let string : String = String(format: "金额:￥%.2f", self.cardInfoModel.amount)
+                let attrString : NSMutableAttributedString = NSMutableAttributedString(string: string)
+                
+                attrString.addAttribute(NSForegroundColorAttributeName, value:UIColor(red: 255.0/255.0, green: 212.0/255.0, blue: 0.0/255.0, alpha: 1), range: NSMakeRange(3, string.characters.count-3))
+                
+                attrString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(18), range: NSMakeRange(0, 3))
+                attrString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(24), range: NSMakeRange(3, string.characters.count-3))
+                cell.amountLabel.attributedText = attrString
+                
+                let integralString : String = String(format: "积分:%.0f", self.cardInfoModel.score)
+                let integralAttrString : NSMutableAttributedString = NSMutableAttributedString(string: integralString)
+                
+                integralAttrString.addAttribute(NSForegroundColorAttributeName, value:UIColor(red: 255.0/255.0, green: 212.0/255.0, blue: 0.0/255.0, alpha: 1), range: NSMakeRange(3, integralString.characters.count-3))
+                
+                integralAttrString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(18), range: NSMakeRange(0, 3))
+                integralAttrString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(24), range: NSMakeRange(3, integralString.characters.count-3))
+                cell.scoreLabel.attributedText = integralAttrString
+                
                 cell.cardNoLabel.text = String(format: "卡号:%@", self.cardInfoModel.cardNo)
             }
             

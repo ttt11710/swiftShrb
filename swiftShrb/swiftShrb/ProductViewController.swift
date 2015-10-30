@@ -40,7 +40,7 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
     var descriptionAndRegisterView : UIView!
     
     var prodDescLabel : UILabel!
-    var registerBtn : UIButton!
+    var registerBtn : CallBackButton!
     
 
     
@@ -56,6 +56,7 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
         self.initCardView()
         self.initTradeNameAndPriceView()
         self.initDescriptionAndregisterView()
+        self.cardAnimation()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -188,7 +189,7 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
         self.collectBtn.setBackgroundImage(UIImage(named: "shoucang"), forState: UIControlState.Normal)
         self.collectBtn.setBackgroundImage(UIImage(named: "shoucang"), forState: UIControlState.Highlighted)
         self.collectBtn.frame = CGRectMake(0, 0, (self.blurEffectView.frame.size.width-1)/2, self.blurEffectView.frame.size.height)
-        self.collectBtn.addTarget(self, action: Selector("collectBtnPressed"), forControlEvents: UIControlEvents.TouchUpOutside)
+        self.collectBtn.addTarget(self, action: Selector("collectBtnPressed"), forControlEvents: UIControlEvents.TouchUpInside)
         self.blurEffectView.addSubview(self.collectBtn)
         
         let lineImageView = UIImageView(frame: CGRectMake((self.blurEffectView.frame.size.width)/2, 5, 1, 30))
@@ -198,7 +199,7 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
         self.shareBtn.setBackgroundImage(UIImage(named: "fenxiang"), forState: UIControlState.Normal)
         self.shareBtn.setBackgroundImage(UIImage(named: "fenxiang"), forState: UIControlState.Highlighted)
         self.shareBtn.frame = CGRectMake((self.blurEffectView.frame.size.width+1)/2, 0, (self.blurEffectView.frame.size.width-1)/2, self.blurEffectView.frame.size.height)
-        self.shareBtn.addTarget(self, action: Selector("shareBtnPressed"), forControlEvents: UIControlEvents.TouchUpOutside)
+        self.shareBtn.addTarget(self, action: Selector("shareBtnPressed"), forControlEvents: UIControlEvents.TouchUpInside)
         self.blurEffectView.addSubview(self.shareBtn)
         
     }
@@ -243,6 +244,12 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
         self.priceLabel.sizeToFit()
         self.tradeNameAndPriceView.addSubview(self.priceLabel)
         
+        let attrString : NSMutableAttributedString = NSMutableAttributedString(string: self.priceLabel.text!)
+        
+        attrString.addAttribute(NSStrikethroughStyleAttributeName, value:NSNumber(integer: 1), range: NSMakeRange(0, (self.priceLabel.text?.characters.count)!))
+        
+        self.priceLabel.attributedText = attrString
+        
     }
     
     func initDescriptionAndregisterView() {
@@ -270,14 +277,19 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
         self.prodDescLabel.sizeToFit()
         self.descriptionAndRegisterView.addSubview(self.prodDescLabel)
         
-        self.registerBtn = UIButton(type: .Custom)
+        self.registerBtn = CallBackButton(type: .Custom)
         self.registerBtn.setTitle("会员注册", forState: .Normal)
-        self.registerBtn.titleLabel?.font = font15
+        self.registerBtn.titleLabel?.font = font18
         self.registerBtn.backgroundColor = shrbPink
         self.registerBtn.frame = CGRectMake(16, self.prodDescLabel.frame.origin.y + self.prodDescLabel.frame.size.height + 16, screenWidth - 32, 44)
         self.registerBtn.layer.cornerRadius = 4
         self.registerBtn.layer.masksToBounds = true
-        self.registerBtn.addTarget(self, action: Selector(""), forControlEvents: UIControlEvents.TouchUpInside)
+        self.registerBtn.setupBlock()
+        self.registerBtn.callBack = { tag in
+            
+            self.getProduct()
+        }
+       
         self.descriptionAndRegisterView.addSubview(self.registerBtn)
         
         self.registerBtn.hidden = false
@@ -292,8 +304,32 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
         
         self.mainScrollView.scrollEnabled = true
         self.mainScrollView.contentSize = CGSizeMake(0, self.cardView.frame.size.height + self.tradeNameAndPriceView.frame.size.height + 8 + self.descriptionAndRegisterView.frame.size.height + 10)
+    }
+    
+    
+    func cardAnimation() {
         
+        self.registerBtn.layer.transform = CATransform3DMakeTranslation(screenWidth, 0, 0)
+        self.cardView.layer.transform = CATransform3DMakeScale(0, 0, 1)
+        self.prodDescLabel.alpha = 0
         
+        UIView.animateWithDuration(0.8, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            self.cardView.layer.transform = CATransform3DIdentity
+            }) { (finished : Bool) -> Void in
+                
+        }
+        
+        UIView.animateWithDuration(2.0, delay: 0.5, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+            self.prodDescLabel.alpha = 1
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.8, delay: 1.5, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            self.registerBtn.layer.transform = CATransform3DMakeScale(0.5, 1, 1)
+            }, completion: nil)
+        
+        UIView.animateWithDuration(1.5, delay: 1.5, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            self.registerBtn.layer.transform = CATransform3DIdentity
+            }, completion: nil)
     }
     
     func startTime() {
@@ -351,14 +387,127 @@ class ProductViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func collectBtnPressed() {
-        
+        SVProgressShow.showWithStatus("收藏中")
+        let delayInSeconds : Int64 = 1
+        let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+        dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+            SVProgressShow.showSuccessWithStatus("收藏成功!")
+        }
     
     }
     
     func shareBtnPressed() {
+        let action1 : DOPAction = DOPAction(name: "微信", iconName: "weixin") { () -> Void in
+            SVProgressShow.showWithStatus("分享中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("微信分享成功!")
+            }
+        }
         
+        let action2 : DOPAction = DOPAction(name: "QQ", iconName: "qq") { () -> Void in
+            SVProgressShow.showWithStatus("分享中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("QQ分享成功!")
+            }
+        }
+        
+        let action3 : DOPAction = DOPAction(name: "微信朋友圈", iconName: "wxFriends") { () -> Void in
+            SVProgressShow.showWithStatus("分享中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("微信朋友圈分享成功!")
+            }
+        }
+        
+        let action4 : DOPAction = DOPAction(name: "QQ空间", iconName: "qzone") { () -> Void in
+            SVProgressShow.showWithStatus("分享中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("QQ空间分享成功!")
+            }
+        }
+        
+        let action5 : DOPAction = DOPAction(name: "微博", iconName: "weibo") { () -> Void in
+            SVProgressShow.showWithStatus("分享中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("新浪微博分享成功!")
+            }
+        }
+        
+        let action6 : DOPAction = DOPAction(name: "短信", iconName: "sms") { () -> Void in
+            SVProgressShow.showWithStatus("短信发送中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("短信发送成功!")
+            }
+        }
+        
+        let action7 : DOPAction = DOPAction(name: "邮件", iconName: "email") { () -> Void in
+            SVProgressShow.showWithStatus("邮件发送中...")
+            let delayInSeconds : Int64 = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds)
+            dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+                SVProgressShow.showSuccessWithStatus("邮件发送成功!")
+            }
+        }
+        
+        let actions : NSArray = ["",[action1,action2,action3,action4],"",[action5,action6,action7]]
+        let myAs : DOPScrollableActionSheet = DOPScrollableActionSheet(actionArray: actions as [AnyObject])
+        myAs.show()
     }
     
+    
+    func getProduct() {
+        
+        if CurrentUser.user == nil {
+            SVProgressShow.showInfoWithStatus("请先登录!")
+            return
+        }
+        
+        SVProgressShow.showWithStatus("会员卡申请中...")
+        
+        Alamofire.request(.POST, baseUrl + "/card/v1.0/applyCard?", parameters: ["token":CurrentUser.user?.token == nil ? "" : CurrentUser.user!.token,"userId":CurrentUser.user?.userId == nil ? "" : CurrentUser.user!.userId,"merchId":self.productDataDic["merchId"].stringValue])
+            
+            .response { request, response, data, error in
+                
+                if error == nil {
+                    let json  = JSON(data: data!)
+                    
+                    if RequestDataTool.processingData(json) != nil {
+                        SVProgressShow.showSuccessWithStatus("会员卡申请成功!")
+                       
+                        Alamofire.request(.GET, baseUrl + "/product/v1.0/getProduct?", parameters: ["prodId":self.productDataDic["prodId"].stringValue,"token":CurrentUser.user?.token == nil ? "" : CurrentUser.user!.token])
+                            
+                            .response { request, response, data, error in
+                             
+                                if error == nil {
+                                    let json  = JSON(data: data!)
+                                    var nav : UINavigationController = UINavigationController()
+                                    nav = self.navigationController!
+                                    self.navigationController?.popViewControllerAnimated(false)
+                                    
+                                    let productIsMemberViewController =  ProductIsMemberViewController()
+                                    productIsMemberViewController.productDataDic = json["product"]
+                                    productIsMemberViewController.cardDataDic = json["card"]
+                                    nav.pushViewController(productIsMemberViewController, animated: true)
+                                }
+                        }
+                        
+                    }
+                    
+                }
+        }
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

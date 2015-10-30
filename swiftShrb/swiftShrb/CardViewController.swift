@@ -42,6 +42,13 @@ class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         if CurrentUser.user == nil {
             SVProgressShow.showInfoWithStatus("请先登录!")
+            
+            let delayInSeconds : Double = 1
+            let popTime : dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)))
+            dispatch_after(popTime, dispatch_get_main_queue(), { () -> Void in
+                SVProgressShow.dismiss()
+                self.navigationController?.popViewControllerAnimated(true)
+            })
             return
         }
         
@@ -78,8 +85,30 @@ class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if self.cardInfoModel.count != 0 {
             cell.cardBackImageView.sd_setImageWithURL(self.cardInfoModel[indexPath.row].cardImgUrl == nil ? nil : NSURL(string: self.cardInfoModel[indexPath.row].cardImgUrl), placeholderImage: UIImage(named: "cardBack"))
             cell.merchNameLabel.text = self.cardInfoModel[indexPath.row].merchName
-            cell.amountLabel.text = String(format: "金额:￥%.2f", self.cardInfoModel[indexPath.row].amount)
-            cell.scoreLabel.text = String(format: "积分:%.0f", self.cardInfoModel[indexPath.row].score)
+           
+            //cell.amountLabel.text = String(format: "金额:￥%.2f", self.cardInfoModel[indexPath.row].amount)
+            
+            let string : String = String(format: "金额:￥%.2f", self.cardInfoModel[indexPath.row].amount)
+            let attrString : NSMutableAttributedString = NSMutableAttributedString(string: string)
+            
+            attrString.addAttribute(NSForegroundColorAttributeName, value:UIColor(red: 255.0/255.0, green: 212.0/255.0, blue: 0.0/255.0, alpha: 1), range: NSMakeRange(3, string.characters.count-3))
+            
+            attrString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(18), range: NSMakeRange(0, 3))
+            attrString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(24), range: NSMakeRange(3, string.characters.count-3))
+            cell.amountLabel.attributedText = attrString
+            
+            
+            
+            let integralString : String = String(format: "积分:%.0f", self.cardInfoModel[indexPath.row].score)
+            let integralAttrString : NSMutableAttributedString = NSMutableAttributedString(string: integralString)
+            
+            integralAttrString.addAttribute(NSForegroundColorAttributeName, value:UIColor(red: 255.0/255.0, green: 212.0/255.0, blue: 0.0/255.0, alpha: 1), range: NSMakeRange(3, integralString.characters.count-3))
+            
+            integralAttrString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(18), range: NSMakeRange(0, 3))
+            integralAttrString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(24), range: NSMakeRange(3, integralString.characters.count-3))
+            cell.scoreLabel.attributedText = integralAttrString
+            
+          
             cell.cardNoLabel.text = String(format: "卡号:%@", self.cardInfoModel[indexPath.row].cardNo)
         }
         
@@ -91,6 +120,8 @@ class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        UserDefaultsSaveInfo.userDefaultsStandardUserDefaultsObject("viewControllers[1]", keyString: "QRPay")
         
         SVProgressShow.showWithStatus("进入卡片...")
         

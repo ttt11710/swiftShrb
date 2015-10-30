@@ -41,7 +41,7 @@ class SupermarketCollectController: UIViewController, UICollectionViewDataSource
         self.creatQRButtonView()
         self.createSelectTypeTableView()
         self.requestData()
-        
+        self.btnAnimation()
 
         // Do any additional setup after loading the view.
     }
@@ -106,6 +106,30 @@ class SupermarketCollectController: UIViewController, UICollectionViewDataSource
         
     }
     
+    func btnAnimation() {
+        
+        UIView.animateWithDuration(0.5, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            self.QRViewBtn.layer.transform = CATransform3DIdentity
+            }) { (finished : Bool) -> Void in
+                
+        }
+    }
+    
+    func btnAnimation1() {
+        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+            self.QRViewBtn.layer.transform = CATransform3DMakeScale(0.9, 0.9, 1)
+            }) { (finished : Bool) -> Void in
+        }
+    }
+    
+    func btnAnimation2() {
+        UIView.animateWithDuration(0.5, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.2, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+            self.QRViewBtn.layer.transform = CATransform3DIdentity
+            self.QRLabel.layer.transform = CATransform3DIdentity
+            
+            }) { (finished : Bool) -> Void in
+        }
+    }
     
     func createCollection() {
        
@@ -216,6 +240,15 @@ class SupermarketCollectController: UIViewController, UICollectionViewDataSource
         
         cell.priceLabel.text = "原价:￥" + String(self.selectProductListModel[indexPath.section].prodList[indexPath.row].price)
         
+        let attrString : NSMutableAttributedString = NSMutableAttributedString(string: cell.priceLabel.text!)
+    
+        attrString.addAttribute(NSStrikethroughStyleAttributeName, value:NSNumber(integer: 1), range: NSMakeRange(0, (cell.priceLabel.text?.characters.count)!))
+        
+        cell.priceLabel.attributedText = attrString
+        
+        
+        
+        
         if self.selectProductListModel.count != 0 {
             cell.tradeImageView.layer.transform = CATransform3DMakeScale(1, 0, 1)
             cell.tradeImageView.layer.transform = CATransform3DMakeTranslation(0, -screenWidth/2, 0)
@@ -253,10 +286,9 @@ class SupermarketCollectController: UIViewController, UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, layout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        let tradeNameLabel = UILabel(frame: CGRectMake(0, 0, (screenWidth-12)/2, 0))
-        let theFont1 = font17
+        let tradeNameLabel = UILabel(frame: CGRectMake(0, 0, (screenWidth-12)/2-16, 0))
         tradeNameLabel.numberOfLines = 0
-        tradeNameLabel.font = theFont1
+        tradeNameLabel.font = font17
         
       //  let string1 =  self.selectArray[indexPath.section]["prodList"][indexPath.row]["prodName"].stringValue
         let string1 = self.selectProductListModel[indexPath.section].prodList[indexPath.row].prodName
@@ -420,7 +452,6 @@ class SupermarketCollectController: UIViewController, UICollectionViewDataSource
     }
     
     func goToQRView() {
-        
         UserDefaultsSaveInfo.userDefaultsStandardUserDefaultsObject("viewControllers[1]", keyString: "QRPay")
         
         UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
@@ -446,7 +477,7 @@ class SupermarketCollectController: UIViewController, UICollectionViewDataSource
                                 }, completion: { (finished : Bool) -> Void in
                                     let supermarketQRViewController = SupermarketQRViewController()
                                     supermarketQRViewController.merchId = self.merchId
-                                    self.navigationController?.pushViewController(supermarketQRViewController, animated: true)
+                                    self.navigationController?.pushViewController(supermarketQRViewController, animated: false)
                                     self.QRViewBtn.layer.transform = CATransform3DIdentity
                                     self.QRLabel.hidden = false
                             })
